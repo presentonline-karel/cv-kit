@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+    &::selection {
+        background: $primary-100;
+        color: $primary-500;
+    }
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    max-width: 100% !important;
+    min-height: -webkit-fill-available;
+    overflow-x: hidden !important;
+    transition: background-color $transition-time-short ease-in-out;
+
+    &.light-mode {
+        background-color: $neutrals-100;
+    }
+
+    &.dark-mode {
+        background-color: $neutrals-1000;
+    }
+}
+
+.stop-scrolling {
+    height: 100%;
+    max-height: -webkit-fill-available;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: $neutrals-1000;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer !important;
+    }
+}
+
+// Contactform
+.honeypot {
+    left: -9999px;
+    position: absolute;
+}
+
+
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    body,
+    html {
+        overflow-x: visible; // Needed for sticky header in team-grouped (Starter Kit)
+    }
+}
