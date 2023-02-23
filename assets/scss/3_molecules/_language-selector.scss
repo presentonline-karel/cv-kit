@@ -1,0 +1,20 @@
+.languages-container {
+    position: absolute;
+    right: 53px;
+
+    .language-active {
+        display: inline-flex;
+        padding: 6px 8px;
+        border: none;
+        border-radius: $border-radius-medium;
+        background-color: $primary-100;
+        color: $primary-600;
+        font-family: $title-font;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+        gap: 6px;
+        align-items: center;
+    }
+}

@@ -1,8 +1,34 @@
 /* FUNDAMENTS */
 @import "./1_fundaments/colors";
-@import "./1_fundaments/spacers";
+@import "./1_fundaments/breakpoints";
+@import "./1_fundaments/borders";
 @import "./1_fundaments/fonts";
-@import "./1_fundaments/displays";
 @import "./1_fundaments/flexbox";
 @import "./1_fundaments/others";
 @import "./1_fundaments/reset";
+
+
+
+/* ATOMS */
+@import "./2_atoms/buttons";
+@import "./2_atoms/icons";
+@import "./2_atoms/paragraphs";
+@import "./2_atoms/tags";
+@import "./2_atoms/titles";
+
+
+
+/* MOLECULES */
+@import "./3_molecules/burger";
+@import "./3_molecules/language-selector";
+@import "./3_molecules/navTeam-employee";
+@import "./3_molecules/socials";
+@import "./3_molecules/team";
+
+
+
+/* ORGANISMS */
+@import "./4_organisms/nav";
+@import "./4_organisms/filter-section";
+@import "./4_organisms/teams-section";
+@import "./4_organisms/cta";

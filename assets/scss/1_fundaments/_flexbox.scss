@@ -5,10 +5,14 @@
 .flex-column {
     display: flex;
     flex-direction: column;
+
+    div:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* DESKTOP - 1280PX */
-@media only screen and (min-width: $desktop-1) {
+@media only screen and (min-width: $desktop-xs) {
     .flex-desktop {
         display: flex;
     }

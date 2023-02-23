@@ -1,0 +1,53 @@
+.burger {
+    position: relative;
+    z-index: 100;
+
+    .burger-line {
+        background-color: $neutrals-1000;
+        height: 3px;
+        margin-top: 3px;
+        position: relative;
+        transition: all $transition-time-short ease;
+        width: 10px;
+        z-index: 101;
+
+        &.line1 {
+            width: 24px;
+        }
+
+        &.line2 {
+            width: 20px;
+        }
+
+        &.line-3 {
+            width: 16px;
+        }
+    }
+
+    // Cross layout
+    &.toggle {
+        top: -2px;
+        z-index: 100;
+
+        .line1 {
+            bottom: 3px;
+            right: 1px;
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .line2 {
+            display: none;
+        }
+
+        .line3 {
+            right: 1px;
+            transform: rotate(45deg) translate(-5px, -6px);
+            top: 7px;
+        }
+
+        .burger-line {
+            position: relative;
+            width: 24px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.team {
+    margin-bottom: 32px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    h4 {
+        margin-bottom: 16px;
+    }
+
+    .employees {
+        gap: 8px;
+    }
+}

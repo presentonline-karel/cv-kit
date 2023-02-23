@@ -1,0 +1,21 @@
+.socials {
+    display: flex;
+    gap: 6px;
+
+    .social {
+        width: 40px;
+        height: 40px;
+        border-radius: $border-radius-medium;
+        background-color: $primary-100;
+        color: $primary-600;
+        text-align: center;
+
+        i {
+            font-size: 20px;
+            line-height: 20px;
+            color: $primary-600;
+            position: relative;
+            top: 10px;
+        }
+    }
+}

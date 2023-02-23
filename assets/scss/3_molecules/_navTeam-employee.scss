@@ -1,0 +1,62 @@
+.nav-team,
+.employee {
+    align-items: center;
+    background-color: $neutrals-200;
+    border: $border-card-thin;
+    border-radius: $border-radius-medium;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px 8px 8px;
+
+    &-container {
+        align-items: center;
+        display: flex;
+        gap: 16px;
+
+        .icon-container,
+        .employee-picture-container {
+            border-radius: $border-radius-medium;
+            height: 56px;
+            overflow: hidden;
+            width: 56px;
+        }
+
+        .icon-container {
+            background-color: $primary-600;
+            text-align: center;
+
+            i {
+                color: $neutrals-100;
+                font-size: 24px;
+                line-height: 24px;
+                position: relative;
+                transform: translate(0, -50%);
+                top: 50%;
+            }
+        }
+
+        .employee-picture {
+            aspect-ratio: 1/1;
+            border: 0.4px solid $primary-100;
+            height: auto;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .content {
+            h5 {
+                margin-bottom: 4px;
+            }
+
+            .function {
+                font-size: 14px;
+                line-height: 14px;
+            }
+
+            .tags {
+                display: flex;
+                gap: 4px;
+            }
+        }
+    }
+}

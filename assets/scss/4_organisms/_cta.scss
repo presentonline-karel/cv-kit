@@ -1,0 +1,25 @@
+.cta {
+    &__content {
+        padding: 48px 16px;
+        background-color: $primary-100;
+
+        h2 {
+            margin-bottom: 24px;
+
+            span {
+                display: inline-block;
+                color: $primary-600;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 8px;
+
+            .button {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
