@@ -10,18 +10,18 @@
     .employees-filter {
         .filter-form {
             &__input {
-                display: block;
-                width: 100%;
-                font-family: $paragraph-font;
-                font-size: 16px;
-                line-height: 16px;
-                font-weight: 400;
-                color: $neutrals-900;
-                padding: 12px 16px;
+                background-color: $neutrals-200;
                 border: $border-card-thin;
                 border-radius: $border-radius-medium;
-                background-color: $neutrals-200;
+                color: $neutrals-900;
+                display: block;
+                font-family: $paragraph-font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
                 margin-bottom: 8px;
+                padding: 12px 16px;
+                width: 100%;
 
                 &::placeholder {
                     color: $neutrals-700;
@@ -35,34 +35,51 @@
 
         .filter-tags {
             align-items: center;
-            gap: 16px;
-            padding-bottom: 20px;
             border-bottom: 1px solid $neutrals-400;
+            gap: 16px;
             margin-bottom: 24px;
+            padding-bottom: 20px;
 
             p {
-                width: 63px;
-                white-space: nowrap;
+                color: $neutrals-900;
                 font-family: $title-font;
                 font-size: 14px;
                 line-height: 14px;
-                color: $neutrals-900;
+                width: 63px;
+                white-space: nowrap;
             }
 
             .tags {
                 display: flex;
                 flex-wrap: nowrap;
-                overflow: auto;
                 gap: 4px;
+                overflow: auto;
+                padding-bottom: 3px;
+
+                &::-webkit-scrollbar {
+                    height: 3px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: $primary-100;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $primary-400;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $primary-600;
+                }
             }
         }
     }
 
     .filter-results-title {
+        color: $neutrals-900;
         font-family: $title-font;
         font-size: 14px;
         font-weight: 400;
-        color: $neutrals-900;
 
         span {
             font-weight: 700;

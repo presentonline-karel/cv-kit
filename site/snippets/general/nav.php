@@ -29,10 +29,10 @@
     <div class="nav-links">
         <div>
             <div class="company">
-                <a class="button button-tertiary"><h4>All employees</h4><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="button button-tertiary clickable-nav-item" href="#allEmployees"><h4>All employees</h4><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
-                <div class="company__teams flex-column">
-                    <div class="nav-team">
+                <div id="allEmployees" class="company__teams flex-column">
+                    <a class="nav-team clickable-nav-item" href="#management">
                         <div class="nav-team-container">
                             <div class="icon-container">
                                 <i class="fa fa-users" aria-hidden="true"></i>
@@ -48,17 +48,17 @@
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
+                        <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </a>
 
-                    <div class="nav-team">
+                    <a class="nav-team clickable-nav-item" href="#frontendDevelopers">
                         <div class="nav-team-container">
                             <div class="employee-picture-container">
                                 <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
                             </div>
 
                             <div class="content">
-                                <h5>Management</h5>
+                                <h5>Frontend developers</h5>
 
                                 <div class="tags">
                                     <div class="tag tag-s"><i class="fa fa-user" aria-hidden="true"></i>4</div>
@@ -67,17 +67,17 @@
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
+                        <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </a>
 
-                    <div class="nav-team">
+                    <a class="nav-team clickable-nav-item" href="#backendDevelopers">
                         <div class="nav-team-container">
                             <div class="icon-container">
                                 <i class="fa fa-users" aria-hidden="true"></i>
                             </div>
 
                             <div class="content">
-                                <h5>Management</h5>
+                                <h5>Backend developers</h5>
 
                                 <div class="tags">
                                     <div class="tag tag-s"><i class="fa fa-user" aria-hidden="true"></i>4</div>
@@ -86,17 +86,17 @@
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
+                        <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </a>
 
-                    <div class="nav-team">
+                    <a class="nav-team clickable-nav-item" href="#projectManagers">
                         <div class="nav-team-container">
                             <div class="icon-container">
                                 <i class="fa fa-users" aria-hidden="true"></i>
                             </div>
 
                             <div class="content">
-                                <h5>Management</h5>
+                                <h5>Project managers</h5>
 
                                 <div class="tags">
                                     <div class="tag tag-s"><i class="fa fa-user" aria-hidden="true"></i>4</div>
@@ -105,8 +105,8 @@
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
+                        <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    </a>
                 </div>
             </div>
 
@@ -123,7 +123,7 @@
                     <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a class="social" href="https://www.linkedin.com/in/karel-decoene-395478187/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     padding: 8px 16px 8px 8px;
+    width: calc(100% - 3px);
 
     &-container {
         align-items: center;

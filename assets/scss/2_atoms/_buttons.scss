@@ -1,5 +1,6 @@
 .button {
     align-items: baseline;
+    border: none;
     border-radius: $border-radius-medium;
     display: inline-flex;
     font-family: $title-font;
@@ -34,6 +35,7 @@
     }
 
     &-tertiary {
+        background: none;
         border-radius: 0;
         padding: 0;
     }

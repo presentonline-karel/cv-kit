@@ -1,0 +1,54 @@
+.footer {
+    background-color: $neutrals-200;
+    padding: 48px 16px 24px;
+
+    &__content {
+        border-bottom: 1px solid $neutrals-400;
+        margin-bottom: 16px;
+        padding-bottom: 24px;
+
+        &__brand {
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+
+            .logo-container {
+                align-items: center;
+                display: flex;
+                height: 40px;
+                width: 160px;
+    
+                .logo {
+                    height: auto;
+                    width: inherit;
+                }
+            }
+
+            .arrow-up {
+                height: 40px;
+                text-align: right;
+                width: 40px;
+
+                i {
+                    color: $primary-600;
+                    font-size: 20px;
+                    height: 20px;
+                    line-height: 20px;
+                    position: relative;
+                    top: 10px;
+                    width: 20px;
+                }
+            }
+        }
+
+        &__signOff {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__copyright {
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+    }
+}

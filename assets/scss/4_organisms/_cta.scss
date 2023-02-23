@@ -1,14 +1,14 @@
 .cta {
     &__content {
-        padding: 48px 16px;
         background-color: $primary-100;
+        padding: 48px 16px;
 
         h2 {
             margin-bottom: 24px;
 
             span {
-                display: inline-block;
                 color: $primary-600;
+                display: inline-block;
             }
         }
 
@@ -17,8 +17,8 @@
             gap: 8px;
 
             .button {
-                width: 100%;
                 display: block;
+                width: 100%;
             }
         }
     }

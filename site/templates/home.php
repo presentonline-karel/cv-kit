@@ -37,7 +37,7 @@
 
         <!-- Teams section -->
         <section class="teams-section">
-            <div class="team">
+            <div id="management" class="team">
                 <h4>Management</h4>
 
                 <div class="employees flex-column">
@@ -88,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="team">
+            <div id="frontendDevelopers" class="team">
                 <h4>Frontend developers</h4>
 
                 <div class="employees flex-column">
@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="team">
+            <div id="backendDevelopers" class="team">
                 <h4>Backend developers</h4>
 
                 <div class="employees flex-column">
