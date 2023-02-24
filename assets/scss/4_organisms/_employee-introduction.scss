@@ -1,0 +1,87 @@
+.employee-introduction {
+    background-color: $neutrals-100;
+    padding: 0 16px 48px;
+
+    h3 {
+        margin-bottom: 8px;
+    }
+
+    .intro {
+        margin-bottom: 16px;
+    }
+
+    .socials {
+        margin-bottom: 24px;
+    }
+
+    .contact-info {
+        margin-bottom: 32px;
+
+        &__item {
+            align-items: baseline;
+            color: $neutrals-900;
+            display: flex;
+            font-family: $paragraph-font;
+            font-size: 16px;
+            font-weight: 400;
+            gap: 8px;
+            line-height: 26px;
+            letter-spacing: -0.01em;
+
+            i {
+                color: $primary-600;
+                font-size: 14px;
+                width: 14px;
+            }
+        }
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+
+        .stat {
+            background-color: $primary-100;
+            border: $border-card-thin;
+            border-radius: $border-radius-medium;
+            height: 64px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+
+            .number-container .number, .number-label {
+                font-family: $title-font;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.01em;
+            }
+
+            .number-container {
+                background-color: $primary-600;
+                height: 72px;
+                left: -38%;
+                position: relative;
+                transform: rotateZ(55deg);
+                text-align: center;
+                width: 168px;
+
+                .number {
+                    color: $neutrals-100;
+                    font-weight: 600;
+                    left: 4px;
+                    position: relative;
+                    top: 8px;
+                }
+            }
+
+            .number-label {
+                color: $neutrals-1000;
+                font-weight: 500;
+                left: 80px;
+                position: absolute;
+                top: 14px;
+            }
+        }
+    }
+}

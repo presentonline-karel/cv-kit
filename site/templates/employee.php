@@ -11,14 +11,14 @@
     <main>
 
         <!-- Employee header -->
-        <section class="header">
+        <section class="employee-header">
             <div class="breadcrumbs">
-                <span>Backend developers</span>
+                <span class="breadcrumb">Backend developers</span>
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                <span>Cedric Lenders</span>
+                <span class="breadcrumb active">Cedric Lenders</span>
             </div>
 
-            <div class="employee__header__person">
+            <div class="employee-header__person flex">
                 <img class="profile-picture" src="/assets/img/karel.webp" alt="Karel" />
 
                 <div class="person">
@@ -30,9 +30,10 @@
 
 
 
-        <section class="introduction">
+        <!-- Employee introduction -->
+        <section class="employee-introduction">
             <h3>Senior Back-end dev with DevOps skillset</h3>
-            <p class="introduction">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
+            <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
             <div class="socials">
                 <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -48,33 +49,81 @@
 
             <div class="stats">
                 <div class="stat">
-                    <div class="number">100+</div>
-                    <div class="numberLabel">Projects</div>
+                    <div class="number-container"><span class="number">100+</span></div>
+                    <div class="number-label">Projects</div>
                 </div>
 
                 <div class="stat">
-                    <div class="number">10+</div>
-                    <div class="numberLabel">YoE</div>
+                    <div class="number-container"><span class="number">10+</span></div>
+                    <div class="number-label">YoE</div>
                 </div>
 
                 <div class="stat">
-                    <div class="number">8+</div>
-                    <div class="numberLabel">Item</div>
+                    <div class="number-container"><span class="number">8+</span></div>
+                    <div class="number-label">Promos</div>
                 </div>
 
                 <div class="stat">
-                    <div class="number">200+</div>
-                    <div class="numberLabel">Item</div>
+                    <div class="number-container"><span class="number">200+</span></div>
+                    <div class="number-label">Item</div>
                 </div>
             </div>
         </section>
 
 
 
-        <section class="languages">
+        <section class="employee-languages">
             <h4>Languages</h4>
 
-            NL, EN, FR
+            <div class="languages">
+                <div class="circular-progress-bar 75">
+                    <div class="text-content">
+                        <span class="lang">NL</span>
+                        <span class="percentage">75%</span>
+                    </div>
+
+                    <span class="border border-r"></span>
+                    <span class="border border-l"></span>
+                </div>
+
+                <div class="circular-progress-bar hundred">
+                    <div class="text-content">
+                        <span class="lang">EN</span>
+                        <span class="percentage">100%</span>
+                    </div>
+
+                    <span class="border border-r"></span>
+                    <span class="border border-l"></span>
+                </div>
+
+                <div class="circular-progress-bar ninety">
+                    <div class="text-content">
+                        <span class="lang">FR</span>
+                        <span class="percentage">90%</span>
+                    </div>
+
+                    <span class="border border-r"></span>
+                    <span class="border border-l"></span>
+                </div>
+            </div>
+
+            <!-- <div class="radial-01 radial-whole">
+                <span class="radial-01-number">
+                    100<span class="radial-01-syb"><sup>%</sup></span>
+                </span>
+                <span class="radial-01-border-r"></span>
+                <span class="radial-01-border-l"></span>
+                <p>Title Goes Here</p>
+            </div>
+
+            <div class="radial-01 radial-ninty">
+                <span class="radial-01-number">
+                    90<span class="radial-01-syb"><sup>%</sup></span>
+                </span>
+                <span class="radial-01-border-r"></span>
+                <span class="radial-01-border-l"></span>
+                <p>Title Goes Here</p>
+            </div> -->
         </section>
 
 
