@@ -6,6 +6,7 @@
 @import "./1_fundaments/flexbox";
 @import "./1_fundaments/others";
 @import "./1_fundaments/reset";
+@import "./1_fundaments/helper-functions";
 
 
 
@@ -25,6 +26,9 @@
 @import "./3_molecules/socials";
 @import "./3_molecules/team";
 @import "./3_molecules/breadcrumbs";
+@import "./3_molecules/progress-bar-circle";
+@import "./3_molecules/progress-bar-flat";
+@import "./3_molecules/card";
 
 
 
@@ -37,3 +41,5 @@
 @import "./4_organisms/employee-header";
 @import "./4_organisms/employee-introduction";
 @import "./4_organisms/employee-languages";
+@import "./4_organisms/employee-skills";
+@import "./4_organisms/employee-card-section";

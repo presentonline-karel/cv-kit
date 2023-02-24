@@ -8,6 +8,10 @@
         background: $primary-100;
         color: $primary-500;
     }
+
+    &:before, &:after {
+        box-sizing: border-box;
+    }
 }
 
 body,

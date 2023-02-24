@@ -76,54 +76,42 @@
             <h4>Languages</h4>
 
             <div class="languages">
-                <div class="circular-progress-bar 75">
-                    <div class="text-content">
-                        <span class="lang">NL</span>
-                        <span class="percentage">75%</span>
-                    </div>
+                <div class="prog-bar-wrapper progress-30">
+                    <span class="prog-bar__content">
+                        <span class="lang-code">NL</span>
+                        <span class="percentage">30%</span>
+                    </span>
 
-                    <span class="border border-r"></span>
-                    <span class="border border-l"></span>
+                    <div class="prog-bar">
+                        <div class="left-side half-circle"></div>
+                        <div class="right-side half-circle"></div>
+                    </div>
                 </div>
 
-                <div class="circular-progress-bar hundred">
-                    <div class="text-content">
-                        <span class="lang">EN</span>
-                        <span class="percentage">100%</span>
-                    </div>
+                <div class="prog-bar-wrapper progress-60">
+                    <span class="prog-bar__content">
+                        <span class="lang-code">EN</span>
+                        <span class="percentage">60%</span>
+                    </span>
 
-                    <span class="border border-r"></span>
-                    <span class="border border-l"></span>
+                    <div class="prog-bar">
+                        <div class="left-side half-circle"></div>
+                        <div class="right-side half-circle"></div>
+                    </div>
                 </div>
 
-                <div class="circular-progress-bar ninety">
-                    <div class="text-content">
-                        <span class="lang">FR</span>
+                <div class="prog-bar-wrapper progress-90">
+                    <span class="prog-bar__content">
+                        <span class="lang-code">FR</span>
                         <span class="percentage">90%</span>
-                    </div>
+                    </span>
 
-                    <span class="border border-r"></span>
-                    <span class="border border-l"></span>
+                    <div class="prog-bar">
+                        <div class="left-side half-circle"></div>
+                        <div class="right-side half-circle"></div>
+                    </div>
                 </div>
             </div>
-
-            <!-- <div class="radial-01 radial-whole">
-                <span class="radial-01-number">
-                    100<span class="radial-01-syb"><sup>%</sup></span>
-                </span>
-                <span class="radial-01-border-r"></span>
-                <span class="radial-01-border-l"></span>
-                <p>Title Goes Here</p>
-            </div>
-
-            <div class="radial-01 radial-ninty">
-                <span class="radial-01-number">
-                    90<span class="radial-01-syb"><sup>%</sup></span>
-                </span>
-                <span class="radial-01-border-r"></span>
-                <span class="radial-01-border-l"></span>
-                <p>Title Goes Here</p>
-            </div> -->
         </section>
 
 
@@ -133,113 +121,118 @@
 
             <div class="skills">
                 <div class="skill">
-                    <div class="skill__title">HTML</div>
-                    <div class="skill__percentage">95%</div>
+                    <div class="skill__content">
+                        <div class="skill__content__title">HTML</div>
+                        <div class="skill__content__percentage">95%</div>
+                    </div>
+
+                    <div class="skill__full-bar bar"></div>
+                    <div class="skill__percentage-bar bar" style="width: 95%"></div>
                 </div>
 
                 <div class="skill">
-                    <div class="skill__title">CSS</div>
-                    <div class="skill__percentage">95%</div>
+                    <div class="skill__content">
+                        <div class="skill__content__title">CSS</div>
+                        <div class="skill__content__percentage">90%</div>
+                    </div>
+
+                    <div class="skill__full-bar bar"></div>
+                    <div class="skill__percentage-bar bar" style="width: 90%"></div>
                 </div>
 
                 <div class="skill">
-                    <div class="skill__title">JavaScript</div>
-                    <div class="skill__percentage">80%</div>
+                    <div class="skill__content">
+                        <div class="skill__content__title">PHP</div>
+                        <div class="skill__content__percentage">80%</div>
+                    </div>
+
+                    <div class="skill__full-bar bar"></div>
+                    <div class="skill__percentage-bar bar" style="width: 80%"></div>
                 </div>
 
                 <div class="skill">
-                    <div class="skill__title">React</div>
-                    <div class="skill__percentage">40%</div>
-                </div>
+                    <div class="skill__content">
+                        <div class="skill__content__title">React</div>
+                        <div class="skill__content__percentage">70%</div>
+                    </div>
 
-                <div class="skill">
-                    <div class="skill__title">PHP</div>
-                    <div class="skill__percentage">75%</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill__title">Laravel</div>
-                    <div class="skill__percentage">50%</div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill__title">KirbyCMS</div>
-                    <div class="skill__percentage">80%</div>
+                    <div class="skill__full-bar bar"></div>
+                    <div class="skill__percentage-bar bar" style="width: 70%"></div>
                 </div>
             </div>
         </section>
 
 
 
-        <section class="projects-section">
-            <div class="projects-section__header">
+        <section class="projects-section card-section">
+            <div class="projects-section__header card-section__header">
                 <h4>Projects</h4>
 
                 <div class="arrows">
-                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <i class="arrow fa fa-arrow-left" aria-hidden="true"></i>
+                    <i class="arrow fa fa-arrow-right" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <div class="projects">
-                <div class="project">
-                    <h5>Toyota/Lexus insurance form</h5>
+            <div class="projects cards">
+                <div class="project card">
+                    <h4>Toyota/Lexus insurance form</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
-                    <div class="tags">
+                    <div class="tags flex">
                         <div class="tag tag-m">HTML</div>
                         <div class="tag tag-m">CSS</div>
                         <div class="tag tag-m">JavaScript</div>
                     </div>
 
-                    <a class="project__url" href="#">lexus-insurance.be</a>
+                    <a class="project__url card__link" href="#">lexus-insurance.be</a>
                 </div>
 
-                <div class="project">
-                    <h5>Toyota/Lexus insurance form</h5>
+                <div class="project card">
+                    <h4>Toyota/Lexus insurance form</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
-                    <div class="tags">
+                    <div class="tags flex">
                         <div class="tag tag-m">HTML</div>
                         <div class="tag tag-m">CSS</div>
                         <div class="tag tag-m">JavaScript</div>
                     </div>
 
-                    <a class="project__url" href="#">lexus-insurance.be</a>
+                    <a class="project__url card__link" href="#">lexus-insurance.be</a>
                 </div>
 
-                <div class="project">
-                    <h5>Toyota/Lexus insurance form</h5>
+                <div class="project card">
+                    <h4>Toyota/Lexus insurance form</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
-                    <div class="tags">
+                    <div class="tags flex">
                         <div class="tag tag-m">HTML</div>
                         <div class="tag tag-m">CSS</div>
                         <div class="tag tag-m">JavaScript</div>
                     </div>
 
-                    <a class="project__url" href="#">lexus-insurance.be</a>
+                    <a class="project__url card__link" href="#">lexus-insurance.be</a>
                 </div>
             </div>
         </section>
 
 
 
-        <section class="experience-section">
-            <div class="projects-section__header">
-                <h4>WOrk experience</h4>
+        <section class="experience-section card-section">
+            <div class="projects-section__header card-section__header">
+                <h4>Work experience</h4>
 
                 <div class="arrows">
-                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <i class="arrow fa fa-arrow-left" aria-hidden="true"></i>
+                    <i class="arrow fa fa-arrow-right" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <div class="work-experience">
-                <div class="experience">
+            <div class="work-experience cards">
+                <div class="experience card">
                     <div class="experience__header">
-                        <h5>Creative technologist <span>@ Present Online</span></h5>
-                        <div class="experience__header__period">May 2018 - Present</div>
+                        <h4>Creative technologist <span>@ Present Online</span></h4>
+                        <div class="card__period">May 2018 - Present</div>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
@@ -251,10 +244,10 @@
                     </div>
                 </div>
 
-                <div class="experience">
+                <div class="experience card">
                     <div class="experience__header">
-                        <h5>Creative technologist <span>@ Present Online</span></h5>
-                        <div class="experience__header__period">May 2018 - Present</div>
+                        <h4>Creative technologist <span>@ Present Online</span></h4>
+                        <div class="card__period">May 2018 - Present</div>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
@@ -266,10 +259,10 @@
                     </div>
                 </div>
 
-                <div class="experience">
+                <div class="experience card">
                     <div class="experience__header">
-                        <h5>Creative technologist <span>@ Present Online</span></h5>
-                        <div class="experience__header__period">May 2018 - Present</div>
+                        <h4>Creative technologist <span>@ Present Online</span></h4>
+                        <div class="card__period">May 2018 - Present</div>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
@@ -285,21 +278,21 @@
 
 
 
-        <section class="education-section">
-            <div class="education-section__header">
+        <section class="education-section card-section">
+            <div class="education-section__header card-section__header">
                 <h4>Education</h4>
 
                 <div class="arrows">
-                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    <i class="arrow fa fa-arrow-left" aria-hidden="true"></i>
+                    <i class="arrow fa fa-arrow-right" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <div class="education__items">
-                <div class="education-item">
+            <div class="education__items cards">
+                <div class="education-item card">
                     <div class="education-item__header">
-                        <h5>Creative technologist <span>@ Present Online</span></h5>
-                        <div class="education-item__period">May 2018 - Present</div>
+                        <h4>Creative technologist <span>@ Present Online</span></h4>
+                        <div class="card__period">May 2018 - Present</div>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
@@ -310,13 +303,13 @@
                         <div class="tag tag-m">JavaScript</div>
                     </div>
 
-                    <a class="education-item__pdf" href="#">Download PDF</a>
+                    <a class="education-item__pdf card__link" href="#">Download PDF</a>
                 </div>
 
-                <div class="education-item">
+                <div class="education-item card">
                     <div class="education-item__header">
-                        <h5>Creative technologist <span>@ Present Online</span></h5>
-                        <div class="education-item__period">May 2018 - Present</div>
+                        <h4>Creative technologist <span>@ Present Online</span></h4>
+                        <div class="card__period">May 2018 - Present</div>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
@@ -327,13 +320,13 @@
                         <div class="tag tag-m">JavaScript</div>
                     </div>
 
-                    <a class="education-item__pdf" href="#">Download PDF</a>
+                    <a class="education-item__pdf card__link" href="#">Download PDF</a>
                 </div>
 
-                <div class="education-item">
+                <div class="education-item card">
                     <div class="education-item__header">
-                        <h5>Creative technologist <span>@ Present Online</span></h5>
-                        <div class="education-item__period">May 2018 - Present</div>
+                        <h4>Creative technologist <span>@ Present Online</span></h4>
+                        <div class="card__period">May 2018 - Present</div>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
@@ -344,7 +337,7 @@
                         <div class="tag tag-m">JavaScript</div>
                     </div>
 
-                    <a class="education-item__pdf" href="#">Download PDF</a>
+                    <a class="education-item__pdf card__link" href="#">Download PDF</a>
                 </div>
             </div>
         </section>

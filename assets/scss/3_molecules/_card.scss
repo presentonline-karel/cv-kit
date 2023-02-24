@@ -1,0 +1,58 @@
+.card {
+    border: $border-card-thin;
+    border-radius: $border-radius-medium;
+    padding: 24px;
+
+    &:has(.card__period) {
+        h4 {
+            margin-bottom: 4px;
+        }
+    }
+
+    h4 {
+        margin-bottom: 8px;
+
+        span {
+            color: $primary-400;
+        }
+    }
+
+    &__period {
+        color: $neutrals-900;
+        font-family: $title-font;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: -0.01em;
+        margin-bottom: 12px;
+    }
+
+    p {
+        margin-bottom: 8px;
+    }
+
+    .tags {
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        border-bottom: 2px solid $primary-300;
+        color: $primary-500;
+        font-size: 14px;
+        font-family: $title-font;
+        letter-spacing: -0.01em;
+        line-height: 14px;
+        padding-bottom: 2px;
+    }
+
+    &.project {
+        background-color: $neutrals-100;
+    }
+
+    &.experience {
+        background-color: $neutrals-200;
+    }
+
+    &.education-item {
+        background-color: $neutrals-100;
+    }
+}

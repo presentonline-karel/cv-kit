@@ -1,0 +1,5 @@
+// Width & height
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
+}

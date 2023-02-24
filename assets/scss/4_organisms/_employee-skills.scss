@@ -1,0 +1,14 @@
+.skills-section {
+    background-color: $neutrals-100;
+    padding: 48px 16px;
+
+    h4 {
+        margin-bottom: 24px;
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}

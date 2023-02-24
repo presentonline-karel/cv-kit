@@ -1,0 +1,41 @@
+.skill {
+    position: relative;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        &__title, &__percentage {
+            font-family: $title-font;
+            font-size: 14px;
+            line-height: 14px;
+            letter-spacing: -0.01em;
+        }
+
+        &__title {
+            color: $neutrals-1000;
+        }
+
+        &__percentage {
+            color: $neutrals-800;
+        }
+    }
+
+    .bar {
+        bottom: 0;
+        height: 3px;
+        position: absolute;
+    }
+
+    &__full-bar {
+        background-color: $primary-100;
+        width: 100%;
+        z-index: 0;
+    }
+
+    &__percentage-bar {
+        background-color: $primary-500;
+        z-index: 1;
+    }
+}
