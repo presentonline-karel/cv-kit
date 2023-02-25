@@ -11,11 +11,10 @@
         gap: 16px;
 
         .profile-picture {
+            @include size(80px, 80px);
             border-radius: $border-radius-medium;
-            border: 0.4px solid $primary-100;
-            height: 80px;
+            border: $border-img;
             object-fit: cover;
-            width: 80px;
         }
 
         .person {
@@ -29,6 +28,34 @@
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 14px;
+            }
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .employee-header {
+        padding: 16px 48px 32px;
+
+        &__person {
+            gap: 24px;
+
+            .profile-picture {
+                @include size(156px, 156px);
+            }
+
+            .person {
+                h4 {
+                    font-size: 40px;
+                    line-height: 44px;
+                    margin-bottom: 12px;
+                }
+    
+                .function {
+                    font-size: 20px;
+                    line-height: 20px;
+                }
             }
         }
     }

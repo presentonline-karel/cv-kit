@@ -53,8 +53,8 @@
 
                     <a class="nav-team clickable-nav-item" href="#frontendDevelopers">
                         <div class="nav-team-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
+                            <div class="icon-container">
+                                <i class="fa fa-users" aria-hidden="true"></i>
                             </div>
 
                             <div class="content">

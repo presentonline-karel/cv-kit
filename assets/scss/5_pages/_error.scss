@@ -1,0 +1,33 @@
+.container-error {
+    position: relative;
+
+    .error-content {
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        top: 50%;
+        width: calc(100vw - 80px);
+
+        .sad-face {
+            margin-bottom: 64px;
+        }
+
+        h1 {
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .container-error {
+        .error-content {
+            width: calc(100vw - 96px);
+        }
+    }
+}

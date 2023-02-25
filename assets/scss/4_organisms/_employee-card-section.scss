@@ -1,5 +1,6 @@
 .card-section {
-    padding: 48px 16px;
+    position: relative;
+    padding: 48px 16px !important;
 
     &__header {
         align-items: center;
@@ -11,7 +12,7 @@
             display: flex;
             gap: 20px;
 
-            .arrow {
+            .nav-arrow {
                 color: $primary-600;
                 font-size: 20px;
                 line-height: 20px;
@@ -19,19 +20,18 @@
         }
     }
 
-    // Replace by Swiper
-    .cards {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 8px;
-        overflow: auto;
-
-        .card {
-            min-width: calc(100vw - 32px);
-        }
-    }
-
     &.projects-section, &.education-section {
         background-color: $neutrals-200;
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .card-section {
+        padding: 64px 48px !important;
+
+        &__header {
+            margin-bottom: 40px;
+        }
     }
 }

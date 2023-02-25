@@ -40,7 +40,7 @@
             <div id="management" class="team">
                 <h4>Management</h4>
 
-                <div class="employees flex-column">
+                <div class="employees">
                     <div class="employee">
                         <div class="employee-container">
                             <div class="employee-picture-container">
@@ -91,7 +91,7 @@
             <div id="frontendDevelopers" class="team">
                 <h4>Frontend developers</h4>
 
-                <div class="employees flex-column">
+                <div class="employees">
                     <div class="employee">
                         <div class="employee-container">
                             <div class="employee-picture-container">
@@ -142,7 +142,7 @@
             <div id="backendDevelopers" class="team">
                 <h4>Backend developers</h4>
 
-                <div class="employees flex-column">
+                <div class="employees">
                     <div class="employee">
                         <div class="employee-container">
                             <div class="employee-picture-container">

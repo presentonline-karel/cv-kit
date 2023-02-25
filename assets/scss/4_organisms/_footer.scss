@@ -13,10 +13,9 @@
             margin-bottom: 16px;
 
             .logo-container {
+                @include size(160px, 40px);
                 align-items: center;
                 display: flex;
-                height: 40px;
-                width: 160px;
 
                 .logo {
                     height: auto;
@@ -25,18 +24,16 @@
             }
 
             .arrow-up {
-                height: 40px;
+                @include size(40px, 40px);
                 text-align: right;
-                width: 40px;
 
                 i {
+                    @include size(20px, 20px);
                     color: $primary-600;
                     font-size: 20px;
-                    height: 20px;
                     line-height: 20px;
                     position: relative;
                     top: 10px;
-                    width: 20px;
                 }
             }
         }
@@ -58,5 +55,16 @@
         font-size: 14px;
         line-height: 14px;
         text-align: center;
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .footer {
+        padding: 48px 48px 24px;
+
+        &__content__signOff {
+            max-width: 414px;
+        }
     }
 }

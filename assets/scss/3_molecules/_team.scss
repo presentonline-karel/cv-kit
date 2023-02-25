@@ -10,6 +10,26 @@
     }
 
     .employees {
+        display: flex;
+        flex-direction: column;
         gap: 8px;
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .team {
+        margin-bottom: 48px;
+    
+        h4 {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 24px;
+        }
+
+        .employees {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }

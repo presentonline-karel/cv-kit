@@ -1,5 +1,20 @@
+// Visibility
 .desktop {
     display: none;
+}
+
+// Layout
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+
+    div:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* DESKTOP - 1280PX */
@@ -10,5 +25,9 @@
 
     .desktop {
         display: block;
+    }
+
+    .flex-desktop {
+        display: flex;
     }
 }

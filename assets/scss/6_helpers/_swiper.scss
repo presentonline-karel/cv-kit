@@ -1,0 +1,44 @@
+.swiper {
+    &-wrapper {
+        margin-bottom: 16px;
+    }
+
+    &-pagination {
+        bottom: 0 !important;
+        left: 0 !important;
+        margin: 0 auto;
+        position: relative !important;
+        transform: initial !important;
+
+        &-bullet {
+            @include size(7px, 7px);
+            background: $primary-200 !important;
+            border-radius: $border-radius-small !important;
+            margin: 0 2px !important;
+            opacity: 1 !important;
+            transition: all $transition-time-short !important;
+
+            &-active {
+                background: $primary-600 !important;
+                width: 21px !important;
+            }
+        }
+    }
+
+    .arrows {
+        display: flex !important;
+        position: initial !important;
+
+        .nav-arrow {
+            cursor: pointer !important;
+            height: auto;
+            margin-top: 0;
+            position: initial !important;
+            pointer-events: all;
+
+            &:after {
+                content: none;
+            }
+        }
+    }
+}

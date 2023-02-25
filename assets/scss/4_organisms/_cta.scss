@@ -23,3 +23,19 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .cta {
+        &__content {
+            padding: 48px;
+
+            .buttons {
+                .button {
+                    display: inline-block;
+                    width: auto;
+                }
+            }
+        }
+    }
+}

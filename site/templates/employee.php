@@ -72,8 +72,9 @@
 
 
 
+        <!-- Employee languages -->
         <section class="employee-languages">
-            <h4>Languages</h4>
+            <h3>Languages</h3>
 
             <div class="languages">
                 <div class="prog-bar-wrapper progress-30">
@@ -116,8 +117,9 @@
 
 
 
+        <!-- Employee skills -->
         <section class="skills-section">
-            <h4>Skills</h4>
+            <h3>Skills</h3>
 
             <div class="skills">
                 <div class="skill">
@@ -164,19 +166,33 @@
 
 
 
-        <section class="projects-section card-section">
+        <!-- Employee projects -->
+        <section class="projects-section card-section swiper">
             <div class="projects-section__header card-section__header">
-                <h4>Projects</h4>
+                <h3>Projects</h3>
 
                 <div class="arrows">
-                    <i class="arrow fa fa-arrow-left" aria-hidden="true"></i>
-                    <i class="arrow fa fa-arrow-right" aria-hidden="true"></i>
+                    <i class="nav-arrow swiper-nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
+                    <i class="nav-arrow swiper-nav-arrow fa fa-arrow-right swiper-button-next" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <div class="projects cards">
-                <div class="project card">
+            <div class="projects cards swiper-wrapper">
+                <div class="project card swiper-slide">
                     <h4>Toyota/Lexus insurance form</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
+
+                    <div class="tags flex">
+                        <div class="tag tag-m">HTML</div>
+                        <div class="tag tag-m">CSS</div>
+                        <div class="tag tag-m">JavaScript</div>
+                    </div>
+
+                    <a class="project__url card__link" href="#">lexus-insurance.be</a>
+                </div>
+
+                <div class="project card swiper-slide">
+                    <h4>Impact</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
                     <div class="tags flex">
@@ -188,21 +204,8 @@
                     <a class="project__url card__link" href="#">lexus-insurance.be</a>
                 </div>
 
-                <div class="project card">
-                    <h4>Toyota/Lexus insurance form</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
-
-                    <div class="tags flex">
-                        <div class="tag tag-m">HTML</div>
-                        <div class="tag tag-m">CSS</div>
-                        <div class="tag tag-m">JavaScript</div>
-                    </div>
-
-                    <a class="project__url card__link" href="#">lexus-insurance.be</a>
-                </div>
-
-                <div class="project card">
-                    <h4>Toyota/Lexus insurance form</h4>
+                <div class="project card swiper-slide">
+                    <h4>Dignify</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
                     <div class="tags flex">
@@ -214,22 +217,25 @@
                     <a class="project__url card__link" href="#">lexus-insurance.be</a>
                 </div>
             </div>
+
+            <div class="swiper-pagination"></div>
         </section>
 
 
 
-        <section class="experience-section card-section">
+        <!-- Employee experience -->
+        <section class="experience-section card-section swiper">
             <div class="projects-section__header card-section__header">
-                <h4>Work experience</h4>
+                <h3>Work experience</h3>
 
                 <div class="arrows">
-                    <i class="arrow fa fa-arrow-left" aria-hidden="true"></i>
-                    <i class="arrow fa fa-arrow-right" aria-hidden="true"></i>
+                    <i class="arrow nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
+                    <i class="arrow nav-arrow fa fa-arrow-right swiper-button-next" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <div class="work-experience cards">
-                <div class="experience card">
+            <div class="work-experience cards swiper-wrapper">
+                <div class="experience card swiper-slide">
                     <div class="experience__header">
                         <h4>Creative technologist <span>@ Present Online</span></h4>
                         <div class="card__period">May 2018 - Present</div>
@@ -244,7 +250,7 @@
                     </div>
                 </div>
 
-                <div class="experience card">
+                <div class="experience card swiper-slide">
                     <div class="experience__header">
                         <h4>Creative technologist <span>@ Present Online</span></h4>
                         <div class="card__period">May 2018 - Present</div>
@@ -259,7 +265,7 @@
                     </div>
                 </div>
 
-                <div class="experience card">
+                <div class="experience card swiper-slide">
                     <div class="experience__header">
                         <h4>Creative technologist <span>@ Present Online</span></h4>
                         <div class="card__period">May 2018 - Present</div>
@@ -274,22 +280,25 @@
                     </div>
                 </div>
             </div>
+
+            <div class="swiper-pagination"></div>
         </section>
 
 
 
-        <section class="education-section card-section">
+        <!-- Employee education -->
+        <section class="education-section card-section swiper">
             <div class="education-section__header card-section__header">
-                <h4>Education</h4>
+                <h3>Education</h3>
 
                 <div class="arrows">
-                    <i class="arrow fa fa-arrow-left" aria-hidden="true"></i>
-                    <i class="arrow fa fa-arrow-right" aria-hidden="true"></i>
+                    <i class="arrow nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
+                    <i class="arrow nav-arrow fa fa-arrow-right swiper-button-next" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <div class="education__items cards">
-                <div class="education-item card">
+            <div class="education__items cards swiper-wrapper">
+                <div class="education-item card swiper-slide">
                     <div class="education-item__header">
                         <h4>Creative technologist <span>@ Present Online</span></h4>
                         <div class="card__period">May 2018 - Present</div>
@@ -306,7 +315,7 @@
                     <a class="education-item__pdf card__link" href="#">Download PDF</a>
                 </div>
 
-                <div class="education-item card">
+                <div class="education-item card swiper-slide">
                     <div class="education-item__header">
                         <h4>Creative technologist <span>@ Present Online</span></h4>
                         <div class="card__period">May 2018 - Present</div>
@@ -323,7 +332,7 @@
                     <a class="education-item__pdf card__link" href="#">Download PDF</a>
                 </div>
 
-                <div class="education-item card">
+                <div class="education-item card swiper-slide">
                     <div class="education-item__header">
                         <h4>Creative technologist <span>@ Present Online</span></h4>
                         <div class="card__period">May 2018 - Present</div>
@@ -340,6 +349,8 @@
                     <a class="education-item__pdf card__link" href="#">Download PDF</a>
                 </div>
             </div>
+
+            <div class="swiper-pagination"></div>
         </section>
 
 
@@ -351,9 +362,24 @@
 
         <!-- Discover more -->
         <section class="discover-more-section">
-            <h4>Discover more teammembers</h4>
+            <h3>Discover more teammembers</h3>
 
             <div class="more-team-members">
+                <a class="employee" href="#">
+                    <div class="employee-container">
+                        <div class="employee-picture-container">
+                            <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
+                        </div>
+
+                        <div class="content">
+                            <h5>Karel Decoene</h5>
+                            <p class="function">Function</p>
+                        </div>
+                    </div>
+
+                    <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                </a>
+
                 <a class="employee" href="#">
                     <div class="employee-container">
                         <div class="employee-picture-container">
@@ -402,5 +428,9 @@
         </section>
     </main>
 </div>
+
+
+
+<?= js("build/js/swipers/swiper-card-section.js", ["defer" => true]) ?>
 
 <?php snippet("general/footer") ?>

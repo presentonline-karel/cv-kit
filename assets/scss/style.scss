@@ -3,10 +3,10 @@
 @import "./1_fundaments/breakpoints";
 @import "./1_fundaments/borders";
 @import "./1_fundaments/fonts";
-@import "./1_fundaments/flexbox";
 @import "./1_fundaments/others";
 @import "./1_fundaments/reset";
 @import "./1_fundaments/helper-functions";
+@import "./1_fundaments/displays";
 
 
 
@@ -16,6 +16,7 @@
 @import "./2_atoms/paragraphs";
 @import "./2_atoms/tags";
 @import "./2_atoms/titles";
+@import "./2_atoms/containers";
 
 
 
@@ -43,3 +44,14 @@
 @import "./4_organisms/employee-languages";
 @import "./4_organisms/employee-skills";
 @import "./4_organisms/employee-card-section";
+@import "./4_organisms/employee-discover-more";
+
+
+
+/* PAGES */
+@import "./5_pages/error";
+
+
+
+/* HELPERS */
+@import "./6_helpers/swiper";

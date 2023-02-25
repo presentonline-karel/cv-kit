@@ -16,10 +16,9 @@
 
         .icon-container,
         .employee-picture-container {
+            @include size(56px, 56px);
             border-radius: $border-radius-medium;
-            height: 56px;
             overflow: hidden;
-            width: 56px;
         }
 
         .icon-container {
@@ -38,7 +37,7 @@
 
         .employee-picture {
             aspect-ratio: 1/1;
-            border: 0.4px solid $primary-100;
+            border: $border-img;
             height: auto;
             object-fit: cover;
             width: 100%;

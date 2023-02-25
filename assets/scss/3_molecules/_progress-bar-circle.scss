@@ -92,3 +92,32 @@
         @include draw-progress(90);
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .prog-bar-wrapper {
+        @include size(156px, 156px);
+    
+        .prog-bar {
+            clip: rect(0, 156px, 156px, 78px);
+    
+            .half-circle {
+                clip: rect(0, 78px, 156px, 0);
+            }
+
+            &__content {
+                gap: 8px;
+
+                .lang-code {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+    
+                .percentage {
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}

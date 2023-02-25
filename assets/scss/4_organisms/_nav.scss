@@ -1,32 +1,29 @@
 .nav {
     .logo-lang-container {
+        @include size(100%, 72px);
         align-items: center;
         display: flex;
-        height: 72px;
         justify-content: space-between;
         padding: 16px;
         position: relative;
-        width: 100%;
         z-index: 2;
 
         .logo-container {
+            @include size(160px, 40px);
             align-items: center;
             display: flex;
-            height: 40px;
-            width: 160px;
 
             .logo {
-                height: auto;
-                width: inherit;
+                @include size(inherit, auto);
             }
         }
     }
 
     .nav-links {
+        @include size(100%, 100%);
         background-color: $neutrals-100;
         display: flex;
         flex-direction: column;
-        height: 100%;
         justify-content: space-between;
         left: 0;
         overflow: hidden;
@@ -35,7 +32,6 @@
         transform: translateX(-100%);
         transition: transform $transition-time-medium ease-in-out;
         top: 0;
-        width: 100%;
         z-index: 1;
 
         &.nav-active {
@@ -104,6 +100,31 @@
                     .websiteButton {
                         grid-area: websiteButton;
                     }
+                }
+            }
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .nav {
+        .logo-lang-container {
+            @include size(100%, 88px);
+            padding: 24px 48px;
+        }
+
+        .nav-links {
+            @include size(100%, 100%);
+            padding: 88px 48px 24px;
+
+            .company {
+                &__teams {
+                    max-height: 328px;
+                }
+
+                &__contact {
+                    max-width: 414px;
                 }
             }
         }

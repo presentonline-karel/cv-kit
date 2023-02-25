@@ -18,3 +18,11 @@
         text-transform: uppercase;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .languages-container {
+        position: absolute;
+        right: 85px;
+    }
+}

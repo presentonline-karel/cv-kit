@@ -39,3 +39,23 @@
         z-index: 1;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .skill {
+        max-width: 242px;
+        
+        &__content {
+            margin-bottom: 12px;
+    
+            &__title, &__percentage {
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+    
+        .bar {
+            height: 4px;
+        }
+    }
+}

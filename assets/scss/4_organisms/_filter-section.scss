@@ -85,3 +85,14 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .filter-section {
+        padding: 16px 48px 24px;
+
+        h1 {
+            margin-bottom: 24px;
+        }
+    }
+}

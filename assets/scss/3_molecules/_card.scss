@@ -56,3 +56,10 @@
         background-color: $neutrals-100;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .card {
+        padding: 32px;
+    }
+}
