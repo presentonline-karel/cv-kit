@@ -1,14 +1,13 @@
 .button {
+    @include fontSize(16px, 24px);
     align-items: baseline;
     border: none;
     border-radius: $border-radius-medium;
     display: inline-flex;
     font-family: $title-font;
-    font-size: 16px;
     font-weight: 500;
     gap: 8px;
     justify-content: space-between;
-    line-height: 24px;
     letter-spacing: -0.01em;
     padding: 8px 24px;
     position: relative;
@@ -45,5 +44,9 @@
 @media only screen and (min-width: $desktop-xs) {
     .button {
         gap: 12px;
+
+        &-tertiary {
+            gap: 8px;
+        }
     }
 }

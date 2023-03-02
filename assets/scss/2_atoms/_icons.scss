@@ -1,9 +1,8 @@
 // ICONS BUTTONS
 .button {
     i {
+        @include fontSize(12px, 22px);
         bottom: 1px;
-        font-size: 12px;
-        line-height: 22px;
         position: relative;
         transition: all $transition-time-short ease-in-out;
 
@@ -24,13 +23,11 @@
 // ICONS TAGS
 .tag {
     &-s i {
-        font-size: 10px;
-        line-height: 10px;
+        @include fontSize(10px, 10px);
     }
 
     &-m i {
-        font-size: 12px;
-        line-height: 12px;
+        @include fontSize(12px, 12px);
     }
 }
 

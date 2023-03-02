@@ -19,12 +19,15 @@
 }
 
 .prog-bar-wrapper {
-    @include size(80px, 80px);
+    $widthHeight: 80px;
+    $halfWidthHeight: ($widthHeight / 2);
+
+    @include size($widthHeight, $widthHeight);
     position: relative;
 
     .prog-bar {
         @include size(100%, 100%);
-        clip: rect(0, 80px, 80px, 40px);
+        clip: rect(0, $widthHeight, $widthHeight, $halfWidthHeight);
         left: 0;
         position: absolute;
         top: 0;
@@ -33,7 +36,7 @@
             @include size(100%, 100%);
             border: 4px solid $primary-600;
             border-radius: 50%;
-            clip: rect(0, 40px, 80px, 0);
+            clip: rect(0, $halfWidthHeight, $widthHeight, 0);
             left: 0;
             position: absolute;
             top: 0;
@@ -47,10 +50,8 @@
             color: $neutrals-1000;
             cursor: default;
             display: flex;
-            font-size: 16px;
             flex-direction: column;
             justify-content: center;
-            line-height: 24px;
             left: 0;
             position: absolute;
             right: 0;
@@ -65,16 +66,14 @@
             }
 
             .lang-code {
+                @include fontSize(16px, 24px);
                 color: $neutrals-1000;
-                font-size: 16px;
                 font-weight: 500;
-                line-height: 24px;
             }
 
             .percentage {
+                @include fontSize(14px, 14px);
                 color: $neutrals-800;
-                font-size: 14px;
-                line-height: 14px;
             }
         }
     }
@@ -95,27 +94,28 @@
 
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
+    $widthHeight: 156px;
+    $halfWidthHeight: ($widthHeight / 2);
+
     .prog-bar-wrapper {
-        @include size(156px, 156px);
+        @include size($widthHeight, $widthHeight);
     
         .prog-bar {
-            clip: rect(0, 156px, 156px, 78px);
+            clip: rect(0, $widthHeight, $widthHeight, $halfWidthHeight);
     
             .half-circle {
-                clip: rect(0, 78px, 156px, 0);
+                clip: rect(0, $halfWidthHeight, $widthHeight, 0);
             }
 
             &__content {
                 gap: 8px;
 
                 .lang-code {
-                    font-size: 24px;
-                    line-height: 32px;
+                    @include fontSize(24px, 32px);
                 }
     
                 .percentage {
-                    font-size: 16px;
-                    line-height: 16px;
+                    @include fontSize(16px, 16px);
                 }
             }
         }
@@ -124,27 +124,28 @@
 
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
+    $widthHeight: 104px;
+    $halfWidthHeight: ($widthHeight / 2);
+
     .prog-bar-wrapper {
-        @include size(104px, 104px);
+        @include size($widthHeight, $widthHeight);
     
         .prog-bar {
-            clip: rect(0, 104px, 104px, 52px);
+            clip: rect(0, $widthHeight, $widthHeight, $halfWidthHeight);
     
             .half-circle {
-                clip: rect(0, 52px, 104px, 0);
+                clip: rect(0, $halfWidthHeight, $widthHeight, 0);
             }
 
             &__content {
                 gap: 4px;
 
                 .lang-code {
-                    font-size: 20px;
-                    line-height: 28px;
+                    @include fontSize(20px, 28px);
                 }
     
                 .percentage {
-                    font-size: 14px;
-                    line-height: 14px;
+                    @include fontSize(14px, 14px);
                 }
             }
         }

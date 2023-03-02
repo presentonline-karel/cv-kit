@@ -13,9 +13,9 @@
             gap: 20px;
 
             .nav-arrow {
+                @include fontSize(20px, 20px);
                 color: $primary-600;
-                font-size: 20px;
-                line-height: 20px;
+                transition: all $transition-time-short ease-in-out !important;
             }
         }
     }
@@ -32,6 +32,29 @@
 
         &__header {
             margin-bottom: 40px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .card-section {
+        padding: 64px !important;
+
+        &__header {
+            margin-bottom: 40px;
+
+            h3 {
+                @include fontSize(32px, 36px);
+            }
+
+            .arrows {
+                gap: 32px;
+    
+                .nav-arrow {
+                    @include fontSize(24px, 32px);
+                }
+            }
         }
     }
 }

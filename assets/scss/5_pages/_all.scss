@@ -1,0 +1,10 @@
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .container {
+        main {
+            width: calc(100% - 382px);
+            margin-left: 382px;
+            margin-right: 0;
+        }
+    }
+}

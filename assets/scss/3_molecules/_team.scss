@@ -22,14 +22,75 @@
         margin-bottom: 48px;
     
         h4 {
-            font-size: 24px;
-            line-height: 32px;
+            @include fontSize(24px, 32px);
             margin-bottom: 24px;
         }
 
         .employees {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .team {
+        margin-bottom: 0;
+        padding: 48px 64px;
+
+        &:nth-child(even) {
+            background-color: $neutrals-200;
+
+            .employee {
+                background-color: $neutrals-100;
+            }
+        }
+
+        h4 {
+            @include fontSize(32px, 36px);
+            margin-bottom: 32px;
+        }
+
+        .employees {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+    }
+}
+
+/* DESKTOP HD */
+@media only screen and (min-width: $desktop-hd) {
+    .team {
+        .employees {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+/* DESKTOP QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .team {
+        .employees {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}
+
+/* DESKTOP WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .team {
+        .employees {
+            grid-template-columns: repeat(8, 1fr);
+        }
+    }
+}
+
+/* DESKTOP 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .team {
+        .employees {
+            grid-template-columns: repeat(9, 1fr);
         }
     }
 }

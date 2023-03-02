@@ -48,12 +48,14 @@
                             </div>
 
                             <div class="content">
-                                <h5>Karel Decoene</h5>
+                                <h5>Matthias Van Vlerken</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="employee">
@@ -65,10 +67,12 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="employee">
@@ -80,10 +84,46 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="employee">
+                        <div class="employee-container">
+                            <div class="employee-picture-container">
+                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
+                            </div>
+
+                            <div class="content">
+                                <h5>Karel Decoene</h5>
+                                <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="employee">
+                        <div class="employee-container">
+                            <div class="employee-picture-container">
+                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
+                            </div>
+
+                            <div class="content">
+                                <h5>Karel Decoene</h5>
+                                <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -101,10 +141,12 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="employee">
@@ -116,10 +158,12 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="employee">
@@ -131,10 +175,12 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -152,10 +198,12 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="employee">
@@ -167,10 +215,12 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
 
                     <div class="employee">
@@ -182,10 +232,12 @@
                             <div class="content">
                                 <h5>Karel Decoene</h5>
                                 <p class="function">Function</p>
+
+                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
 
-                        <a class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

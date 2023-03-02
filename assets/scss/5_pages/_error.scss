@@ -31,3 +31,19 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .container-error {
+        .error-content {
+            width: calc(100vw - 382px);
+            transform: translate(0, -50%);
+            top: 50%;
+            left: 382px;
+
+            h1 {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

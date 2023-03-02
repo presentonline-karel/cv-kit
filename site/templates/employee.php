@@ -8,7 +8,7 @@
 
 
 
-    <main>
+    <main class="main-employee">
 
         <!-- Employee header -->
         <section class="employee-header">
@@ -19,11 +19,18 @@
             </div>
 
             <div class="employee-header__person flex">
-                <img class="profile-picture" src="/assets/img/karel.webp" alt="Karel" />
+                <div class="flex">
+                    <img class="profile-picture" src="/assets/img/karel.webp" alt="Karel" />
 
-                <div class="person">
-                    <h4>Cedric Lenders</h4>
-                    <p class="function">Backend developer</p>
+                    <div class="person">
+                        <h4>Matthias van Vlerken</h4>
+                        <p class="function">Backend developer</p>
+                    </div>
+                </div>
+
+                <div class="contact-tags tags flex">
+                    <div class="tag tag-l"><i class="fa fa-phone icon-big" aria-hidden="true"></i>0476 28 09 02</div>
+                    <div class="tag tag-l"><i class="fa fa-envelope icon-big" aria-hidden="true"></i>info@presentonline.be</div>
                 </div>
             </div>
         </section>
@@ -371,7 +378,7 @@
             <h3>Discover more teammembers</h3>
 
             <div class="more-team-members">
-                <a class="employee" href="#">
+                <div class="employee">
                     <div class="employee-container">
                         <div class="employee-picture-container">
                             <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
@@ -380,13 +387,15 @@
                         <div class="content">
                             <h5>Karel Decoene</h5>
                             <p class="function">Function</p>
+
+                            <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
-                    <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                </a>
+                    <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
 
-                <a class="employee" href="#">
+                <div class="employee">
                     <div class="employee-container">
                         <div class="employee-picture-container">
                             <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
@@ -395,13 +404,15 @@
                         <div class="content">
                             <h5>Karel Decoene</h5>
                             <p class="function">Function</p>
+
+                            <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
-                    <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                </a>
+                    <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
 
-                <a class="employee" href="#">
+                <div class="employee">
                     <div class="employee-container">
                         <div class="employee-picture-container">
                             <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
@@ -410,13 +421,15 @@
                         <div class="content">
                             <h5>Karel Decoene</h5>
                             <p class="function">Function</p>
+
+                            <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
-                    <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                </a>
+                    <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
 
-                <a class="employee" href="#">
+                <div class="employee">
                     <div class="employee-container">
                         <div class="employee-picture-container">
                             <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
@@ -425,11 +438,13 @@
                         <div class="content">
                             <h5>Karel Decoene</h5>
                             <p class="function">Function</p>
+
+                            <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
-                    <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                </a>
+                    <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
             </div>
         </section>
     </main>

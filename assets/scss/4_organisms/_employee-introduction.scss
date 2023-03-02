@@ -18,14 +18,13 @@
         margin-bottom: 32px;
 
         &__item {
+            @include fontSize(16px, 26px);
             align-items: baseline;
             color: $neutrals-900;
             display: flex;
             font-family: $paragraph-font;
-            font-size: 16px;
             font-weight: 400;
             gap: 8px;
-            line-height: 26px;
             letter-spacing: -0.01em;
 
             i {
@@ -52,9 +51,8 @@
 
             .number-container .number,
             .number-label {
+                @include fontSize(20px, 28px);
                 font-family: $title-font;
-                font-size: 20px;
-                line-height: 28px;
                 letter-spacing: -0.01em;
             }
 
@@ -93,8 +91,7 @@
         padding: 0 48px 64px;
 
         h3 {
-            font-size: 24px;
-            line-height: 32px;
+            @include fontSize(24px, 32px);
         }
 
         .stats .stat .number-container {
@@ -114,10 +111,76 @@
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+
+            .stat .number-container {
+                left: -28%;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .employee-introduction {
+        .stats .stat .number-container {
+            left: -32%;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .employee-introduction {
+        padding: 0 64px 64px;
+
+        h3 {
+            @include fontSize(48px, 52px);
+            margin-bottom: 16px;
         }
 
-        .stats .stat .number-container {
-            left: -28%;
+        .socials {
+            margin-bottom: 48px;
+
+            .social {
+                @include size(48px, 48px);
+    
+                i {
+                    @include fontSize(24px, 24px);
+                    top: 12px;
+                }
+            }
+        }
+
+        .contact-info {
+            display: none;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            .stat {
+                height: 80px;
+    
+                .number-container .number,
+                .number-label {
+                    @include fontSize(24px, 32px);
+                }
+    
+                .number-container {
+                    height: 80px;
+                    left: -28%;
+
+                    .number {
+                        left: 8px;
+                    }
+                }
+    
+                .number-label {
+                    left: 89px;
+                    top: 20px;
+                }
+            }
         }
     }
 }

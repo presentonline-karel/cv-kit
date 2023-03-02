@@ -3,6 +3,7 @@
     right: 53px;
 
     .language-active {
+        @include fontSize(16px, 16px);
         align-items: center;
         background-color: $primary-100;
         border: none;
@@ -10,10 +11,8 @@
         color: $primary-600;
         display: inline-flex;
         font-family: $title-font;
-        font-size: 16px;
         font-weight: 500;
         gap: 6px;
-        line-height: 16px;
         padding: 6px 8px;
         text-transform: uppercase;
     }

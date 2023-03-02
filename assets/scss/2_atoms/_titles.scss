@@ -6,63 +6,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 40px;
-    line-height: 44px;
+    @include fontSize(40px, 44px);
     letter-spacing: -0.015em;
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 36px;
+    @include fontSize(32px, 36px);
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 32px;
+    @include fontSize(24px, 32px);
 }
 
 h4 {
-    font-size: 20px;
-    line-height: 28px;
+    @include fontSize(20px, 28px);
 }
 
 h5, h6 {
-    font-size: 16px;
-    line-height: 24px;
+    @include fontSize(16px, 24px);
 }
 
 /* DESKTOP - 1440PX */
 @media only screen and (min-width: $desktop-m) {
     h1 {
-        font-size: 72px;
-        line-height: 72px;
+        @include fontSize(72px, 72px);
         letter-spacing: -0.02em;
     }
     
     h2 {
-        font-size: 56px;
-        line-height: 60px;
+        @include fontSize(56px, 60px);
         letter-spacing: -0.015em;
     }
     
     h3 {
-        font-size: 40px;
-        line-height: 44px;
+        @include fontSize(40px, 44px);
         letter-spacing: -0.015em;
     }
     
     h4 {
-        font-size: 32px;
-        line-height: 36px;
+        @include fontSize(32px, 36px);
     }
     
     h5 {
-        font-size: 24px;
-        line-height: 32px;
+        @include fontSize(24px, 32px);
     }
 
     h6 {
-        font-size: 20px;
-        line-height: 28px;
+        @include fontSize(20px, 28px);
     }
 }

@@ -23,12 +23,14 @@
         }
     }
 
+    &__period, &__link {
+        @include fontSize(14px, 14px);
+        font-family: $title-font;
+        letter-spacing: -0.01em;
+    }
+
     &__period {
         color: $neutrals-900;
-        font-family: $title-font;
-        font-size: 14px;
-        line-height: 14px;
-        letter-spacing: -0.01em;
         margin-bottom: 12px;
     }
 
@@ -40,10 +42,6 @@
         border-bottom: 2px solid $primary-300;
         color: $primary-500;
         display: inline;
-        font-size: 14px;
-        font-family: $title-font;
-        letter-spacing: -0.01em;
-        line-height: 14px;
         padding-bottom: 2px;
         width: min-content;
         white-space: nowrap;
@@ -76,5 +74,17 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100% !important;
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .card {
+        padding: 32px;
+
+        h4 {
+            @include fontSize(24px, 32px);
+            margin-bottom: 16px;
+        }
     }
 }

@@ -47,3 +47,14 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .employee-languages {
+        padding: 64px;
+
+        h3 {
+            @include fontSize(32px, 36px);
+        }
+    }
+}

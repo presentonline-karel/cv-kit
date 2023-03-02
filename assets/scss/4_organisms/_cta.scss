@@ -39,3 +39,66 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .container-home {
+        .cta {
+            padding: 0px 48px 48px;
+        }
+    }
+
+    .container-employee {
+        .cta {
+            padding: 64px 48px 0px;
+        }
+    }
+
+    .cta {
+        &__content {
+            border: $border-card-thin;
+            border-radius: $border-radius-medium;
+            box-shadow: $card-shadow;
+            padding: 32px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .container-home {
+        .cta {
+            padding: 32px 64px 48px;
+        }
+    }
+
+    .container-employee {
+        .cta {
+            padding: 64px 64px 0px;
+        }
+    }
+
+    .cta {
+        &__content {
+            h2 {
+                @include fontSize(32px, 36px);
+            }
+        }
+    }
+}
+
+/* DESKTOP HD */
+@media only screen and (min-width: $desktop-hd) {
+    .cta {
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 32px 48px;
+
+            h2 {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

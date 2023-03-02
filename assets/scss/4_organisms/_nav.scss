@@ -47,8 +47,7 @@
                 margin-bottom: 12px;
 
                 i {
-                    font-size: 14px;
-                    line-height: 14px;
+                    @include fontSize(14px, 14px);
                 }
             }
 
@@ -160,6 +159,9 @@
 @media only screen and (min-width: $desktop-xs) {
     .nav {
         background-color: $primary-100;
+        border-radius: 0 $border-radius-medium $border-radius-medium 0;
+        border-right: $border-card-thin;
+        box-shadow: $card-shadow;
         height: 100vh;
         padding: 32px 32px 48px;
         position: fixed;
@@ -200,6 +202,61 @@
     
                     &::-webkit-scrollbar-thumb:hover {
                         background: $primary-600;
+                    }
+                }
+
+                &__contact {
+                    .buttons {
+                        display: none;
+                    }
+
+                    .links {
+                        margin-bottom: 24px;
+
+                        .link {
+                            @include fontSize(16px, 24px);
+                            align-items: center;
+                            display: flex;
+                            font-family: $paragraph-font;
+                            gap: 8px;
+
+                            i {
+                                color: $primary-600;
+                                width: 16px;
+                            }
+                        }
+                    }
+
+                    .socials .social {
+                        background-color: $primary-600;
+                        
+                        i {
+                            color: $neutrals-100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .nav {
+        .nav-links {
+            .company {
+                padding-bottom: 48px;
+                margin-bottom: 48px;
+
+                > .button {
+                    h4 {
+                        @include fontSize(20px, 28px);
+                    }
+                }
+
+                &__contact {
+                    h4 {
+                        @include fontSize(20px, 28px);
                     }
                 }
             }

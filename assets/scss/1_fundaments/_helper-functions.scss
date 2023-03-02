@@ -3,3 +3,9 @@
     height: $height;
     width: $width;
 }
+
+// fontSize & lineHeight
+@mixin fontSize($fontSize, $lineHeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}

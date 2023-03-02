@@ -49,6 +49,7 @@
                         </div>
 
                         <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        <i class="fa fa-chevron-right desktop" aria-hidden="true"></i>
                     </a>
 
                     <a class="nav-team clickable-nav-item" href="#frontendDevelopers">
@@ -67,7 +68,8 @@
                             </div>
                         </div>
 
-                        <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        <button class="button button-tertiary mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        <i class="fa fa-chevron-right desktop" aria-hidden="true"></i>
                     </a>
 
                     <a class="nav-team clickable-nav-item" href="#backendDevelopers">
@@ -87,6 +89,7 @@
                         </div>
 
                         <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        <i class="fa fa-chevron-right desktop" aria-hidden="true"></i>
                     </a>
 
                     <a class="nav-team clickable-nav-item" href="#projectManagers">
@@ -106,6 +109,7 @@
                         </div>
 
                         <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        <i class="fa fa-chevron-right desktop" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -113,18 +117,20 @@
             <div class="company__contact">
                 <h4>Contact Present Online</h4>
 
-                <div class="buttons">
+                <div class="buttons mobile">
                     <a class="button button-secundary callButton"><span><i class="fa fa-phone icon-big" aria-hidden="true"></i>Call us</span> <i class="icon-hover fa fa-arrow-right" aria-hidden="true"></i></a>
                     <a class="button button-secundary emailButton"><span><i class="fa fa-envelope icon-big" aria-hidden="true"></i>Email us</span> <i class="icon-hover fa fa-arrow-right" aria-hidden="true"></i></a>
                     <a class="button button-secundary websiteButton"><span><i class="fa fa-globe icon-big" aria-hidden="true"></i>Visit our website - presentonline.be</span> <i class="icon-hover fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
 
-                <div class="socials">
-                    <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a class="social" href="https://www.linkedin.com/in/karel-decoene-395478187/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <div class="links desktop">
+                    <a class="link__call link"><i class="fa fa-phone icon-big" aria-hidden="true"></i>0476 28 09 02</a>
+                    <a class="link__email link"><i class="fa fa-envelope icon-big" aria-hidden="true"></i>info@presentonline.be</a>
+                    <a class="link__email link"><i class="fa fa-globe icon-big" aria-hidden="true"></i>presentonline.be</a>
                 </div>
+
+                <!-- Socials -->
+                <?php snippet("general/socials") ?>
             </div>
         </div>
 
