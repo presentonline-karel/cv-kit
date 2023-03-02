@@ -26,3 +26,15 @@
         right: 85px;
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .languages-container {
+        right: 0px;
+
+        .language-active {
+            background-color: $primary-600;
+            color: $neutrals-100;
+        }
+    }
+}

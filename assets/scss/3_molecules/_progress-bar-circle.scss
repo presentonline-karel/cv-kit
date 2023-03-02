@@ -121,3 +121,32 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .prog-bar-wrapper {
+        @include size(104px, 104px);
+    
+        .prog-bar {
+            clip: rect(0, 104px, 104px, 52px);
+    
+            .half-circle {
+                clip: rect(0, 52px, 104px, 0);
+            }
+
+            &__content {
+                gap: 4px;
+
+                .lang-code {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+    
+                .percentage {
+                    font-size: 14px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+}

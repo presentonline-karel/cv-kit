@@ -23,3 +23,12 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .skills-section {
+        .skills {
+            gap: 24px 16px;
+        }
+    }
+}

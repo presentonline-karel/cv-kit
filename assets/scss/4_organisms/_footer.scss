@@ -68,3 +68,10 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .footer {
+        display: none;
+    }
+}

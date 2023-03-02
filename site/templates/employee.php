@@ -179,39 +179,45 @@
 
             <div class="projects cards swiper-wrapper">
                 <div class="project card swiper-slide">
-                    <h4>Toyota/Lexus insurance form</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
+                    <div>
+                        <h4>Toyota/Lexus insurance form</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
-                    <div class="tags flex">
-                        <div class="tag tag-m">HTML</div>
-                        <div class="tag tag-m">CSS</div>
-                        <div class="tag tag-m">JavaScript</div>
+                        <div class="tags flex">
+                            <div class="tag tag-m">HTML</div>
+                            <div class="tag tag-m">CSS</div>
+                            <div class="tag tag-m">JavaScript</div>
+                        </div>
                     </div>
 
                     <a class="project__url card__link" href="#">lexus-insurance.be</a>
                 </div>
 
                 <div class="project card swiper-slide">
-                    <h4>Impact</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
+                    <div>
+                        <h4>Impact</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
-                    <div class="tags flex">
-                        <div class="tag tag-m">HTML</div>
-                        <div class="tag tag-m">CSS</div>
-                        <div class="tag tag-m">JavaScript</div>
+                        <div class="tags flex">
+                            <div class="tag tag-m">HTML</div>
+                            <div class="tag tag-m">CSS</div>
+                            <div class="tag tag-m">JavaScript</div>
+                        </div>
                     </div>
 
                     <a class="project__url card__link" href="#">lexus-insurance.be</a>
                 </div>
 
                 <div class="project card swiper-slide">
-                    <h4>Dignify</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
+                    <div>
+                        <h4>Dignify</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
-                    <div class="tags flex">
-                        <div class="tag tag-m">HTML</div>
-                        <div class="tag tag-m">CSS</div>
-                        <div class="tag tag-m">JavaScript</div>
+                        <div class="tags flex">
+                            <div class="tag tag-m">HTML</div>
+                            <div class="tag tag-m">CSS</div>
+                            <div class="tag tag-m">JavaScript</div>
+                        </div>
                     </div>
 
                     <a class="project__url card__link" href="#">lexus-insurance.be</a>

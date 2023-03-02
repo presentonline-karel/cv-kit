@@ -9,6 +9,12 @@
         }
     }
 
+    &:has(.card__link) {
+        .tags {
+            margin-bottom: 20px;
+        }
+    }
+
     h4 {
         margin-bottom: 8px;
 
@@ -30,18 +36,17 @@
         margin-bottom: 8px;
     }
 
-    .tags {
-        margin-bottom: 20px;
-    }
-
     &__link {
         border-bottom: 2px solid $primary-300;
         color: $primary-500;
+        display: inline;
         font-size: 14px;
         font-family: $title-font;
         letter-spacing: -0.01em;
         line-height: 14px;
         padding-bottom: 2px;
+        width: min-content;
+        white-space: nowrap;
     }
 
     &.project {
@@ -61,5 +66,15 @@
 @media only screen and (min-width: $tablet-portrait) {
     .card {
         padding: 32px;
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .card {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100% !important;
     }
 }

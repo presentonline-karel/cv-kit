@@ -102,3 +102,22 @@
         }
     }
 }
+
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .employee-introduction {
+        h3, .intro {
+            max-width: 615px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stats .stat .number-container {
+            left: -28%;
+        }
+    }
+}

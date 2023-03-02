@@ -29,3 +29,21 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .employee-languages {
+        align-items: center;
+        display: flex;
+        gap: 56px;
+
+        h3 {
+            margin-bottom: 8px;
+        }
+
+        .languages {
+            display: flex;
+            gap: 16px;
+        }
+    }
+}
