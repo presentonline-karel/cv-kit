@@ -37,8 +37,8 @@
 
         <!-- Teams section -->
         <section class="teams-section">
-            <div id="management" class="team">
-                <h4>Management</h4>
+            <div id="management" class="team section">
+                <h4 class="section__title">Management</h4>
 
                 <div class="employees">
                     <div class="employee">
@@ -128,8 +128,8 @@
                 </div>
             </div>
 
-            <div id="frontendDevelopers" class="team">
-                <h4>Frontend developers</h4>
+            <div id="frontendDevelopers" class="team section">
+                <h4 class="section__title">Frontend developers</h4>
 
                 <div class="employees">
                     <div class="employee">
@@ -185,8 +185,8 @@
                 </div>
             </div>
 
-            <div id="backendDevelopers" class="team">
-                <h4>Backend developers</h4>
+            <div id="backendDevelopers" class="team section">
+                <h4 class="section__title">Backend developers</h4>
 
                 <div class="employees">
                     <div class="employee">

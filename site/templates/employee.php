@@ -42,12 +42,8 @@
             <h3>Senior Back-end dev with DevOps skillset</h3>
             <p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.</p>
 
-            <div class="socials">
-                <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            </div>
+            <!-- Socials -->
+            <?php snippet("general/socials") ?>
 
             <div class="contact-info">
                 <a class="contact-info__item" href="#"><i class="fa fa-phone" aria-hidden="true"></i>0476280902</a>
@@ -80,8 +76,8 @@
 
 
         <!-- Employee languages -->
-        <section class="employee-languages">
-            <h3>Languages</h3>
+        <section class="employee-languages section">
+            <h3 class="section__title">Languages</h3>
 
             <div class="languages">
                 <div class="prog-bar-wrapper progress-30">
@@ -125,8 +121,8 @@
 
 
         <!-- Employee skills -->
-        <section class="skills-section">
-            <h3>Skills</h3>
+        <section class="skills-section section">
+            <h3 class="section__title">Skills</h3>
 
             <div class="skills">
                 <div class="skill">
@@ -174,9 +170,9 @@
 
 
         <!-- Employee projects -->
-        <section class="projects-section card-section swiper">
+        <section class="projects-section card-section section swiper">
             <div class="projects-section__header card-section__header">
-                <h3>Projects</h3>
+                <h3 class="section__title">Projects</h3>
 
                 <div class="arrows">
                     <i class="nav-arrow swiper-nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
@@ -237,9 +233,9 @@
 
 
         <!-- Employee experience -->
-        <section class="experience-section card-section swiper">
+        <section class="experience-section card-section section swiper">
             <div class="projects-section__header card-section__header">
-                <h3>Work experience</h3>
+                <h3 class="section__title">Work experience</h3>
 
                 <div class="arrows">
                     <i class="arrow nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
@@ -300,9 +296,9 @@
 
 
         <!-- Employee education -->
-        <section class="education-section card-section swiper">
+        <section class="education-section card-section section swiper">
             <div class="education-section__header card-section__header">
-                <h3>Education</h3>
+                <h3 class="section__title">Education</h3>
 
                 <div class="arrows">
                     <i class="arrow nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
@@ -374,8 +370,8 @@
 
 
         <!-- Discover more -->
-        <section class="discover-more-section">
-            <h3>Discover more teammembers</h3>
+        <section class="discover-more-section section">
+            <h3 class="section__title">Discover more teammembers</h3>
 
             <div class="more-team-members">
                 <div class="employee">

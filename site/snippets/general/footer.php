@@ -17,12 +17,8 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.
                 </p>
 
-                <div class="socials">
-                    <a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </div>
+                <!-- Socials -->
+                <?php snippet("general/socials") ?>
             </div>
 
             <p class="footer__copyright">©PresentOnline. All rights reserved.</p>

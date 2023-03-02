@@ -1,12 +1,15 @@
 .card-section {
     position: relative;
-    padding: 48px 16px !important;
 
     &__header {
         align-items: center;
         display: flex;
         justify-content: space-between;
         margin-bottom: 24px;
+
+        h3 {
+            margin-bottom: 0 !important;
+        }
 
         .arrows {
             display: flex;
@@ -28,8 +31,6 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .card-section {
-        padding: 64px 48px !important;
-
         &__header {
             margin-bottom: 40px;
         }
@@ -39,15 +40,7 @@
 /* DESKTOP 1440PX */
 @media only screen and (min-width: $desktop-m) {
     .card-section {
-        padding: 64px !important;
-
         &__header {
-            margin-bottom: 40px;
-
-            h3 {
-                @include fontSize(32px, 36px);
-            }
-
             .arrows {
                 gap: 32px;
     

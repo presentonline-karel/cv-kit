@@ -1,12 +1,13 @@
 .team {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 
     &:last-of-type {
         margin-bottom: 0;
     }
 
     h4 {
-        margin-bottom: 16px;
+        @include fontSize(24px, 32px);
+        margin-bottom: 24px;
     }
 
     .employees {
@@ -20,9 +21,12 @@
 @media only screen and (min-width: $tablet-portrait) {
     .team {
         margin-bottom: 48px;
+
+        &.section {
+            padding: 0 !important;
+        }
     
         h4 {
-            @include fontSize(24px, 32px);
             margin-bottom: 24px;
         }
 
@@ -33,11 +37,10 @@
     }
 }
 
-/* DESKTOP 1440PX */
-@media only screen and (min-width: $desktop-m) {
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
     .team {
         margin-bottom: 0;
-        padding: 48px 64px;
 
         &:nth-child(even) {
             background-color: $neutrals-200;
@@ -45,6 +48,19 @@
             .employee {
                 background-color: $neutrals-100;
             }
+        }
+
+        &:last-of-type {
+            padding: 48px 48px 64px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .team {
+        &:last-of-type {
+            padding: 64px;
         }
 
         h4 {

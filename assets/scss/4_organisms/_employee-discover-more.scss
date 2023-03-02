@@ -1,10 +1,5 @@
 .discover-more-section {
     background-color: $neutrals-100;
-    padding: 48px 16px;
-
-    h3 {
-        margin-bottom: 24px;
-    }
 
     .more-team-members {
         display: flex;
@@ -16,8 +11,6 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .discover-more-section {
-        padding: 64px 48px;
-
         .more-team-members {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -29,7 +22,7 @@
 @media only screen and (min-width: $tablet-landscape) {
     .discover-more-section {
         h3 {
-            margin-bottom: 40px;
+            margin-bottom: 32px !important;
         }
     }
 }
@@ -37,7 +30,7 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-xs) {
     .discover-more-section {
-        padding: 64px 48px 48px;
+        padding: 64px 48px 48px !important;
     }
 }
 
@@ -47,7 +40,7 @@
         padding: 64px 64px 48px;
 
         h3 {
-            @include fontSize(32px, 36px);
+            margin-bottom: 40px !important;
         }
     }
 }

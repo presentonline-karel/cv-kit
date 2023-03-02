@@ -98,21 +98,27 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-xs) {
     .filter-section {
+        border-bottom: 1px solid $neutrals-400;
         padding: 40px 48px 24px;
+        position: sticky;
+        right: 0;
+        top: 0;
+        z-index: 9;
+
+        .employees-filter {
+            .filter-tags {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
     }
 }
 
 /* DESKTOP 1440PX */
 @media only screen and (min-width: $desktop-m) {
     .filter-section {
-        border-bottom: 1px solid $neutrals-400;
-        max-width: 100%;
         padding: 40px 64px 24px;
-        position: sticky;
-        right: 0;
-        top: 0;
-        z-index: 9;
-
 
         h1 {
             @include fontSize(40px, 44px);
@@ -127,10 +133,6 @@
             }
 
             .filter-tags {
-                border-bottom: none;
-                margin-bottom: 0;
-                padding-bottom: 0;
-
                 p {
                     @include fontSize(16px, 16px);
                     padding-bottom: 3px;
