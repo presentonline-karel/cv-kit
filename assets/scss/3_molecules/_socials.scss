@@ -9,6 +9,14 @@
         color: $primary-600;
         text-align: center;
 
+        &:hover {
+            background-color: $primary-200;
+
+            i {
+                color: $primary-700;
+            }
+        }
+
         i {
             @include fontSize(20px, 20px);
             color: $primary-600;

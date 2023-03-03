@@ -11,7 +11,6 @@
     letter-spacing: -0.01em;
     padding: 8px 24px;
     position: relative;
-    transition: all $transition-time-short ease-in-out;
 
     &-primary, &-secundary {
         min-width: 136px;
@@ -26,11 +25,20 @@
     &-primary {
         background-color: $primary-600;
         color: $neutrals-100;
+
+        &:hover {
+            background-color: $primary-700;
+        }
     }
 
     &-secundary {
         background-color: $primary-100;
         color: $primary-600;
+
+        &:hover {
+            background-color: $primary-200;
+            color: $primary-700;
+        }
     }
 
     &-tertiary {
@@ -44,6 +52,10 @@
 @media only screen and (min-width: $desktop-xs) {
     .button {
         gap: 12px;
+
+        &-primary, &-secundary {
+            min-width: initial;
+        }
 
         &-tertiary {
             gap: 8px;

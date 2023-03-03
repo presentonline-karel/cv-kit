@@ -9,7 +9,7 @@
                 display: none;
             }
         } @else {
-            clip: rect(auto, auto, auto, auto);
+            clip: rect(auto, auto, auto, auto) !important;
 
             .right-side {
                 transform: rotate(180deg);
@@ -78,17 +78,11 @@
         }
     }
 
-    // Change by JavaScript
-    &.progress-30 {
-        @include draw-progress(30);
-    }
-
-    &.progress-60 {
-        @include draw-progress(60);
-    }
-
-    &.progress-90 {
-        @include draw-progress(90);
+    // Dynamic radial progress bar
+    @for $progress from 1 through 100 {
+        &.progress-#{$progress} {
+            @include draw-progress($progress);
+        }
     }
 }
 
@@ -99,10 +93,10 @@
 
     .prog-bar-wrapper {
         @include size($widthHeight, $widthHeight);
-    
+
         .prog-bar {
             clip: rect(0, $widthHeight, $widthHeight, $halfWidthHeight);
-    
+
             .half-circle {
                 clip: rect(0, $halfWidthHeight, $widthHeight, 0);
             }
@@ -113,7 +107,7 @@
                 .lang-code {
                     @include fontSize(24px, 32px);
                 }
-    
+
                 .percentage {
                     @include fontSize(16px, 16px);
                 }
@@ -129,10 +123,10 @@
 
     .prog-bar-wrapper {
         @include size($widthHeight, $widthHeight);
-    
+
         .prog-bar {
             clip: rect(0, $widthHeight, $widthHeight, $halfWidthHeight);
-    
+
             .half-circle {
                 clip: rect(0, $halfWidthHeight, $widthHeight, 0);
             }
@@ -143,7 +137,7 @@
                 .lang-code {
                     @include fontSize(20px, 28px);
                 }
-    
+
                 .percentage {
                     @include fontSize(14px, 14px);
                 }

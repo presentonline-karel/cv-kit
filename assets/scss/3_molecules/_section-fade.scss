@@ -1,0 +1,8 @@
+.fade-section {
+    opacity: 0;
+    transition: opacity $transition-time-medium ease-in;
+
+    &.in-viewport{ 
+        opacity: 1;
+    }
+}

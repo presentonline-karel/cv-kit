@@ -42,7 +42,7 @@
     .team {
         margin-bottom: 0;
 
-        &:nth-child(even) {
+        &:nth-child(odd) {
             background-color: $neutrals-200;
 
             .employee {
@@ -52,6 +52,14 @@
 
         &:last-of-type {
             padding: 48px 48px 64px;
+        }
+
+        &.filter-results {
+            background-color: $neutrals-100;
+
+            .employee {
+                background-color: $neutrals-200;
+            }
         }
     }
 }

@@ -18,7 +18,6 @@
             .nav-arrow {
                 @include fontSize(20px, 20px);
                 color: $primary-600;
-                transition: all $transition-time-short ease-in-out !important;
             }
         }
     }
@@ -33,6 +32,19 @@
     .card-section {
         &__header {
             margin-bottom: 40px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .card-section {
+        &__header {
+            .arrows {
+                .nav-arrow:hover {
+                    color: $primary-700;
+                }
+            }
         }
     }
 }

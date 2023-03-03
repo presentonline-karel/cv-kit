@@ -1,4 +1,4 @@
-<section class="cta fade-section">
+<section class="cta fade-section fade-section">
     <div class="cta__content">
         <h2>Looking for something specific?<br><span>Maybe reach out to us directly.</span></h2>
 

@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    transition: all $transition-time-short ease-in-out;
 
     &::selection {
-        background: $primary-100;
-        color: $primary-500;
+        background: $primary-200;
+        color: $primary-700;
     }
 
     &:before, &:after {
@@ -34,15 +35,6 @@ body {
     max-width: 100% !important;
     min-height: -webkit-fill-available;
     overflow-x: hidden !important;
-    transition: background-color $transition-time-short ease-in-out;
-
-    &.light-mode {
-        background-color: $neutrals-100;
-    }
-
-    &.dark-mode {
-        background-color: $neutrals-1000;
-    }
 }
 
 .stop-scrolling {

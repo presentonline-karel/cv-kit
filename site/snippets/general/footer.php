@@ -1,4 +1,4 @@
-        <footer class="footer">
+        <footer class="footer fade-section">
             <div class="footer__content">
                 <div class="footer__content__brand flex">
 
@@ -25,5 +25,6 @@
         </footer>
 
         <?= js("build/js/general/nav.js", ["defer" => true]) ?>
+        <?= js("build/js/general/section-fade.js", ["defer" => true]) ?>
     </body>
 </html>

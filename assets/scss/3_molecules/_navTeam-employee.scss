@@ -72,6 +72,14 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-xs) {
     .nav-team {
+        border: 0.4px solid $primary-200;
+
+        &:hover {
+            i.desktop {
+                right: 4px;
+            }
+        }
+
         .button {
             display: none;
         }
@@ -81,10 +89,14 @@
             font-size: 12px;
             line-height: 16px;
             letter-spacing: -0.01em;
+            position: relative;
+            right: 0;
         }
     }
 
     .employee:hover {
+        box-shadow: $card-shadow-hover;
+
         .button {
             gap: 8px !important;
         }

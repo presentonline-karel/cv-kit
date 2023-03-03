@@ -31,7 +31,7 @@
             <div class="company">
                 <a class="button button-tertiary clickable-nav-item" href="#allEmployees"><h4>All employees</h4><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 
-                <div id="allEmployees" class="company__teams flex-column">
+                <div class="company__teams flex-column">
                     <a class="nav-team clickable-nav-item" href="#management">
                         <div class="nav-team-container">
                             <div class="icon-container">

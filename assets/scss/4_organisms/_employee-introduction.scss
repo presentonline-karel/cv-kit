@@ -122,8 +122,12 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-xs) {
     .employee-introduction {
-        .stats .stat .number-container {
-            left: -32%;
+        .stats {
+            gap: 16px;
+
+            .stat .number-container {
+                left: -32%;
+            }
         }
     }
 }

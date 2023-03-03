@@ -98,10 +98,27 @@
 
             .tags {
                 display: flex;
+                gap: 8px;
 
                 .tag {
                     border-radius: $border-radius-medium;
+                    cursor: pointer;
                     gap: 8px;
+                    padding: 8px 16px;
+                    
+                    i {
+                        color: $primary-600;
+                    }
+
+                    &:hover {
+                        background-color: $primary-600;
+                        border: 0.4px solid $primary-600;
+                        color: $neutrals-100;
+
+                        i {
+                            color: $neutrals-100;
+                        }
+                    }
                 }
             }
         }

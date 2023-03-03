@@ -76,14 +76,14 @@
 
 
         <!-- Employee languages -->
-        <section class="employee-languages section">
+        <section class="employee-languages section fade-section">
             <h3 class="section__title">Languages</h3>
 
             <div class="languages">
                 <div class="prog-bar-wrapper progress-30">
                     <span class="prog-bar__content">
                         <span class="lang-code">NL</span>
-                        <span class="percentage">30%</span>
+                        <span class="percentage"><span class="language-percentage-number">30</span>%</span>
                     </span>
 
                     <div class="prog-bar">
@@ -95,7 +95,7 @@
                 <div class="prog-bar-wrapper progress-60">
                     <span class="prog-bar__content">
                         <span class="lang-code">EN</span>
-                        <span class="percentage">60%</span>
+                        <span class="percentage"><span class="language-percentage-number">60</span>%</span>
                     </span>
 
                     <div class="prog-bar">
@@ -107,7 +107,7 @@
                 <div class="prog-bar-wrapper progress-90">
                     <span class="prog-bar__content">
                         <span class="lang-code">FR</span>
-                        <span class="percentage">90%</span>
+                        <span class="percentage"><span class="language-percentage-number">90</span>%</span>
                     </span>
 
                     <div class="prog-bar">
@@ -121,7 +121,7 @@
 
 
         <!-- Employee skills -->
-        <section class="skills-section section">
+        <section class="skills-section section fade-section">
             <h3 class="section__title">Skills</h3>
 
             <div class="skills">
@@ -170,7 +170,7 @@
 
 
         <!-- Employee projects -->
-        <section class="projects-section card-section section swiper">
+        <section class="projects-section card-section section fade-section swiper">
             <div class="projects-section__header card-section__header">
                 <h3 class="section__title">Projects</h3>
 
@@ -233,7 +233,7 @@
 
 
         <!-- Employee experience -->
-        <section class="experience-section card-section section swiper">
+        <section class="experience-section card-section section fade-section swiper">
             <div class="projects-section__header card-section__header">
                 <h3 class="section__title">Work experience</h3>
 
@@ -296,7 +296,7 @@
 
 
         <!-- Employee education -->
-        <section class="education-section card-section section swiper">
+        <section class="education-section card-section section fade-section swiper">
             <div class="education-section__header card-section__header">
                 <h3 class="section__title">Education</h3>
 
@@ -370,7 +370,7 @@
 
 
         <!-- Discover more -->
-        <section class="discover-more-section section">
+        <section class="discover-more-section section fade-section">
             <h3 class="section__title">Discover more teammembers</h3>
 
             <div class="more-team-members">

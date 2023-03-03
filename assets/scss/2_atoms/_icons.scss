@@ -4,7 +4,6 @@
         @include fontSize(12px, 22px);
         bottom: 1px;
         position: relative;
-        transition: all $transition-time-short ease-in-out;
 
         &.icon-hover {
             left: 0;

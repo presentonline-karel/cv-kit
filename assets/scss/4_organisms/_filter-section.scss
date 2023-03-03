@@ -7,6 +7,12 @@
         margin-bottom: 16px;
     }
 
+    &:has(.active) {
+        .employees-filter {
+            margin-bottom: 16px;
+        }
+    }
+
     .employees-filter {
         .filter-form {
             &__input {
@@ -26,7 +32,8 @@
                     color: $neutrals-700;
                 }
 
-                &:focus {
+                &:focus, &:hover {
+                    box-shadow: $card-shadow;
                     outline: none;
                 }
             }
@@ -68,6 +75,27 @@
                 &::-webkit-scrollbar-thumb:hover {
                     background: $primary-600;
                 }
+
+                .tag {
+                    cursor: pointer;
+
+                    &.active {
+                        background-color: $primary-600;
+                        border: 0.4px solid $primary-600;
+                        color: $neutrals-100;
+
+                        &:hover {
+                            background-color: $primary-600;
+                            border: 0.4px solid $primary-600;
+                            color: $neutrals-100;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $primary-200;
+                        color: $primary-700;
+                    }
+                }
             }
         }
     }
@@ -77,6 +105,11 @@
         color: $neutrals-900;
         font-family: $title-font;
         font-weight: 400;
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+        }
 
         span {
             font-weight: 700;
