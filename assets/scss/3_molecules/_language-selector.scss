@@ -9,12 +9,59 @@
         border: none;
         border-radius: $border-radius-medium;
         color: $primary-600;
+        cursor: pointer;
         display: inline-flex;
         font-family: $title-font;
         font-weight: 500;
         gap: 6px;
         padding: 6px 8px;
         text-transform: uppercase;
+    }
+
+    .languages {
+        border-radius: $border-radius-medium;
+        border: 0.4px solid $primary-200;
+        opacity: 0;
+        position: absolute;
+        transition: opacity $transition-time-medium ease-in-out;
+        top: -164px;
+        z-index: 1;
+
+        &.open {
+            box-shadow: $card-shadow-hover;
+            opacity: 1;
+            top: 40px;
+        }
+
+        .language-button {
+            background-color: $neutrals-100;
+            color: $neutrals-800;
+            display: block;
+            font-family: $title-font;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 16px;
+            padding: 8px 12px;
+            text-transform: uppercase;
+    
+            &:first-of-type {
+                border-radius: $border-radius-medium $border-radius-medium 0 0;
+            }
+    
+            &:last-of-type {
+                border-radius: 0 0 $border-radius-medium $border-radius-medium;
+            }
+
+            &:hover {
+                background-color: $primary-100;
+                color: $primary-500;
+            }
+    
+            &.active {
+                background-color: $primary-100;
+                color: $primary-500;
+            }
+        }
     }
 }
 
@@ -34,6 +81,10 @@
         .language-active {
             background-color: $primary-600;
             color: $neutrals-100;
+
+            &:hover {
+                background-color: $primary-700;
+            }
         }
     }
 }

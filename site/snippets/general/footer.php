@@ -26,5 +26,6 @@
 
         <?= js("build/js/general/nav.js", ["defer" => true]) ?>
         <?= js("build/js/general/section-fade.js", ["defer" => true]) ?>
+        <?= js("build/js/general/language-dropdown.js", ["defer" => true]) ?>
     </body>
 </html>

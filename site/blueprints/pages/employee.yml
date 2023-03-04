@@ -1,0 +1,320 @@
+title: Employee
+  nl: Werknemer
+  en: Employee
+  fr: Employé
+icon: user
+
+tabs:
+  info:
+    label:
+      nl: Persoonlijke info
+      en: Personal info
+      fr: Informations personnelles
+    icon: account
+
+    columns:
+      left:
+        width: 2/3
+        fields:
+
+          # Personal info
+          personalInfoHeadline:
+            label:
+              nl: Persoonlijke info
+              en: Personal info
+              fr: Informations personnelles
+            type: headline
+          name:
+            label:
+              nl: Naam
+              en: Name
+              fr: Nom
+            type: text
+            required: true
+            width: 1/2
+          jobTitle:
+            label:
+              nl: Functietitel
+              en: Job title
+              fr: Titre de l'emploi
+            type: text
+            required: true
+            width: 1/2
+          department:
+            label:
+              nl: Afdeling
+              en: Department
+              fr: Département
+            type: text
+            width: 1/3
+            help:
+              nl: Indien meerdere, kies de afdeling waar je het actiefst bent.
+              en: If several, choose the department where you are most active.
+              fr: Si vous en avez plusieurs, choisissez le département où vous êtes le plus actif.
+          telNumber:
+            label: Telephone number
+              nl: Gsm-nummer
+              en: Mobile number
+              fr: Numéro de mobile
+            type: tel
+            width: 1/3
+          email:
+            label: Email
+            type: email
+            required: true
+            width: 1/3
+          line-a:
+            type: line
+          
+          # Introduction
+          introHeadline:
+            label:
+              nl: Introductie
+              en: Introduction
+              fr: Introduction
+            type: headline
+          introTitle:
+            label:
+              nl: Introductie title
+              en: Introduction title
+              fr: Titre d'introduction
+            type: text
+            required: true
+          intro:
+            label:
+              nl: Introductie paragraaf
+              en: Introduction paragraph
+              fr: Paragraphe d'introduction
+            type: writer
+            inline: true
+            required: true
+
+          # Socials
+          socials:
+            label:
+              nl: Sociale media
+              en: Social media
+              fr: Médias sociaux
+            type: structure
+            width: 1/2
+            columns:
+              social:
+                width: 1/4
+              url:
+                width: 3/4
+            fields:
+              social:
+                label:
+                  nl: Platform
+                  en: Platform
+                  fr: Plateforme
+                type: select
+                options:
+                  facebook: Facebook
+                  instagram: Instagram
+                  linkedin: LinkedIn
+                  twitter: Twitter
+                  github: GitHub
+                  dribbble: Dribbble
+                  other:
+                    nl: Andere
+                    en: Other
+                    fr: Autre
+              url:
+                label: URL
+                type: url
+
+          # Statistics
+          stats:
+            label:
+              nl: Statistieken
+              en: Statistics
+              fr: Statistiques
+            type: structure
+            width: 1/2
+            fields:
+              number:
+                label:
+                  nl: Getal
+                  en: Number
+                  fr: Nombre
+                type: number
+                min: 1
+                max: 999
+                step: 100
+                required: true
+                help:
+                  nl: Kies een getal van 1-999
+                  en: Insert number from 1-999
+                  fr: Choisissez un nombre de 1-999
+              numberLabel:
+                label: Label
+                type: text
+                maxlength: 10
+                required: true
+                help:
+                  nl: bv. "Projecten" of "Klanten" -> **Max 10 karakters**
+                  en: fe. "Projects" or "YoE" -> **Max 10 characters**
+                  fr: pe. "Projets" ou "Clients" -> **Max 10 caractères**
+          line-c:
+            type: line
+          
+          # Languages
+          languagesHeadline:
+            label:
+              nl: Talen
+              en: Languages
+              fr: Langues
+            type: headline
+          languages:
+            label:
+              nl: Talen
+              en: Languages
+              fr: Langues
+            type: structure
+            fields:
+              langCode:
+                label:
+                  nl: Taal code
+                  en: Language code
+                  fr: Code de la langue
+                type: text
+                maxlength: 2
+                required: true
+                help:
+                  nl: bv. "NL" of "FR"
+                  en: fe. "NL" or "FR"
+                  fr: pe. "NL" ou "FR".
+              langPerc:
+                extends: fields/percentage
+          line-d:
+            type: line
+
+          # Skills
+          skillsHeadline:
+            label:
+              nl: Vaardigheden
+              en: Skills
+              fr: Compétences
+            type: headline
+          skills:
+            label:
+              nl: Vaardigheden
+              en: Skills
+              fr: Compétences
+            type: structure
+            fields:
+              skill:
+                label:
+                  nl: Vaardigheid
+                  en: Skill
+                  fr: Compétence
+                type: text
+                required: true
+                help:
+                  nl: bv. "HTML" of "CSS"
+                  en: fe. "HTML" or "CSS"
+                  fr: pe. "HTML" ou "CSS".
+              skillPerc:
+                extends: fields/percentage
+
+      # Picture
+      right:
+        width: 1/3
+        fields:
+          profilePictureHeadline:
+            label:
+              nl: Profielfoto
+              en: Profile picture
+              fr: Photo du profil
+            type: headline
+            numbered: false
+          profilePicture:
+            label: Picture
+            type: files
+            layout: cards
+            max: 1
+            help:
+              nl: Neem een foto met 1/1 verhouding voor de beste weergave
+              en: Take a picture with a 1/1 ratio for the best result
+              fr: Prenez une photo avec un rapport de 1/1 pour un meilleur résultat.
+            image:
+              ratio: 1/1
+              cover: true
+
+  # Projects
+  projects:
+    label:
+      nl: Projecten
+      en: Projects
+      fr: Projets
+    icon: folder
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          projectsHeadline:
+            label:
+              nl: Projecten
+              en: Projects
+              fr: Projets
+            type: headline
+          projectsInfo:
+            label:
+              nl: Info bij toevoegen projecten
+              en: Info when adding projects
+              fr: Informations lors de l'ajout de projets
+            type: info
+            text: |
+              [Placeholder] Here comes some info on adding new projects...
+
+      right:
+        width: 2/3
+        fields:
+          projects:
+            label:
+              nl: Projecten
+              en: Projects
+              fr: Projets
+            type: structure
+            fields:
+              title:
+                label:
+                  nl: Titel
+                  en: Title
+                  fr: Titre
+                type: text
+                maxlength: 60
+                required: true
+              description:
+                label:
+                  nl: Omschrijving
+                  en: Description
+                  fr: Description
+                type: writer
+                inline: true
+                maxlength: 250
+                required: true
+              tags:
+                label: Tags
+                type: tags
+              link:
+                label: URL
+                type: url
+  
+  # Experience
+  experience:
+    label:
+      nl: Werkervaring
+      en: Work experience
+      fr: Expérience de travail
+    icon: road-sign
+
+  # Education
+  education:
+    label:
+      nl: Opleiding
+      en: Education
+      fr: Formation
+    icon: document

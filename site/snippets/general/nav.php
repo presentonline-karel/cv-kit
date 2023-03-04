@@ -9,7 +9,7 @@
         <!-- Languages -->
         <div class="languages-container">
             <button class="language-active">
-                <i class="fa fa-globe" aria-hidden="true"></i><span class="language-active__code">NL</span>
+                <span class="language-active__code"><?= $kirby->language()->code() ?></span><i class="fa fa-chevron-down" aria-hidden="true"></i>
             </button>
 
             <?php snippet("general/languages") ?>

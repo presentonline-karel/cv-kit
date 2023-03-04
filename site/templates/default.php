@@ -1,3 +1,7 @@
+<?php if (!$kirby->user()) go('/login') ?>
+
+
+
 <?php snippet("general/header") ?>
 
 <div id="container" class="container container-error">
