@@ -1,0 +1,8 @@
+label:
+  nl: Begindatum
+  en: Start date
+  fr: Date de début
+type: date
+display: DD/MM/YYYY
+required: true
+width: 3/4

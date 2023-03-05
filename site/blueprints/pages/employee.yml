@@ -156,7 +156,7 @@ tabs:
                   nl: bv. "Projecten" of "Klanten" -> **Max 10 karakters**
                   en: fe. "Projects" or "YoE" -> **Max 10 characters**
                   fr: pe. "Projets" ou "Clients" -> **Max 10 caractères**
-          line-c:
+          line-b:
             type: line
           
           # Languages
@@ -186,8 +186,8 @@ tabs:
                   en: fe. "NL" or "FR"
                   fr: pe. "NL" ou "FR".
               langPerc:
-                extends: fields/percentage
-          line-d:
+                extends: fields/employee/percentage
+          line-c:
             type: line
 
           # Skills
@@ -216,7 +216,7 @@ tabs:
                   en: fe. "HTML" or "CSS"
                   fr: pe. "HTML" ou "CSS".
               skillPerc:
-                extends: fields/percentage
+                extends: fields/employee/percentage
 
       # Picture
       right:
@@ -260,6 +260,7 @@ tabs:
               en: Projects
               fr: Projets
             type: headline
+            numbered: false
           projectsInfo:
             label:
               nl: Info bij toevoegen projecten
@@ -278,6 +279,15 @@ tabs:
               en: Projects
               fr: Projets
             type: structure
+            columns:
+              title:
+                width: 2/8
+              description:
+                width: 2/8
+              tags:
+                width: 2/8
+              link:
+                width: 2/8
             fields:
               title:
                 label:
@@ -288,20 +298,21 @@ tabs:
                 maxlength: 60
                 required: true
               description:
-                label:
-                  nl: Omschrijving
-                  en: Description
-                  fr: Description
-                type: writer
-                inline: true
-                maxlength: 250
-                required: true
+                extends: fields/employee/description
               tags:
                 label: Tags
                 type: tags
+                help:
+                  nl: Welke vaardigheden gebruikte je voor dit project?
+                  en: Which skills did you use for this project?
+                  fr: Quelles compétences avez-vous utilisées pour ce projet?
               link:
                 label: URL
                 type: url
+                help:
+                  nl: Link naar het finale resultaat
+                  en: Link to the final result
+                  fr: Lien vers le résultat final
   
   # Experience
   experience:
@@ -311,6 +322,106 @@ tabs:
       fr: Expérience de travail
     icon: road-sign
 
+    columns:
+      left:
+        width: 1/3
+        fields:
+          experienceHeadline:
+            label:
+              nl: Werkervaring
+              en: Work experience
+              fr: Expérience de travail
+            type: headline
+            numbered: false
+          experienceInfo:
+            label:
+              nl: Info bij toevoegen eerdere werkervaringen
+              en: Info when adding previous work experiences
+              fr: Informations pour ajouter d'expériences professionnelles
+            type: info
+            text: |
+              [Placeholder] Here comes some info on adding work experiences...
+
+      right:
+        width: 2/3
+        fields:
+          experiences:
+            label:
+              nl: Werkervaring
+              en: Work experience
+              fr: Expérience de travail
+            type: structure
+            columns:
+              jobTitle:
+                width: 2/8
+              company:
+                width: 2/8
+              description:
+                width: 2/8
+              tags:
+                width: 2/8
+            fields:
+              jobTitle:
+                label:
+                  nl: Functietitel
+                  en: Job title
+                  fr: Titre de l'emploi
+                type: text
+                maxlength: 60
+                required: true
+                width: 2/4
+              company:
+                label:
+                  nl: Bedrijf
+                  en: Company
+                  fr: Entreprise
+                type: text
+                maxlength: 60
+                required: true
+                width: 2/4
+              companyWebsiteToggle:
+                extends: fields/employee/toggle
+                label:
+                  nl: Bedrijfswebsite toevoegen?
+                  en: Add company website?
+                  fr: Ajouter site web de l'entreprise?
+                default: false
+              companyWebsite:
+                label:
+                  nl: Bedrijfswebsite
+                  en: Company website
+                  fr: Site web de l'entreprise
+                type: url
+                width: 3/4
+                when:
+                  companyWebsiteToggle: true
+              line-d:
+                type: line
+              experienceStartDate:
+                extends: fields/employee/startDate
+              currentJobToggle:
+                extends: fields/employee/toggle
+                label:
+                  nl: Is dit je huidige functie?
+                  en: Is this your current job?
+                  fr: Est-ce votre emploi actuel?
+                default: true
+              experienceEndDate:
+                extends: fields/employee/endDate
+                when:
+                  currentJobToggle: false
+              line-e:
+                type: line
+              description:
+                extends: fields/employee/description
+              tags:
+                label: Tags
+                type: tags
+                help:
+                  nl: Welke vaardigheden gebruikte je tijdens deze job?
+                  en: What skills did you use during this job?
+                  fr: Quelles compétences avez-vous utilisées au cours de cet emploi?
+
   # Education
   education:
     label:
@@ -318,3 +429,106 @@ tabs:
       en: Education
       fr: Formation
     icon: document
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          educationHeadline:
+            label:
+              nl: Opleiding
+              en: Education
+              fr: Formation
+            type: headline
+            numbered: false
+          educationInfo:
+            label:
+              nl: Info bij toevoegen opledingsonderdelen
+              en: Info when adding training items
+              fr: Informations pour ajouter éléments de formation
+            type: info
+            text: |
+              [Placeholder] Here comes some info on addingtraining items...
+
+      right:
+        width: 2/3
+        fields:
+          educationItems:
+            label:
+              nl: Opleiding
+              en: Education
+              fr: Formation
+            type: structure
+            columns:
+              study:
+                width: 2/8
+              academy:
+                width: 2/8
+              description:
+                width: 2/8
+              tags:
+                width: 2/8
+            fields:
+              study:
+                label:
+                  nl: Opleidingsonderdeel
+                  en: Education
+                  fr: Formation
+                type: text
+                maxlength: 60
+                help:
+                  nl: Naam van de opleiding/studie -> vb. "Professionele Bachelor Marketing"
+                  en: Name of course/study -> fe. "Professional Bachelor of Marketing"
+                  fr: Nom du cours/de l'étude -> pe. "Licence professionnelle en marketing"
+                required: true
+              academy:
+                label:
+                  nl: Instituut
+                  en: Institute
+                  fr: Institut
+                type: text
+                maxlength: 60
+                required: true
+                help:
+                  nl: Waar heb je dit opleidingsonderdeel behaald? -> fe. "KdG Hogeschool" or "Universiteit Antwerpen"
+                  en: Where did you obtain this course unit? -> fe. "KdG Hogeschool" or "Universiteit Antwerpen"
+                  fr: Où avez-vous obtenu cette unité de cours ? -> fe. "KdG Hogeschool" ou "Universiteit Antwerpen".
+              line-f:
+                type: line
+              educationStartDate:
+                extends: fields/employee/startDate
+              currentEducationToggle:
+                extends: fields/employee/toggle
+                label:
+                  nl: Lopend?
+                  en: Ongoing?
+                  fr: En cours?
+                default: true
+                help:
+                  nl: Is dit je huidige opleiding?
+                  en: Is this your current education?
+                  fr: Est-ce votre formation actuelle?
+              educationEndDate:
+                extends: fields/employee/endDate
+                when:
+                  currentEducationToggle: false
+              line-g:
+                type: line
+              description:
+                extends: fields/employee/description
+              tags:
+                label: Tags
+                type: tags
+                width: 2/4
+                help:
+                  nl: Welke vaardigheden gebruikte je tijdens deze opleiding?
+                  en: What skills did you use during this education?
+                  fr: Quelles compétences avez-vous utilisées au cours de cet formation?
+              certificate:
+                label:
+                  nl: Diploma
+                  en: Certificate
+                  fr: Diplôme
+                type: files
+                max: 1
+                width: 2/4

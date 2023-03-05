@@ -1,0 +1,11 @@
+type: toggle
+width: 1/4
+text:
+  -
+      nl: "Nee"
+      en: "No"
+      fr: "Non"
+  -
+      nl: "Ja"
+      en: "Yes"
+      fr: "Oui"

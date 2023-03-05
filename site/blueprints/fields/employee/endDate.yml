@@ -1,0 +1,7 @@
+label:
+  nl: Einddatum
+  en: End date
+  fr: Date d'expiration
+type: date
+display: DD/MM/YYYY
+required: true

@@ -1,0 +1,8 @@
+label:
+  nl: Omschrijving
+  en: Description
+  fr: Description
+type: writer
+inline: true
+maxlength: 250
+required: true

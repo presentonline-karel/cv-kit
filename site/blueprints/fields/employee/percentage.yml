@@ -1,0 +1,10 @@
+label: Percentage
+type: number
+min: 1
+max: 100
+step: 10
+required: true
+help:
+  nl: Kies een getal van 1-100 -> **Zet geen %-teken aan het eind**
+  en: Insert number from 1-100 -> **Do not add % at the end**
+  fr: Choisissez un nombre de 1-100 -> **Ne mettez pas le signe % à la fin**
