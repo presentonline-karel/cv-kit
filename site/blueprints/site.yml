@@ -1,5 +1,74 @@
 title: Site
 
-sections:
-  pages:
-    type: pages
+# sections:
+#   pages:
+#     type: pages
+
+tabs:
+  employees:
+    label:
+      nl: Werknemers
+      en: Employees
+      fr: Employés
+    icon: users
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          cvKitHeadline:
+            label: Present Online CV Kit
+            type: headline
+            numbered: false
+          cvKitInfo:
+            label: Info
+            type: info
+            text: |
+              [Placeholder] Here comes some info on how to use the CV kit...
+      right:
+        width: 2/3
+        sections:
+          employeesIntroduction:
+            type: fields
+            fields:
+              employeesHeadline:
+                label:
+                  nl: Werknemers
+                  en: Employees
+                  fr: Employés
+                type: headline
+                numbered: false
+              employeesInfo:
+                label: Attention
+                type: info
+                theme: negative
+                text: |
+                  [Placeholder] Here comes some info on adding new employees...
+          
+          employeesDrafts:
+            label: Drafts
+            type: pages
+            status: draft
+            templates: employee
+
+          employeesPublished:
+            label:
+              nl: Werknemers
+              en: Employees
+              fr: Employés
+            type: pages
+            status: listed
+            templates: employee
+            layout: cardlets
+            image:
+              query: page.profilePicture.toFile()
+              cover: true
+            
+            # published:
+            #   label: Published Articles
+            #   type: pages
+            #   status: listed
+            #   templates: employee
+            #   layout: cardlets
+            #   image:
+            #     cover: true
