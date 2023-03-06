@@ -1,16 +1,12 @@
 title: Site
 
-# sections:
-#   pages:
-#     type: pages
-
 tabs:
-  employees:
+  cvKit:
     label:
-      nl: Werknemers
-      en: Employees
-      fr: Employés
-    icon: users
+      nl: CV kit
+      en: CV kit
+      fr: CV kit
+    icon: page
 
     columns:
       left:
@@ -27,24 +23,102 @@ tabs:
               [Placeholder] Here comes some info on how to use the CV kit...
       right:
         width: 2/3
-        sections:
-          employeesIntroduction:
-            type: fields
+        fields:
+          logoHeadline:
+            label:
+              nl: Bedrijfsinformatie
+              en: Company info
+              fr: Informations sur l'entreprise
+            type: headline
+          logo:
+            label: Logo
+            type: files
+            layout: cards
+            max: 1
+            required: true
+            width: 1/3
+            help:
+              nl: Gebruik een **.svg** bestand indien mogelijk
+              en: Use a **.svg** file if possible
+              fr: utilisez un fichier **.svg** si possible
+          companyDescription:
+            label:
+              nl: Beschrijving
+              en: Description
+              fr: Description
+            type: textarea
+            size: small
+            inline: true
+            max: 180
+            width: 2/3
+            required: true
+            help:
+              nl: Beschrijf de diensten van je bedrijf in **1-2 zinnen**
+              en: Describe your company's services in **1-2 sentences**
+              fr: Décrivez les services de votre entreprise en **1-2 phrases**
+          line-a:
+            type: line
+          contactHeadline:
+            label: Contact
+            type: headline
+          contactInfo:
+            label:
+              nl: Contact info
+              en: Contact info
+              fr: Informations de contact
+            type: object
             fields:
-              employeesHeadline:
+              name:
                 label:
-                  nl: Werknemers
-                  en: Employees
-                  fr: Employés
-                type: headline
-                numbered: false
-              employeesInfo:
-                label: Attention
-                type: info
-                theme: negative
-                text: |
-                  [Placeholder] Here comes some info on adding new employees...
-          
+                  nl: Bedrijfsnaam
+                  en: Company name
+                  fr: Nom de l'entreprise
+                type: text
+                required: true
+              phoneNumber:
+                label:
+                  nl: Telefoonnummer
+                  en: Phone number
+                  fr: Numéro de téléphone
+                type: tel
+                required: true
+              email:
+                label: Email
+                type: email
+                required: true
+              website:
+                label:
+                  nl: Website
+                  en: Website
+                  fr: Site web
+                type: url
+                required: true
+  employees:
+    label:
+      nl: Werknemers
+      en: Employees
+      fr: Employés
+    icon: user
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          employeesHeadline:
+            label:
+              nl: Werknemers
+              en: Employees
+              fr: Employés
+            type: headline
+            numbered: false
+          employeesInfo:
+            label: Attention
+            type: info
+            text: |
+              [Placeholder] Here comes some info on adding new employees...
+      right:
+        width: 2/3
+        sections:
           employeesDrafts:
             label: Drafts
             type: pages
@@ -64,11 +138,93 @@ tabs:
               query: page.profilePicture.toFile()
               cover: true
             
-            # published:
-            #   label: Published Articles
-            #   type: pages
-            #   status: listed
-            #   templates: employee
-            #   layout: cardlets
-            #   image:
-            #     cover: true
+  teams:
+    label:
+      nl: Afdelingen
+      en: Departments
+      fr: Départements
+    icon: users
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          departmentsHeadline:
+            label:
+              nl: Afdelingen
+              en: Departments
+              fr: Départements
+            type: headline
+            numbered: false
+          departmentsInfo:
+            label: Info
+            type: info
+            text: |
+              [Placeholder] Here comes some info on how to manage departments...
+      right:
+        width: 2/3
+        sections:
+          departmentsDrafts:
+            label: Drafts
+            type: pages
+            status: draft
+            templates: department
+
+          departmentsPublished:
+            label:
+              nl: Afdelingen
+              en: Departments
+              fr: Départements
+            type: pages
+            status: listed
+            templates: department
+            layout: cardlets
+            image:
+              query: page.profilePicture.toFile()
+              cover: true
+  
+  projects:
+    label:
+      nl: Projecten
+      en: Projects
+      fr: Projets
+    icon: folder
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          projectsHeadline:
+            label:
+              nl: Projecten
+              en: Projects
+              fr: Projets
+            type: headline
+            numbered: false
+          projectsInfo:
+            label: Info
+            type: info
+            text: |
+              [Placeholder] Here comes some info on how to manage projects...
+
+      right:
+        width: 2/3
+        sections:
+          projectsDrafts:
+            label: Drafts
+            type: pages
+            status: draft
+            templates: project
+
+          projectsPublished:
+            label:
+              nl: Projecten
+              en: Projects
+              fr: Projets
+            type: pages
+            status: listed
+            templates: project
+            layout: cardlets
+            image:
+              query: page.profilePicture.toFile()
+              cover: true
