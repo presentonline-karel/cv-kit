@@ -28,7 +28,7 @@
 
             <div class="employees-filter">
                 <form class="filter-form">
-                    <input class="filter-form__input input-filter" type="text" placeholder="Search on employees name" />
+                    <input class="filter-form__input input-filter" type="text" placeholder="<?php if ($kirby->language()->code() == "nl") { echo ("Zoek op naam werknemer"); } elseif ($kirby->language()->code() == "en") { echo ("Search on employees name"); } elseif ($kirby->language()->code() == "fr") { echo ("Recherche par nom d'employé"); } ?>" />
                 </form>
 
                 <div class="filter-tags flex">
@@ -42,16 +42,18 @@
                         } ?>
                     </p>
 
-                    <div class="tags">
-                        <button class="tag tag-m filter-tag">Frontend Developer</button>
-                        <button class="tag tag-m filter-tag">Project Manager</button>
-                        <button class="tag tag-m filter-tag">ux/ui designer</button>
-                        <button class="tag tag-m filter-tag">Function</button>
-                    </div>
+                    <?php if($functions = $site->departmentOptions()->toStructure()): ?>
+                        <div class="tags">
+                            
+                            <?php foreach($functions as $function): ?>
+                                <button class="tag tag-m filter-tag"><?= $function->department() ?></button>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
 
-            <p class="filter-results-title">3 results for "<span class="search-term">Cedric Lenders</span>"</p>
+            <p class="filter-results-title">3 results for "<span class="search-term">Employee Name</span>"</p>
         </section>
 
 
@@ -76,7 +78,7 @@
                         <div class="employees">
 
                             <?php foreach ($publishedEmployees as $employee) : ?>
-                                <a class="employee" href="<?= $employee->url() ?>">
+                                <a class="employee employee-search-results" href="<?= $employee->url() ?>">
                                     <div class="employee-container">
                                         <div class="employee-picture-container">
 
@@ -91,11 +93,29 @@
                                             <h5 class="employee-name"><?= $employee->name() ?></h5>
                                             <p class="function"><?= $employee->jobTitle() ?></p>
 
-                                            <button class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                            <p class="hidden-function"><?= $employee->department() ?></p>
+
+                                            <?php /*foreach ($departments as $department) : ?>
+                                                <?php if($department->employees()->toPages()->has($employee)): ?>
+                                                    <p class="hidden-function"><?= var_dump($department->name()) ?></p>
+                                                <?php endif; ?>
+                                            <?php endforeach;*/ ?>
+
+                                            <button class="button button-tertiary button-desktop">
+                                                <?php if ($kirby->language()->code() == "nl") {
+                                                    echo ("Lees");
+                                                } elseif ($kirby->language()->code() == "en") {
+                                                    echo ("Read");
+                                                } elseif ($kirby->language()->code() == "fr") {
+                                                    echo ("Lire");
+                                                } ?>
+                                                
+                                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                            </button>
                                         </div>
                                     </div>
 
-                                    <button class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                    <button class="button button-tertiary button-mobile"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
                                 </a>
                             <?php endforeach; ?>
                         </div>
@@ -127,11 +147,27 @@
                                                 <h5 class="employee-name"><?= $employee->name() ?></h5>
                                                 <p class="function"><?= $employee->jobTitle() ?></p>
 
-                                                <button class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                                <?php foreach ($departments as $department) : ?>
+                                                    <?php if($department->employees()->toPages()->has($employee)): ?>
+                                                        <p class="hidden-function"><?= $department->name() ?></p>
+                                                    <?php endif; ?>
+                                                <?php endforeach; ?>
+
+                                                <button class="button button-tertiary button-desktop">
+                                                    <?php if ($kirby->language()->code() == "nl") {
+                                                        echo ("Lees");
+                                                    } elseif ($kirby->language()->code() == "en") {
+                                                        echo ("Read");
+                                                    } elseif ($kirby->language()->code() == "fr") {
+                                                        echo ("Lire");
+                                                    } ?>
+                                                    
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                </button>
                                             </div>
                                         </div>
 
-                                        <button class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                        <button class="button button-tertiary button-mobile"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
                                     </a>
                                 <?php endforeach; ?>
                             </div>

@@ -64,6 +64,7 @@
 
     &-container .content {
         .button-desktop {
+            cursor: pointer;
             display: none;
         }
     }
@@ -124,6 +125,8 @@
             }
 
             .content {
+                width: calc(100% - 90px - 16px);
+
                 h5 {
                     @include fontSize(16px, 20px);
                 }

@@ -143,7 +143,7 @@ tabs:
             extends: fields/buttons
             when:
               ctaDisplayToggle: true
-            
+
   employees:
     label:
       nl: Werknemers
@@ -194,7 +194,7 @@ tabs:
                 image:
                   query: page.profilePicture.toFile()
                   cover: true
-            
+
   teams:
     label:
       nl: Afdelingen
@@ -221,26 +221,45 @@ tabs:
       right:
         width: 2/3
         fields:
-          departments:
+          departmentOptions:
             label:
               nl: Afdelingen
               en: Departments
               fr: Départements
             type: structure
+            limit: 6
+            fields:
+              department:
+                label:
+                  nl: Afdeling
+                  en: Department
+                  fr: Département
+                type: text
+                required: true
+                maxlength: 32
+          departments:
+            label:
+              nl: Afdeling x Werknemers
+              en: Departments x Employees
+              fr: Départements x Employés
+            type: structure
             columns:
-              name:
+              department:
                 width: 1/4
               employees:
                 width: 3/4
             fields:
-              name:
+              department:
                 label:
-                  nl: Naam
-                  en: Name
-                  fr: Nom
-                type: text
-                maxlength: 32
+                  nl: Afdeling
+                  en: Department
+                  fr: Département
+                type: radio
                 required: true
+                options:
+                  type: query
+                  query: site.departmentOptions.toStructure
+                  text: "{{ item.department }}"
               employees:
                 label:
                   nl: Werknemers
@@ -253,7 +272,43 @@ tabs:
                 image:
                   query: page.profilePicture.toFile
                   cover: true
-  
+            # label:
+            #   nl: Afdelingen x Werknemers
+            #   en: Departments x Employees
+            #   fr: Départements x Employés
+            # type: radio
+            # required: true
+            # options:
+            #   type: query
+            #   query: site.departmentOptions.toStructure
+
+            # columns:
+            #   name:
+            #     width: 1/4
+            #   employees:
+            #     width: 3/4
+            # fields:
+            #   name:
+            #     label:
+            #       nl: Naam
+            #       en: Name
+            #       fr: Nom
+            #     type: text
+            #     maxlength: 32
+            #     required: true
+            #   employees:
+            #     label:
+            #       nl: Werknemers
+            #       en: Employees
+            #       fr: Employés
+            #     type: pages
+            #     query: site.index.filterBy('template', 'in', ['employee'])
+            #     limit: 6
+            #     layout: cardlets
+            #     image:
+            #       query: page.profilePicture.toFile
+            #       cover: true
+
   projects:
     label:
       nl: Projecten
