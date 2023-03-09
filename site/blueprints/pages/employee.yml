@@ -91,38 +91,7 @@ tabs:
 
           # Socials
           socials:
-            label:
-              nl: Sociale media
-              en: Social media
-              fr: Médias sociaux
-            type: structure
-            width: 1/2
-            columns:
-              social:
-                width: 1/4
-              url:
-                width: 3/4
-            fields:
-              social:
-                label:
-                  nl: Platform
-                  en: Platform
-                  fr: Plateforme
-                type: select
-                options:
-                  facebook: Facebook
-                  instagram: Instagram
-                  linkedin: LinkedIn
-                  twitter: Twitter
-                  github: GitHub
-                  dribbble: Dribbble
-                  other:
-                    nl: Andere
-                    en: Other
-                    fr: Autre
-              url:
-                label: URL
-                type: url
+            extends: fields/socials
 
           # Statistics
           stats:
@@ -132,6 +101,11 @@ tabs:
               fr: Statistiques
             type: structure
             width: 1/2
+            columns:
+              number:
+                width: 1/2
+              numberLabel:
+                width: 1/2
             fields:
               number:
                 label:
@@ -139,14 +113,26 @@ tabs:
                   en: Number
                   fr: Nombre
                 type: number
-                min: 1
+                min: 0
                 max: 999
                 step: 100
                 required: true
+                width: 1/2
                 help:
                   nl: Kies een getal van 1-999
                   en: Insert number from 1-999
                   fr: Choisissez un nombre de 1-999
+              addPlus:
+                label:
+                  nl: "+" toevoegen?
+                  en: Add "+"?
+                  fr: Ajouter "+"?
+                extends: fields/toggle
+                width: 1/2
+                help:
+                  nl: 100 wordt **100+**
+                  en: 100 becomes **100+**
+                  fr: 100 devient **100+**
               numberLabel:
                 label: Label
                 type: text
@@ -380,7 +366,7 @@ tabs:
                 required: true
                 width: 2/4
               companyWebsiteToggle:
-                extends: fields/employee/toggle
+                extends: fields/toggle
                 label:
                   nl: Bedrijfswebsite toevoegen?
                   en: Add company website?
@@ -400,7 +386,7 @@ tabs:
               experienceStartDate:
                 extends: fields/employee/startDate
               currentJobToggle:
-                extends: fields/employee/toggle
+                extends: fields/toggle
                 label:
                   nl: Is dit je huidige functie?
                   en: Is this your current job?
@@ -498,7 +484,7 @@ tabs:
               educationStartDate:
                 extends: fields/employee/startDate
               currentEducationToggle:
-                extends: fields/employee/toggle
+                extends: fields/toggle
                 label:
                   nl: Lopend?
                   en: Ongoing?

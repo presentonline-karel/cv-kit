@@ -223,6 +223,10 @@
                             font-family: $paragraph-font;
                             gap: 8px;
 
+                            &:hover {
+                                color: $neutrals-1200;
+                            }
+
                             i {
                                 color: $primary-600;
                                 width: 16px;

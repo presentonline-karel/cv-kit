@@ -50,7 +50,6 @@
                 @include fontSize(14px, 14px);
                 color: $neutrals-900;
                 font-family: $title-font;
-                width: 63px;
                 white-space: nowrap;
             }
 
@@ -169,7 +168,6 @@
                 p {
                     @include fontSize(16px, 16px);
                     padding-bottom: 3px;
-                    width: 76px;
                 }
 
                 .tags {

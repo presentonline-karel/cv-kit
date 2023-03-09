@@ -16,7 +16,15 @@
 
         <!-- Filter section -->
         <section class="filter-section">
-            <h1>All employees</h1>
+            <h1>
+                <?php if ($kirby->language()->code() == "nl") {
+                    echo ("Alle werknemers");
+                } elseif ($kirby->language()->code() == "en") {
+                    echo ("All employees");
+                } elseif ($kirby->language()->code() == "fr") {
+                    echo ("Tous les employés");
+                } ?>
+            </h1>
 
             <div class="employees-filter">
                 <form class="filter-form">
@@ -24,7 +32,15 @@
                 </form>
 
                 <div class="filter-tags flex">
-                    <p>Or job title</p>
+                    <p>
+                        <?php if ($kirby->language()->code() == "nl") {
+                            echo ("of functietitel");
+                        } elseif ($kirby->language()->code() == "en") {
+                            echo ("or job title");
+                        } elseif ($kirby->language()->code() == "fr") {
+                            echo ("ou titre de l'emploi");
+                        } ?>
+                    </p>
 
                     <div class="tags">
                         <button class="tag tag-m filter-tag">Frontend Developer</button>
@@ -41,308 +57,96 @@
 
 
         <!-- Teams section -->
-        <section class="teams-section">
-            <div id="allEmployees" class="team section fade-section filter-results">
-                <h4 class="section__title">Results</h4>
+        <?php if ($departments = $site->departments()->toStructure()) : ?>
+            <section class="teams-section">
 
-                <div class="employees">
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
+                <!-- Searchable employees -->
+                <div id="allEmployees" class="team section fade-section filter-results">
+                    <h4 class="section__title">
+                        <?php if ($kirby->language()->code() == "nl") {
+                            echo ("Resultaten");
+                        } elseif ($kirby->language()->code() == "en") {
+                            echo ("Results");
+                        } elseif ($kirby->language()->code() == "fr") {
+                            echo ("Résultats");
+                        } ?>
+                    </h4>
 
-                            <div class="content">
-                                <h5 class="employee-name">Matthias Van Vlerken</h5>
-                                <p class="function">Project Manager</p>
+                    <?php if($publishedEmployees = $site->employeesPublished()->toPages()): ?>
+                        <div class="employees">
 
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
+                            <?php foreach ($publishedEmployees as $employee) : ?>
+                                <a class="employee" href="<?= $employee->url() ?>">
+                                    <div class="employee-container">
+                                        <div class="employee-picture-container">
+
+                                            <?php if ($profilePicture = $employee->profilePicture()->toFile()) : ?>
+                                                <img class="employee-picture" src="<?= $profilePicture->url() ?>" alt="<?= $profilePicture->alt() === "" ? $profilePicture->alt() : $employee->name(); ?>" />
+                                            <?php else : ?>
+                                                <img class="employee-picture" src="../../assets/img/employee-picture-placeholder.jpg" alt="<?= $employee->name() ?>" />
+                                            <?php endif; ?>
+                                        </div>
+
+                                        <div class="content">
+                                            <h5 class="employee-name"><?= $employee->name() ?></h5>
+                                            <p class="function"><?= $employee->jobTitle() ?></p>
+
+                                            <button class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <button class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                </a>
+                            <?php endforeach; ?>
                         </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Frontend Developer</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Matthias Van Vlerken</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Matthias Van Vlerken</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Matthias Van Vlerken</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
+                    <?php endif; ?>
                 </div>
-            </div>
 
-            <div id="management" class="team section fade-section">
-                <h4 class="section__title">Management</h4>
 
-                <div class="employees">
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
+
+                <!-- Employees in teams -->
+                <?php foreach ($departments as $department) : ?>
+                    <div id="management" class="team section fade-section">
+                        <h4 class="section__title"><?= $department->name() ?></h4>
+
+                        <?php if ($employees = $department->employees()->toPages()) : ?>
+                            <div class="employees">
+
+                                <?php foreach ($employees as $employee) : ?>
+                                    <a class="employee" href="<?= $employee->url() ?>">
+                                        <div class="employee-container">
+                                            <div class="employee-picture-container">
+                                                <?php if ($profilePicture = $employee->profilePicture()->toFile()) : ?>
+                                                    <img class="employee-picture" src="<?= $profilePicture->url() ?>" alt="<?= $profilePicture->alt() === "" ? $profilePicture->alt() : $employee->name(); ?>" />
+                                                <?php else : ?>
+                                                    <img class="employee-picture" src="../../assets/img/employee-picture-placeholder.jpg" alt="<?= $employee->name() ?>" />
+                                                <?php endif; ?>
+                                            </div>
+
+                                            <div class="content">
+                                                <h5 class="employee-name"><?= $employee->name() ?></h5>
+                                                <p class="function"><?= $employee->jobTitle() ?></p>
+
+                                                <button class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+
+                                        <button class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                                    </a>
+                                <?php endforeach; ?>
                             </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Matthias Van Vlerken</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        <?php endif; ?>
                     </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="frontendDevelopers" class="team section fade-section">
-                <h4 class="section__title">Frontend developers</h4>
-
-                <div class="employees">
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="backendDevelopers" class="team section fade-section">
-                <h4 class="section__title">Backend developers</h4>
-
-                <div class="employees">
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-
-                    <div class="employee">
-                        <div class="employee-container">
-                            <div class="employee-picture-container">
-                                <img class="employee-picture" src="/assets/img/karel.webp" alt="Karel" />
-                            </div>
-
-                            <div class="content">
-                                <h5 class="employee-name">Karel Decoene</h5>
-                                <p class="function">Function</p>
-
-                                <a class="button button-tertiary button-desktop">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
-                        <a class="button button-tertiary button-mobile">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <?php endforeach; ?>
+            </section>
+        <?php endif; ?>
 
 
 
-        <!-- CTA section -->
-        <?php snippet("blocks/cta") ?>
+        <!-- CTA -->
+        <?php if ($site->ctaDisplayToggle()->toBool() === true) : ?>
+            <?php snippet("blocks/cta") ?>
+        <?php endif; ?>
     </main>
 </div>
 

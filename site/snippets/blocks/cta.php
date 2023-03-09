@@ -1,6 +1,9 @@
 <section class="cta fade-section fade-section">
     <div class="cta__content">
-        <h2>Looking for something specific?<br><span>Maybe reach out to us directly.</span></h2>
+        <h2>
+            <?= $site->ctaTitleDefault() ?><br>
+            <span><?= $site->ctaTitleColor() ?></span>
+        </h2>
 
         <div class="buttons">
             <a class="button button-primary"><span><i class="icon-big fa fa-phone" aria-hidden="true"></i>Call us</span></a>

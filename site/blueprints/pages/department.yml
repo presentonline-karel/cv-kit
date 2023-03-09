@@ -1,0 +1,25 @@
+title:
+  nl: Afdeling
+  en: Department
+  fr: Département
+icon: users
+
+columns:
+  left:
+    width: 1/3
+    fields:
+      departmentHeadline:
+        label:
+          nl: Afdelingen
+          en: Departments
+          fr: Départements
+        type: headline
+        numbered: false
+      departmentsInfo:
+        label: Info
+        type: info
+        text: |
+          [Placeholder] Here comes some info on how to manage departments...
+  right:
+    width: 2/3
+    sections:

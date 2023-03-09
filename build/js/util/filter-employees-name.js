@@ -3,7 +3,7 @@ const filterEmployeesOnName = () => {
     filterFeedback.style.display = "none";
     
     const searchInput = document.querySelector(".input-filter");
-    const employees = document.querySelectorAll(".employee");
+    const employees = document.querySelector(".filter-results").querySelectorAll(".employee");
     const employeeNames = document.querySelectorAll(".employee-name");
 
     const teams = document.querySelectorAll(".team");
