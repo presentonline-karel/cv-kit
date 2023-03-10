@@ -6,8 +6,27 @@
         </h2>
 
         <div class="buttons">
-            <a class="button button-primary"><span><i class="icon-big fa fa-phone" aria-hidden="true"></i>Call us</span></a>
-            <a class="button button-primary"><span><i class="icon-big fa fa-envelope" aria-hidden="true"></i>Email us</span></a>
+            <a class="button button-primary" href="tel:<?= $site->contactInfo()->toObject()->phoneNumber() ?>">
+                <span>
+                    <i class="icon-big fa fa-phone" aria-hidden="true"></i>
+                    
+                    <?php if ($kirby->language()->code() == "nl") {
+                        echo ("Bellen");
+                    } elseif ($kirby->language()->code() == "en") {
+                        echo ("Call");
+                    } elseif ($kirby->language()->code() == "fr") {
+                        echo ("Appeler");
+                    } ?>
+                </span>
+            </a>
+
+            <a class="button button-primary" href="mailto:<?= $site->contactInfo()->toObject()->email() ?>">
+                <span>
+                    <i class="icon-big fa fa-envelope" aria-hidden="true"></i>
+
+                    Email
+                </span>
+            </a>
         </div>
     </div>
 </section>

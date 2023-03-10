@@ -45,14 +45,13 @@ tabs:
               nl: Afdeling
               en: Department
               fr: Département
-            # type: text
-            width: 1/3
             type: select
             options:
               type: query
               query: site.departmentOptions.toStructure
               text: "{{ item.department }}"
               value: "{{ item.department }}"
+            width: 1/3
             # help:
             #   nl: Indien meerdere, kies de afdeling waar je het actiefst bent.
             #   en: If several, choose the department where you are most active.
@@ -85,6 +84,7 @@ tabs:
               en: Introduction title
               fr: Titre d'introduction
             type: text
+            maxlength: 80
             required: true
           intro:
             label:
@@ -523,4 +523,7 @@ tabs:
                   fr: Diplôme
                 type: files
                 max: 1
+                layout: cardlets
                 width: 2/4
+                image:
+                  cover: true

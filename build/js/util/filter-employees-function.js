@@ -4,7 +4,6 @@ const filterEmployeesOnFunction = () => {
     filterFeedback.classList.remove("active");
 
     const functions = document.querySelectorAll(".filter-tag");
-    // const employees = document.querySelectorAll(".employee");
     const employees = document.querySelectorAll(".employee-search-results");
 
     const teams = document.querySelectorAll(".team");
@@ -17,15 +16,13 @@ const filterEmployeesOnFunction = () => {
     var amountOfResults = 0;
 
     const structuredFunctions = [];
-    // employees.forEach(employee => { structuredFunctions.push(employee.querySelector(".function")); });
 
     employees.forEach(employee => { 
-        structuredFunctions.push(employee.querySelector(".hidden-function"));
-        //document.querySelector(".employee-search-results").querySelector(".hidden-function").style.display = "none";
+        structuredFunctions.push(employee.querySelector(".department"));
     });
 
-    document.querySelectorAll(".hidden-function").forEach(employeeFilter => {
-        //employeeFilter.style.display = "none";
+    document.querySelectorAll(".department").forEach(employeeFilter => {
+        employeeFilter.style.display = "none";
     })
 
 

@@ -3,9 +3,11 @@
                 <div class="footer__content__brand flex">
 
                     <!-- Logo -->
-                    <a class="logo-container" href="<?= $site->url() ?>" aria-label="Home">
-                        <img class="logo" src="/assets/img/PO-flat-default.png" alt="Logo" />
-                    </a>
+                    <?php if($logo = $site->logo()->toFile()): ?>
+                        <a class="logo-container" href="<?= $site->url() ?>" aria-label="Home">
+                            <img class="logo" src="<?= $logo->url() ?>" alt="<?= $logo->alt() === "" ? $logo->alt() : $logo->name(); ?>" />
+                        </a>
+                    <?php endif; ?>
 
                     <!-- Arrow up -->
                     <a class="arrow-up" href="#container">
@@ -13,15 +15,16 @@
                     </a>
                 </div> 
 
-                <p class="footer__content__signOff">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum bibendum tristique. Ut sagittis euismod mi.
-                </p>
+                <p class="footer__content__signOff"><?= $site->companyDescription() ?></p>
 
                 <!-- Socials -->
                 <?php snippet("general/socials") ?>
             </div>
 
-            <p class="footer__copyright">©PresentOnline. All rights reserved.</p>
+            <!-- Copyright -->
+            <?php if($companyInfo = $site->contactInfo()->toObject()): ?>
+                <p class="footer__copyright">© <?= $companyInfo->name() ?> <?php echo date("Y"); ?></p>
+            <?php endif; ?>
         </footer>
 
         <?= js("build/js/general/nav.js", ["defer" => true]) ?>

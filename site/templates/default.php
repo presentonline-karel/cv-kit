@@ -6,7 +6,7 @@
 
 <div id="container" class="container container-error">
 
-    <?php snippet("general/nav") ?>
+    <?php snippet("nav/nav") ?>
 
 
 

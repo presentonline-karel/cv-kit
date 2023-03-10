@@ -104,7 +104,7 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .employee-introduction {
-        h3, .intro {
+        .intro {
             max-width: 615px;
         }
 

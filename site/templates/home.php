@@ -8,7 +8,7 @@
 <div id="container" class="container container-home">
 
     <!-- Nav -->
-    <?php snippet("general/nav") ?>
+    <?php snippet("nav/nav") ?>
 
 
 
@@ -92,14 +92,7 @@
                                         <div class="content">
                                             <h5 class="employee-name"><?= $employee->name() ?></h5>
                                             <p class="function"><?= $employee->jobTitle() ?></p>
-
-                                            <p class="hidden-function"><?= $employee->department() ?></p>
-
-                                            <?php /*foreach ($departments as $department) : ?>
-                                                <?php if($department->employees()->toPages()->has($employee)): ?>
-                                                    <p class="hidden-function"><?= var_dump($department->name()) ?></p>
-                                                <?php endif; ?>
-                                            <?php endforeach;*/ ?>
+                                            <p class="department"><?= $employee->department() ?></p>
 
                                             <button class="button button-tertiary button-desktop">
                                                 <?php if ($kirby->language()->code() == "nl") {
@@ -126,7 +119,9 @@
 
                 <!-- Employees in teams -->
                 <?php foreach ($departments as $department) : ?>
-                    <div id="management" class="team section fade-section">
+                    <?php $departmentId = strtolower(str_replace(" ", "", $department->name())); ?>
+
+                    <div id="<?= $departmentId ?>" class="team section fade-section">
                         <h4 class="section__title"><?= $department->name() ?></h4>
 
                         <?php if ($employees = $department->employees()->toPages()) : ?>
@@ -146,12 +141,6 @@
                                             <div class="content">
                                                 <h5 class="employee-name"><?= $employee->name() ?></h5>
                                                 <p class="function"><?= $employee->jobTitle() ?></p>
-
-                                                <?php foreach ($departments as $department) : ?>
-                                                    <?php if($department->employees()->toPages()->has($employee)): ?>
-                                                        <p class="hidden-function"><?= $department->name() ?></p>
-                                                    <?php endif; ?>
-                                                <?php endforeach; ?>
 
                                                 <button class="button button-tertiary button-desktop">
                                                     <?php if ($kirby->language()->code() == "nl") {
