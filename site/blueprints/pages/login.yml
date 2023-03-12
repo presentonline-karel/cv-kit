@@ -1,16 +1,169 @@
 title: Login
-icon: lock
+icon: key
 
-fields:
-  alert:
-    label: Alert text
-    type: text
-  username:
-    label: Label for username
-    type: text
-  password:
-    label: Label for password
-    type: text
-  button:
-    label: Button text
-    type: text
+columns:
+  left:
+    width: 1/2
+    fields:
+      headerHeadline:
+        label: Header
+        type: headline
+      pageTitle:
+        label:
+          nl: Titel
+          en: Title
+          fr: Titre
+        type: text
+        maxlength: 16
+      message:
+        label: 
+          nl: Boodschap
+          en: Message
+          fr: Message
+        type: text
+        maxlength: 64
+      line-a:
+        type: line
+
+      formHeadline:
+        label:
+          nl: Login formulier
+          en: Login form
+          fr: Formulaire login
+        type: headline
+      emailLabel:
+        label: Email label
+        type: text
+        maxlength: 32
+        required: true
+      emailPlaceholder:
+        label: Email placeholder
+        type: text
+        maxlength: 48
+        required: true
+      passwordLabel:
+        label:
+          nl: Wachtwoord label
+          en: Password label
+          fr: Mot de passe label
+        type: text
+        maxlength: 32
+        required: true
+      passwordPlaceholder:
+        label:
+          nl: Wachtwoord placeholder
+          en: Password placeholder
+          fr: Mot de passe placeholder
+        type: text
+        maxlength: 32
+        required: true
+      submitButtonText:
+        label:
+          nl: Login knop tekst
+          en: Login button text
+          fr: Bouton login texte
+        type: text
+        maxlength: 32
+        width: 1/2
+        required: true
+      submitButtonIcon:
+        label:
+          nl: Login knop icoon
+          en: Login button icon
+          fr: Bouton login icône
+        type: radio
+        required: true
+        width: 1/2
+        options:
+          noIcon:
+            nl: Geen icoon
+            en: No icon
+            fr: Pas d'icône
+          chevronRight:
+            nl: Chevron rechts
+            en: Chevron right
+            fr: Chevron droit
+          arrowRight:
+            nl: Pijl rechts
+            en: Pijl naar onder
+            fr: Flèche vers le bas
+      line-b:
+        type: line
+      
+      accessHeadline:
+        label:
+          nl: Toegang CTA
+          en: Access CTA
+          fr: Accès CTA
+        type: headline
+      accessText:
+        label:
+          nl: Toegang tekst
+          en: Access text
+          fr: Accès texte
+        type: text
+        maxlength: 32
+        required: true
+      accesLink:
+        label:
+          nl: Link
+          en: Link
+          fr: Lien
+        extends: fields/buttons
+        required: true
+        max: 1
+        fields:
+          icon: false
+          typeOfButton: false
+
+  right:
+    width: 1/2
+    fields:
+      typeOfImage:
+        type: toggles
+        label:
+          nl: Type afbeelding
+          en: Type image
+          fr: type d'image
+        required: true
+        options:
+          - value: preview
+            text: Preview app
+            icon: display
+          - value: custom
+            text: Custom
+            icon: image
+      previewInfo:
+        label:
+          nl: Info bij preview
+          en: Info with preview
+          fr: Info avec preview
+        type: info
+        when:
+          typeOfImage: preview
+        text:
+          nl: De preview image wordt automatisch ingesteld.
+          en: The preview image is configured automatically.
+          fr: L'image de prévisualisation est configurée automatiquement.
+        help:
+          nl: De afbeelding van de login pagina is zichtbaar vanaf een schermresolutie van 1280px (laptop).
+          en: The image of the login page is visible from a screen resolution of 1280px (laptop).
+          fr: L'image de la page de connexion est visible à partir d'une résolution d'écran de 1280px (ordinateur portable).
+      customImage:
+        label:
+          nl: Aangepaste afbeelding
+          en: Custom image
+          fr: Image personnalisée
+        type: files
+        max: 1
+        required: true
+        layout: cards
+        when:
+          typeOfImage: custom
+        help:
+          nl: Neem een foto met 1/1 verhouding voor de beste weergave
+          en: Take a picture with a 1/1 ratio for the best result
+          fr: Prenez une photo avec un rapport de 1/1 pour un meilleur résultat.
+        image:
+          ratio: 1/1
+          cover: true

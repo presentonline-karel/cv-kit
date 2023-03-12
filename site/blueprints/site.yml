@@ -32,9 +32,9 @@ tabs:
             image: icon
             create: false
             templates:
-              - home
               - error
               - login
+              - !home
               - !employee
 
       right:
@@ -151,14 +151,14 @@ tabs:
             maxlength: 64
             when:
               ctaDisplayToggle: true
-          # ctaButtons:
-          #   label:
-          #     nl: Knoppen
-          #     en: Buttons
-          #     fr: Boutons
-          #   extends: fields/buttons
-          #   when:
-          #     ctaDisplayToggle: true
+          ctaButtons:
+            label:
+              nl: Knoppen
+              en: Buttons
+              fr: Boutons
+            extends: fields/buttons
+            when:
+              ctaDisplayToggle: true
 
   employees:
     label:

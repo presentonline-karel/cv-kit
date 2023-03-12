@@ -10,7 +10,13 @@
         width: calc(100vw - 80px);
 
         .sad-face {
+            color: $primary-600;
+            font-weight: 700;
+            font-family: $title-font;
+            font-size: 80px;
+            line-height: 80px;
             margin-bottom: 64px;
+            transform: rotate(90deg);
         }
 
         h1 {
@@ -43,6 +49,11 @@
 
             h1 {
                 margin-bottom: 24px;
+            }
+
+            .sad-face {
+                font-size: 112px;
+                line-height: 112px;
             }
         }
     }

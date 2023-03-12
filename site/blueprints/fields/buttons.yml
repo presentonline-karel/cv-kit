@@ -11,40 +11,96 @@ columns:
     width: 2/8
 fields:
   anchor:
-    label: Knop tekst
+    label:
+      nl: Knop tekst
+      en: Button text
+      fr: Texte du bouton
     type: text
     required: true
   icon:
-    label: Icoon
+    label:
+      nl: Icoon
+      en: Icon
+      fr: Icône
     type: radio
     required: true
     options:
-      noIcon: Geen Icoon
-      chevronRight: Chevron rechts
-      chevronDown: Chevron onder
-      arrowRight: Pijl rechts
-      arrowRightTop: Pijl rechts boven
-      arrowDown: Pijl onder
+      noIcon:
+        nl: Geen icoon
+        en: No icon
+        fr: Pas d'icône
+      chevronRight:
+        nl: Chevron rechts
+        en: Chevron right
+        fr: Chevron droit
+      chevronDown:
+        nl: Chevron naar onder
+        en: Chevron down
+        fr: Chevron vers le bas
+      arrowRight:
+        nl: Pijl rechts
+        en: Pijl naar onder
+        fr: Flèche vers le bas
+      arrowRightTop:
+        nl: Pijl rechtssboven
+        en: Top right arrow
+        fr: Flèche en haut à droite
+      arrowDown:
+        nl: Pijl naar onder
+        en: Arrow down
+        fr: Flèche vers le bas
+      phone:
+        nl: Telefoon
+        en: Phone
+        fr: Téléphone
+      envelope:
+        nl: Envelop
+        en: Envelope
+        fr: Enveloppe
   typeOfButton:
     label: Type
     type: radio
     required: true
     options:
-      button-primary: Primary
-      button-secondary: Secondary
-      button-tertiary: Tertiary
+      button-primary:
+        nl: Primair
+        en: Primary
+        fr: Primaire
+      button-secondary:
+        nl: Secundair
+        en: Secondary
+        fr: Secondaire
+      button-tertiary:
+        nl: Tertiar
+        en: Tertiary
+        fr: Tertiare
   destination:
-    label: Link
+    label:
+      nl: Link
+      en: Link
+      fr: Lien
     type: select
     max: 1
     required: true
     options:
-      internal: Interne webpagina
-      external: Externe webpagina
-      call: Bellen
-      email: Mailen
+      internal:
+        nl: Interne webpagina
+        en: Internal webpage
+        fr: Page web interne
+      external:
+        nl: Externe webpagina
+        en: External webpage
+        fr: Page web externe
+      call:
+        nl: Bellen
+        en: Call
+        fr: Appeler
+      email: Email
   internalPage:
-    label: Interne webpagina
+    label:
+      nl: Interne webpagina
+      en: Internal webpage
+      fr: Page web interne
     type: pages
     max: 1
     required: true
@@ -53,28 +109,41 @@ fields:
     when:
       destination: internal
   idPage:
-    label: id op pagina
+    label:
+      nl: Id op pagina
+      en: Id on page
+      fr: Id à la page
     type: text
     width: 1/4
     when:
       destination: internal
   externalUrl:
-    label: Externe webpagina
+    label:
+      nl: Externe webpagina
+      en: External webpage
+      fr: Page web externe
     type: url
     required: true
     when:
       destination: external
   callInfo:
-    label: Info bij Bellen knop
+    label:
+      nl: Info bij bellen
+      en: Info when calling
+      fr: Informations lors de l'appel
     type: info
     when:
       destination: call
-    text: |
-      Deze knop zal nu een directe link zijn om je te bellen. Je telefoonnummer wordt automatisch ingevuld vanuit de contact tab (check even of dit ingevuld is).
+    text:
+      nl: Deze knop zal nu een directe link zijn om je te bellen. Je telefoonnummer wordt automatisch ingevuld vanuit de bedrijfsinformatie.
+      en: This button will now be a direct link to call you. Your phone number is automatically populated from the company information.
+      fr: Ce bouton sera désormais un lien direct pour vous appeler. Votre numéro de téléphone est automatiquement généré à partir des informations sur l'entreprise.
   emailInfo:
     label: Info bij Mailen knop
     type: info
     when:
       destination: email
-    text: |
-      Deze knop zal nu een directe link zijn om je een mail te sturen. Je email wordt automatisch ingevuld vanuit de contact tab (check even of dit ingevuld is).
+    text:
+      nl: Deze knop zal nu een directe link zijn om je een mail te sturen. Je email wordt automatisch ingevuld vanuit de bedrijfsinformatie.
+      en: This button will now be a direct link to send you an email. Your email will be automatically populated from the company information.
+      fr: Ce bouton sera désormais un lien direct pour vous envoyer un courrier électronique. Votre adresse électronique sera automatiquement renseignée à partir des informations relatives à l'entreprise.

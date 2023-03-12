@@ -5,28 +5,12 @@
             <span><?= $site->ctaTitleColor() ?></span>
         </h2>
 
-        <div class="buttons">
-            <a class="button button-primary" href="tel:<?= $site->contactInfo()->toObject()->phoneNumber() ?>">
-                <span>
-                    <i class="icon-big fa fa-phone" aria-hidden="true"></i>
-                    
-                    <?php if ($kirby->language()->code() == "nl") {
-                        echo ("Bellen");
-                    } elseif ($kirby->language()->code() == "en") {
-                        echo ("Call");
-                    } elseif ($kirby->language()->code() == "fr") {
-                        echo ("Appeler");
-                    } ?>
-                </span>
-            </a>
-
-            <a class="button button-primary" href="mailto:<?= $site->contactInfo()->toObject()->email() ?>">
-                <span>
-                    <i class="icon-big fa fa-envelope" aria-hidden="true"></i>
-
-                    Email
-                </span>
-            </a>
-        </div>
+        <?php if ($ctaButtons = $site->ctaButtons()->toStructure()) : ?>
+            <div class="buttons">
+                <?php foreach ($ctaButtons as $button) : ?>
+                    <?php snippet("helpers/button", ["button" => $button]) ?>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
     </div>
 </section>

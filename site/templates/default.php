@@ -11,12 +11,18 @@
 
 
     <div class="error-content">
-        <img class="sad-face" src="/assets/img/sad-face.svg" alt="Sad face" />
+        <?php if($page->defaultSmiley()->isNotEmpty()): ?>
+            <div class="sad-face"><?= $page->defaultSmiley() ?></div>
+        <?php endif; ?>
 
-        <h1>Oooppsss</h1>
-        <p>We can’t find this page.<br> Please return to the main project page.</p>
+        <h1><?= $page->defaultTitle() ?></h1>
+        <p><?= $page->defaultParagraph() ?></p>
 
-        <a class="button button-primary" href="#">All employees<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        <?php if ($defaultButton = $page->defaultButton()->toStructure()) : ?>
+            <?php foreach ($defaultButton as $button) : ?>
+                <?php snippet("helpers/button", ["button" => $button]) ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 </div>
 

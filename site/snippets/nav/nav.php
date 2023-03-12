@@ -29,7 +29,7 @@
 
             <!-- Company -->
             <div class="company">
-                <a class="button button-tertiary clickable-nav-item" href="#allEmployees">
+                <a class="button button-tertiary clickable-nav-item" href="<?= $site->url() ?>/#allEmployees">
                     <h4>
                         <?php if ($kirby->language()->code() == "nl") {
                             echo ("Alle werknemers");
