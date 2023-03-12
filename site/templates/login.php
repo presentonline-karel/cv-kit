@@ -13,7 +13,7 @@
             <div class="logo-lang-container">
 
                 <!-- Logo -->
-                <?php if($logo = $site->logo()->toFile()): ?>
+                <?php if ($logo = $site->logo()->toFile()) : ?>
                     <a class="logo-container" href="<?= $site->url() ?>" aria-label="Home">
                         <img class="logo" src="<?= $logo->url() ?>" alt="<?= $logo->alt() === "" ? $logo->alt() : $logo->name(); ?>" />
                     </a>
@@ -34,7 +34,10 @@
 
         <!-- Error -->
         <?php if ($error) : ?>
-            <div class="alert"><?= $page->alert()->html() ?></div>
+            <div class="alert">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <h5><?= $page->alert()->html() ?></h5>
+            </div>
         <?php endif ?>
 
 
@@ -46,7 +49,7 @@
                 <p>Welcome back! Please enter your details.</p>
             </div>
 
-            <form method="post" action="<?= $page->url() ?>">
+            <form method="POST" action="<?= $page->url() ?>">
                 <div>
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" value="<?= get('email') ? esc(get('email'), 'attr') : '' ?>" placeholder="surename.firstname@company.be">
@@ -55,24 +58,30 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" value="<?= get('password') ? esc(get('password'), 'attr') : '' ?>" placeholder="password">
                 </div>
-                
+
                 <button class="button button-primary" type="submit" name="login" value="Login">Login</button>
             </form>
 
             <div class="access-cta">
-                <p>Toegang nodig?  |  <a href="#">Neem contact op.</a></p>
+                <p>Toegang nodig? | <a href="#">Neem contact op.</a></p>
             </div>
         </div>
 
 
 
         <!-- Copyright -->
-        <?php if($companyInfo = $site->contactInfo()->toObject()): ?>
+        <?php if ($companyInfo = $site->contactInfo()->toObject()) : ?>
             <p class="copyright p">© <?= $companyInfo->name() ?> <?php echo date("Y"); ?></p>
         <?php endif; ?>
+    </div>
+
+    <div class="image-container">
+        <img src="../../assets/img/login-test.png" />
     </div>
 </div>
 
 
 
-<?php snippet("general/footer") ?>
+<?= js("build/js/general/language-dropdown.js", ["defer" => true]) ?>
+</body>
+</html>
