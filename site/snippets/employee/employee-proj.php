@@ -1,14 +1,6 @@
 <section class="projects-section card-section section fade-section swiper">
     <div class="projects-section__header card-section__header">
-        <h3 class="section__title">
-            <?php if ($kirby->language()->code() == "nl") {
-                echo ("Projecten");
-            } elseif ($kirby->language()->code() == "en") {
-                echo ("Projects");
-            } elseif ($kirby->language()->code() == "fr") {
-                echo ("Projets");
-            } ?>
-        </h3>
+        <h3 class="section__title"><?= t("projects") ?></h3>
 
         <div class="arrows">
             <i class="nav-arrow swiper-nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>

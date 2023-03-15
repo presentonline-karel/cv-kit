@@ -1,14 +1,6 @@
 <section class="experience-section card-section section fade-section swiper">
     <div class="projects-section__header card-section__header">
-        <h3 class="section__title">
-            <?php if ($kirby->language()->code() == "nl") {
-                echo ("Werkervaring");
-            } elseif ($kirby->language()->code() == "en") {
-                echo ("Work experience");
-            } elseif ($kirby->language()->code() == "fr") {
-                echo ("Expérience de travail");
-            } ?>
-        </h3>
+        <h3 class="section__title"><?= t("workExperience") ?></h3>
 
         <div class="arrows">
             <i class="arrow nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
@@ -44,13 +36,7 @@
                                 <div class="card__period">
                                     <?= date('M Y', strtotime($experience->experienceStartDate())) ?>
                                     -
-                                    <?php if ($kirby->language()->code() == "nl") {
-                                        echo ("Heden");
-                                    } elseif ($kirby->language()->code() == "en") {
-                                        echo ("Present");
-                                    } elseif ($kirby->language()->code() == "fr") {
-                                        echo ("Présent");
-                                    } ?>
+                                    <?= t("present") ?>
                                 </div>
                             <?php else : ?>
                                 <div class="card__period">

@@ -16,31 +16,15 @@
 
         <!-- Filter section -->
         <section class="filter-section">
-            <h1>
-                <?php if ($kirby->language()->code() == "nl") {
-                    echo ("Alle werknemers");
-                } elseif ($kirby->language()->code() == "en") {
-                    echo ("All employees");
-                } elseif ($kirby->language()->code() == "fr") {
-                    echo ("Tous les employés");
-                } ?>
-            </h1>
+            <h1><?= t("allEmployees") ?></h1>
 
             <div class="employees-filter">
                 <form class="filter-form">
-                    <input class="filter-form__input input-filter" type="text" placeholder="<?php if ($kirby->language()->code() == "nl") { echo ("Zoek op naam werknemer"); } elseif ($kirby->language()->code() == "en") { echo ("Search on employees name"); } elseif ($kirby->language()->code() == "fr") { echo ("Recherche par nom d'employé"); } ?>" />
+                    <input class="filter-form__input input-filter" type="text" placeholder="<?= t("searchOnEmployeesName") ?>" />
                 </form>
 
                 <div class="filter-tags flex">
-                    <p>
-                        <?php if ($kirby->language()->code() == "nl") {
-                            echo ("of functietitel");
-                        } elseif ($kirby->language()->code() == "en") {
-                            echo ("or job title");
-                        } elseif ($kirby->language()->code() == "fr") {
-                            echo ("ou titre de l'emploi");
-                        } ?>
-                    </p>
+                    <p><?= t("jobTitleHandle") ?></p>
 
                     <?php if($functions = $site->departmentOptions()->toStructure()): ?>
                         <div class="tags">
@@ -64,15 +48,7 @@
 
                 <!-- Searchable employees -->
                 <div id="allEmployees" class="team section fade-section filter-results">
-                    <h4 class="section__title">
-                        <?php if ($kirby->language()->code() == "nl") {
-                            echo ("Resultaten");
-                        } elseif ($kirby->language()->code() == "en") {
-                            echo ("Results");
-                        } elseif ($kirby->language()->code() == "fr") {
-                            echo ("Résultats");
-                        } ?>
-                    </h4>
+                    <h4 class="section__title"><?= t("results") ?></h4>
 
                     <?php if($publishedEmployees = $site->employeesPublished()->toPages()): ?>
                         <div class="employees">
@@ -95,14 +71,7 @@
                                             <p class="department"><?= $employee->department() ?></p>
 
                                             <button class="button button-tertiary button-desktop">
-                                                <?php if ($kirby->language()->code() == "nl") {
-                                                    echo ("Lees");
-                                                } elseif ($kirby->language()->code() == "en") {
-                                                    echo ("Read");
-                                                } elseif ($kirby->language()->code() == "fr") {
-                                                    echo ("Lire");
-                                                } ?>
-                                                
+                                                <?= t("read") ?>
                                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                             </button>
                                         </div>
@@ -143,14 +112,7 @@
                                                 <p class="function"><?= $employee->jobTitle() ?></p>
 
                                                 <button class="button button-tertiary button-desktop">
-                                                    <?php if ($kirby->language()->code() == "nl") {
-                                                        echo ("Lees");
-                                                    } elseif ($kirby->language()->code() == "en") {
-                                                        echo ("Read");
-                                                    } elseif ($kirby->language()->code() == "fr") {
-                                                        echo ("Lire");
-                                                    } ?>
-                                                    
+                                                    <?= t("read") ?>
                                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                                 </button>
                                             </div>

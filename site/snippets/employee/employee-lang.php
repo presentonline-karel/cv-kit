@@ -1,13 +1,5 @@
 <section class="employee-languages section fade-section">
-    <h3 class="section__title">
-        <?php if ($kirby->language()->code() == "nl") {
-            echo ("Talen");
-        } elseif ($kirby->language()->code() == "en") {
-            echo ("Languages");
-        } elseif ($kirby->language()->code() == "fr") {
-            echo ("Langues");
-        } ?>
-    </h3>
+    <h3 class="section__title"><?= t("languages") ?></h3>
 
     <?php if ($languages = $page->languages()->toStructure()) : ?>
         <div class="languages">

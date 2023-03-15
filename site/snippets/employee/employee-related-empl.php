@@ -2,15 +2,7 @@
 
 <?php if (count($relatedEmployees) > 0) : ?>
     <section class="discover-more-section section fade-section">
-        <h3 class="section__title">
-            <?php if ($kirby->language()->code() == "nl") {
-                echo ("Ontdek meer werknemers");
-            } elseif ($kirby->language()->code() == "en") {
-                echo ("Discover more employees");
-            } elseif ($kirby->language()->code() == "fr") {
-                echo ("Découvrir plus d'employés");
-            } ?>
-        </h3>
+        <h3 class="section__title"><?= t("relatedEmployees") ?></h3>
 
         <div class="more-team-members">
             <?php foreach ($relatedEmployees as $employee) : ?>
@@ -29,14 +21,7 @@
                             <p class="function"><?= $employee->jobTitle() ?></p>
 
                             <button class="button button-tertiary button-desktop">
-                                <?php if ($kirby->language()->code() == "nl") {
-                                    echo ("Lees");
-                                } elseif ($kirby->language()->code() == "en") {
-                                    echo ("Read");
-                                } elseif ($kirby->language()->code() == "fr") {
-                                    echo ("Lire");
-                                } ?>
-
+                                <?= t("read") ?>
                                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </button>
                         </div>

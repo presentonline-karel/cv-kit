@@ -1,13 +1,6 @@
 <?php if ($companyInfo = $site->contactInfo()->toObject()) : ?>
     <h4>
-        <?php if ($kirby->language()->code() == "nl") {
-            echo ("Contacteer");
-        } elseif ($kirby->language()->code() == "en") {
-            echo ("Contact");
-        } elseif ($kirby->language()->code() == "fr") {
-            echo ("Contact");
-        } ?>
-
+        <?= t("contact") ?>
         <?= $companyInfo->name() ?>
     </h4>
 
@@ -18,14 +11,7 @@
         <a class="button button-secundary callButton" href="tel:<?= $companyInfo->phoneNumber() ?>">
             <span>
                 <i class="fa fa-phone icon-big" aria-hidden="true"></i>
-
-                <?php if ($kirby->language()->code() == "nl") {
-                    echo ("Bellen");
-                } elseif ($kirby->language()->code() == "en") {
-                    echo ("Call");
-                } elseif ($kirby->language()->code() == "fr") {
-                    echo ("Appeler");
-                } ?>
+                <?= t("call") ?>
             </span>
 
             <i class="icon-hover fa fa-arrow-right" aria-hidden="true"></i>

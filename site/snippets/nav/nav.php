@@ -30,15 +30,7 @@
             <!-- Company -->
             <div class="company">
                 <a class="button button-tertiary clickable-nav-item" href="<?= $site->url() ?>/#allEmployees">
-                    <h4>
-                        <?php if ($kirby->language()->code() == "nl") {
-                            echo ("Alle werknemers");
-                        } elseif ($kirby->language()->code() == "en") {
-                            echo ("All employees");
-                        } elseif ($kirby->language()->code() == "fr") {
-                            echo ("Tous les employés");
-                        } ?>
-                    </h4>
+                    <h4><?= t("allEmployees") ?></h4>
                     
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </a>

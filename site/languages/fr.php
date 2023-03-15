@@ -6,5 +6,6 @@ return [
     "direction" => "ltr",
     "locale" => "fr_FR",
     "name" => "FR",
-    "url" => NULL
+    "url" => NULL,
+    'translations' => Yaml::decode(F::read(kirby()->root('languages').'/vars/fr.yml')),
 ];
