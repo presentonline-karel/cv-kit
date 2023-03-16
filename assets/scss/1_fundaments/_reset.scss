@@ -10,14 +10,15 @@
         color: $primary-700;
     }
 
-    &:before, &:after {
+    &:before,
+    &:after {
         box-sizing: border-box;
     }
 }
 
 body,
 html {
-    overflow-x: hidden;
+    overflow-x: visible !important;
 }
 
 html,
@@ -34,7 +35,6 @@ html {
 body {
     max-width: 100% !important;
     min-height: -webkit-fill-available;
-    overflow-x: hidden !important;
 }
 
 .stop-scrolling {
@@ -42,6 +42,15 @@ body {
     max-height: -webkit-fill-available;
     overflow: hidden;
     overflow-y: hidden;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 img {
@@ -62,14 +71,4 @@ a {
 .honeypot {
     left: -9999px;
     position: absolute;
-}
-
-
-
-/* TABLET LANDSCAPE - 1024PX */
-@media only screen and (min-width: $tablet-landscape) {
-    body,
-    html {
-        overflow-x: visible; // Needed for sticky header in team-grouped (Starter Kit)
-    }
 }

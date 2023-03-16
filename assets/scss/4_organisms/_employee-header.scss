@@ -15,7 +15,7 @@
         .profile-picture {
             @include size(80px, 80px);
             border-radius: $border-radius-medium;
-            border: $border-img;
+            border: $border-card-thin;
             object-fit: cover;
         }
 
@@ -67,7 +67,16 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-xs) {
     .employee-header {
+        border-bottom: 0.4px solid transparent;
         padding: 40px 48px 32px;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+
+        &.scrolled {
+            box-shadow: $card-shadow;
+            border-bottom: $border-card-thin;
+        }
 
         &__person {
             .profile-picture {

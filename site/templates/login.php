@@ -109,9 +109,9 @@
 
 
     <!-- Image -->
-    <div class="image-container" <?php if($page->typeOfImage() == "custom") { ?> style="background-image: url('<?= $page->customImage()->toFile()->url()?>')" <?php } ?>>
+    <div class="image-container noselect" <?php if($page->typeOfImage() == "custom") { ?> style="background-image: url('<?= $page->customImage()->toFile()->url()?>')" <?php } ?>>
         <?php if($page->typeOfImage() != "custom"): ?>
-            <img src="../../assets/img/login-test.png" />
+            <img src="../../assets/img/Login-Default-Mockup.png" alt="Default mockup Upthrust CV Kit" />
         <?php endif; ?>
     </div>
 </div>

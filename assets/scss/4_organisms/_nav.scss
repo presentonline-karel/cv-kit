@@ -6,7 +6,7 @@
         justify-content: space-between;
         padding: 16px;
         position: relative;
-        z-index: 2;
+        z-index: 3;
 
         .logo-container {
             @include size(160px, 40px);
@@ -31,7 +31,7 @@
         position: fixed;
         transform: translateX(-100%);
         top: 0;
-        z-index: 1;
+        z-index: 2;
 
         &.nav-active {
             transform: translateX(0%);
@@ -157,7 +157,7 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-xs) {
     .nav {
-        background-color: $primary-100;
+        background-color: $primary-100 !important;
         border-radius: 0 $border-radius-medium $border-radius-medium 0;
         border-right: $border-card-thin;
         box-shadow: $card-shadow;

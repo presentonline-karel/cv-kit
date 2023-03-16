@@ -1,7 +1,35 @@
+.container-employee {
+    .nav {
+        background-color: $neutrals-100;
+        border-bottom: 0.4px solid transparent;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        &.scrolled {
+            box-shadow: $card-shadow;
+            border-bottom: $border-card-thin;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .container-employee {
+        .nav {
+            border-bottom: none;
+            position: fixed;
+        }
+    }
+}
+
+
 /* DESKTOP - 1440PX */
 @media only screen and (min-width: $desktop-m) {
     .main-employee {
         border-right: $border-card-thin;
         max-width: 1058px;
+        position: relative;
+        top: 0;
     }
 }

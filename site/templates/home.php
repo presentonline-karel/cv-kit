@@ -61,7 +61,7 @@
                                             <?php if ($profilePicture = $employee->profilePicture()->toFile()) : ?>
                                                 <img class="employee-picture" src="<?= $profilePicture->url() ?>" alt="<?= $profilePicture->alt() === "" ? $profilePicture->alt() : $employee->name(); ?>" />
                                             <?php else : ?>
-                                                <img class="employee-picture" src="../../assets/img/employee-picture-placeholder.jpg" alt="<?= $employee->name() ?>" />
+                                                <img class="employee-picture" src="../../assets/img/employee-default-profilePicture.svg" alt="<?= $employee->name() ?>" />
                                             <?php endif; ?>
                                         </div>
 
@@ -103,7 +103,7 @@
                                                 <?php if ($profilePicture = $employee->profilePicture()->toFile()) : ?>
                                                     <img class="employee-picture" src="<?= $profilePicture->url() ?>" alt="<?= $profilePicture->alt() === "" ? $profilePicture->alt() : $employee->name(); ?>" />
                                                 <?php else : ?>
-                                                    <img class="employee-picture" src="../../assets/img/employee-picture-placeholder.jpg" alt="<?= $employee->name() ?>" />
+                                                    <img class="employee-picture" src="../../assets/img/employee-default-profilePicture.svg" alt="<?= $employee->name() ?>" />
                                                 <?php endif; ?>
                                             </div>
 

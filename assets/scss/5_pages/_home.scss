@@ -1,0 +1,27 @@
+.container-home {
+    .nav {
+        background-color: $neutrals-100;
+        left: 0;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+
+    main {
+        position: relative;
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .container-home {
+        .nav {
+            background-color: $primary-100;
+            position: fixed;
+        }
+    
+        main {
+            position: relative;
+        }
+    }
+}

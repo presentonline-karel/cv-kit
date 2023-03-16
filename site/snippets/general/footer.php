@@ -18,7 +18,7 @@
                 <p class="footer__content__signOff"><?= $site->companyDescription() ?></p>
 
                 <!-- Socials -->
-                <?php snippet("general/socials") ?>
+                <?php snippet("general/socials", ["socials" => $site->socials()->toStructure()]) ?>
             </div>
 
             <!-- Copyright -->

@@ -1,6 +1,10 @@
 .filter-section {
     background-color: $neutrals-100;
-    padding: 8px 16px 16px;
+    left: 0;
+    padding: 8px 16px 0px;
+    position: sticky;
+    top: 72px;
+    z-index: 1;
 
     h1 {
         @include fontSize(32px, 36px);
@@ -43,7 +47,6 @@
             align-items: center;
             border-bottom: 1px solid $neutrals-400;
             gap: 16px;
-            margin-bottom: 24px;
             padding-bottom: 20px;
 
             p {
@@ -119,7 +122,8 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .filter-section {
-        padding: 16px 48px 24px;
+        padding: 16px 48px 0px;
+        top: 88px;
 
         h1 {
             margin-bottom: 24px;

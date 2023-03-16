@@ -11,6 +11,8 @@
         <div class="flex">
             <?php if ($profilePicture = $page->profilePicture()->toFile()) : ?>
                 <img class="profile-picture" src="<?= $profilePicture->url() ?>" alt="<?= $profilePicture->alt() === "" ? $profilePicture->alt() : $page->name(); ?>" />
+            <?php else : ?>
+                <img class="profile-picture" src="../../assets/img/employee-default-profilePicture.svg" alt="<?= $page->name() ?>" />
             <?php endif; ?>
 
             <div class="person">

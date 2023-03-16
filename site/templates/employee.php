@@ -64,5 +64,6 @@
 
 
 <?= js("build/js/swipers/swiper-card-section.js", ["defer" => true]) ?>
+<?= js("build/js/general/toggle-scrolled-class.js", ["defer" => true]) ?>
 
 <?php snippet("general/footer") ?>
