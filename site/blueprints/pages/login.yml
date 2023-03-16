@@ -85,8 +85,8 @@ columns:
             fr: Chevron droit
           arrowRight:
             nl: Pijl rechts
-            en: Pijl naar onder
-            fr: Flèche vers le bas
+            en: Arrow right
+            fr: Flèche droite
       line-b:
         type: line
       

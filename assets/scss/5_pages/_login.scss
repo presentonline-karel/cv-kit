@@ -91,6 +91,10 @@
                     padding: 12px 16px;
                     text-align: center;
                     width: 100%;
+
+                    span {
+                        justify-content: center;
+                    }
                 }
             }
 
@@ -169,14 +173,21 @@
         }
 
         .image-container {
+            background: linear-gradient(180deg, $primary-200 0%, $primary-100 48%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             display: block;
             height: 100vh;
+            position: relative;
             width: calc(100% - 400px);
 
             img {
-                height: 100%;
-                object-fit: cover;
-                width: 100%;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                width: 60%;
             }
         }
     }

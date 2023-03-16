@@ -45,25 +45,57 @@
         <!-- Header -->
         <div class="content__body">
             <div class="header">
-                <h1>CV kit</h1>
-                <p>Welcome back! Please enter your details.</p>
+                <h1><?= $page->pageTitle() ?></h1>
+                <p><?= $page->message() ?></p>
             </div>
 
             <form method="POST" action="<?= $page->url() ?>">
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="<?= get('email') ? esc(get('email'), 'attr') : '' ?>" placeholder="surename.firstname@company.be">
+                    <label for="email"><?= $page->emailLabel() ?></label>
+                    <input type="email" id="email" name="email" value="<?= get('email') ? esc(get('email'), 'attr') : '' ?>" placeholder="<?= $page->emailPlaceholder() ?>">
                 </div>
                 <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" value="<?= get('password') ? esc(get('password'), 'attr') : '' ?>" placeholder="password">
+                    <label for="password"><?= $page->passwordLabel() ?></label>
+                    <input type="password" id="password" name="password" value="<?= get('password') ? esc(get('password'), 'attr') : '' ?>" placeholder="<?= $page->passwordPlaceholder() ?>">
                 </div>
 
-                <button class="button button-primary" type="submit" name="login" value="Login">Login</button>
+                <button class="button button-primary" type="submit" name="login" value="Login">
+                    <span>
+                        <?= $page->submitButtonText() ?>
+
+                        <?php if ($page->submitButtonIcon() == "chevronRight") { ?>
+                            <i class="fa fa-chevron-right"></i>
+                        <?php } elseif ($page->submitButtonIcon() == "arrowRight") { ?>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <?php } ?>
+                    </span>
+                </button>
             </form>
 
             <div class="access-cta">
-                <p>Toegang nodig? | <a href="#">Neem contact op.</a></p>
+                <?php $button = $page->accesLink()->toStructure()->first(); ?>
+
+                <p>
+                    <?= $page->accessText() ?> | 
+
+                    <a 
+                        href="<?php if ($button->destination() == "internal") {
+                            echo ($button->internalPage()->toPage()->url() . $button->idPage());
+                        } elseif ($button->destination() == "external") {
+                            echo ($button->externalUrl());
+                        } elseif ($button->destination() == "call") {
+                            echo ("tel:" . $site->telephone());
+                        } elseif ($button->destination() == "email") {
+                            echo ("mailto:" . $site->email());
+                        } ?>"
+
+                        <?php if ($button->destination() == "external") {
+                            ?> target="_blank" <?php
+                        } ?>
+                    >
+                        <?= $button->anchor() ?>
+                    </a>
+                </p>
             </div>
         </div>
 
@@ -75,8 +107,12 @@
         <?php endif; ?>
     </div>
 
-    <div class="image-container">
-        <img src="../../assets/img/login-test.png" />
+
+    <!-- Image -->
+    <div class="image-container" <?php if($page->typeOfImage() == "custom") { ?> style="background-image: url('<?= $page->customImage()->toFile()->url()?>')" <?php } ?>>
+        <?php if($page->typeOfImage() != "custom"): ?>
+            <img src="../../assets/img/login-test.png" />
+        <?php endif; ?>
     </div>
 </div>
 

@@ -55,7 +55,7 @@ function server(cb) {
     browserSync.init({
         notify: false,
         open: true,
-        proxy: "http://cv-kit.test",
+        proxy: "http://cv-kit.int",
         port: 81,
         online: true
     })
