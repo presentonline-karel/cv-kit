@@ -3,7 +3,8 @@
         <h3 class="section__title"><?= t("education") ?></h3>
 
         <div class="arrows">
-            <i class="arrow nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i>
+            <!-- <i class="arrow nav-arrow fa fa-arrow-left swiper-button-prev" aria-hidden="true"></i> -->
+            <?php snippet("helpers/icon-builder", ["icon" => "arrow-left", "addClasses" => "arrow nav-arrow swiper-button-prev"]) ?>
             <i class="arrow nav-arrow fa fa-arrow-right swiper-button-next" aria-hidden="true"></i>
         </div>
     </div>

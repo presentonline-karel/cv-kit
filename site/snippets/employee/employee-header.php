@@ -22,8 +22,14 @@
         </div>
 
         <div class="contact-tags tags flex">
-            <a class="tag tag-l" href="tel:<?= $page->telNumber() ?>"><i class="fa fa-phone icon-big" aria-hidden="true"></i><?= $page->telNumber() ?></a>
-            <a class="tag tag-l" href="mailto:<?= $page->email() ?>"><i class="fa fa-envelope icon-big" aria-hidden="true"></i><?= $page->email() ?></a>
+            <a class="tag tag-l" href="tel:<?= $page->telNumber() ?>">
+                <?php snippet("helpers/icon-builder", ["icon" => "phone"]) ?>
+                <?= $page->telNumber() ?>
+            </a>
+            <a class="tag tag-l" href="mailto:<?= $page->email() ?>">
+                <?php snippet("helpers/icon-builder", ["icon" => "envelope"]) ?>
+                <?= $page->email() ?>
+            </a>
         </div>
     </div>
 </section>

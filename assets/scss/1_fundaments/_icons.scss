@@ -1,0 +1,19 @@
+.fa-svg-icon {
+    display: inline-flex;
+    align-self: center;
+
+    // Define a global color for the icons
+    fill: $primary-600;
+
+    // Define the size of the default icons
+    svg {
+        height: 1em;
+        width: 1em;
+    }
+
+    // Positionate the SVG correctly
+    &.svg-baseline svg {
+        top: 0.125em;
+        position: relative;
+    }
+}
