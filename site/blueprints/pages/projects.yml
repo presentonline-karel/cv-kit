@@ -1,0 +1,83 @@
+title: Projects
+icon: layers
+
+columns:
+  left:
+    width: 1/3
+    fields:
+      projectNameHeadline:
+        label:
+          nl: Richtlijnen
+          en: Guidelines
+          fr: Directives
+        type: headline
+        numbered: false
+      info:
+        label: Info
+        type: info
+        text:
+          nl: |
+            Wanneer een klant inlogt om een team te bekijken voor zijn/haar project, komt die op deze pagina terecht. Standaard krijgt de klant dan zijn/haar projecten) te zien
+
+            Wanneer er (nog) geen projecten voor hem/haar te bezichtigen zijn, krijgt die de content van deze pagina te zien.
+
+            **Je kan een klant toegang geven tot een project op de project detail pagina.**
+          en: |
+            When a client logs in to view a team for his/her project, he/she lands on this page. By default, the customer then sees his/her projects.
+
+            If there are no projects for him/her to view (yet), he/she will be shown the content of this page.
+
+            **You can give a customer access to a project on the project detail page.**
+          fr: |
+            Lorsqu'un client se connecte pour consulter une équipe pour son projet, il arrive sur cette page. Par défaut, le client voit alors ses projets.
+
+            S'il n'y a pas (encore) de projet à consulter, il verra le contenu de cette page.
+
+            **Vous pouvez donner à un client l'accès à un projet sur la page de détail du projet.**
+
+  main:
+    width: 2/3
+    fields:
+      projectsEmptyHeadline:
+        label:
+          nl: Content wanneer geen projecten
+          en: Content when no projects
+          fr: Contenu en l'absence de projets
+        type: headline
+      defaultSmiley:
+        label:
+          nl: Error smiley
+          en: Error smiley
+          fr: Erreur smiley
+        type: text
+        maxlength: 8
+        placeholder: :(
+        help:
+          nl: bv. "**:(**" - Leeg laten voor weg te laten.
+          en: fe. "**:(**" - Leave empty for no smiley.
+          fr: pe. "**:(**" - Vide pour laisser de côté.
+      defaultTitle:
+        label:
+          nl: Error titel
+          en: Error title
+          fr: Erreur titre
+        type: text
+        maxlength: 32
+        required: true
+      defaultParagraph:
+        label:
+          nl: Error tekst
+          en: Error text
+          fr: Erreur texte
+        type: writer
+        inline: true
+        maxlength: 80
+        required: true
+      defaultButton:
+        label:
+          nl: Error knop
+          en: Error button
+          fr: Erreur bouton
+        extends: fields/buttons
+        required: true
+        max: 1

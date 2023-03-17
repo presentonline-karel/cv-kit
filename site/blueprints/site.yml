@@ -30,10 +30,11 @@ tabs:
             type: pages
             status: all
             image: icon
-            create: false
+            # create: false
             templates:
               - error
               - login
+              - projects
               - !home
               - !employee
 
@@ -321,6 +322,10 @@ tabs:
             type: pages
             status: draft
             templates: project
+            layout: cardlets
+            image:
+              back: "#EF9093"
+              color: "#FFFFFF"
 
           projectsPublished:
             label:
@@ -332,5 +337,5 @@ tabs:
             templates: project
             layout: cardlets
             image:
-              query: page.profilePicture.toFile()
-              cover: true
+              back: "#E1363D"
+              color: "#FFFFFF"

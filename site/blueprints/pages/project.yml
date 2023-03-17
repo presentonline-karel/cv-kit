@@ -1,29 +1,59 @@
-title: Project page
+title: Project
+icon: chart
 
 columns:
   left:
     width: 1/3
     fields:
       projectNameHeadline:
-        label: When creating a project
+        label:
+          nl: Richtlijnen
+          en: Guidelines
+          fr: Directives
         type: headline
         numbered: false
       info:
         label: Info
         type: info
-        text: |
-          [Placeholder] Here comes some info on how to manage projects...
+        text:
+          nl: |
+            Je maakt een projectpagina aan wanneer je een team wil voorstellen aan de klant.
+
+            **Opgelet!** Je moet van elke medewerker die je hier selecteerd schriftelijke toestemming + handtekening hebben.
+          en: |
+            You create a project page when you want to introduce a team to the client.
+
+            **Warning!** You must have written permission + signature from each employee you select here.
+          fr: |
+            Vous créez une page de projet lorsque vous souhaitez présenter une équipe au client.
+
+            **Attention!** Vous devez obtenir l'autorisation écrite et la signature de chaque employé que vous sélectionnez ici.
       peopleWithAccessHeadline:
-        label: People with access
+        label:
+          nl: Verleen toegang
+          en: Grant access
+          fr: Accorder l'accès
         type: headline
         numbered: false
       peopleWithAccessInfo:
-        label: Warning
+        label:
+          nl: Opgelet
+          en: Warning
+          fr: Attention
         type: info
         theme: notice
-        text: Here comes text
+        text:
+          nl: |
+            Gebruikers die je hier selecteert hebben toegang tot alle info van de geselecteerde werknemers -> **Geef enkel de strikt noodzakelijke mensen toegang**
+          en: |
+            Users you select here have access to all info on the selected employees -> **Give access only to the strictly necessary people**
+          fr: |
+            Les utilisateurs que vous sélectionnez ici ont accès à toutes les informations sur les employés sélectionnés -> **Donner l'accès uniquement aux personnes strictement nécessaires**
       peopleWithAccess:
-        label: People
+        label:
+          nl: Gebruikers met toegang
+          en: Users with access
+          fr: Utilisateurs ayant accès
         type: users
         # query: kirby.users.filterBy("role", "client")
   
@@ -31,34 +61,70 @@ columns:
     width: 2/3
     fields:
       projectContentHeadline:
-        label: Project content
+        label:
+          nl: Projectinstellingen
+          en: Project settings
+          fr: Paramètres du projet
         type: headline
       projectTitle:
-        label: Title
+        label:
+          nl: Titel
+          en: Title
+          fr: Titre
         type: text
         maxlength: 48
         required: true
         placeholder: "{{ page.title }}"
-        help: The name of the clients company
+        help:
+          nl: De bedrijfsnaam van de klant -> bv. "Atlas Copco"
+          en: The customer company name -> fe. "Atlas Copco"
+          fr: Le nom de l'entreprise du client -> pe. "Atlas Copco"
+      projectProduct:
+        label:
+          nl: Product(en)/service(s)
+          en: Product(s)/service(s)
+          fr: Produit(s)/service(s)
+        type: text
+        maxlength: 48
+        required: true
+        placeholder:
+          nl: Website + e-commerce
+          en: Website + e-commerce
+          fr: Site web + e-commerce
+        help:
+          nl: Product(en)/service(s) die we gaan aanleveren -> bv. "Website + e-commerce"
+          en: Product(s)/service(s) we will provide -> fe. "Website + e-commerce"
+          fr: le(s) produit(s)/service(s) que nous fournirons -> pe. "Site web + e-commerce"
       projectDescription:
-        label: Description
+        label:
+          nl: Omschrijving
+          en: Description
+          fr: Description
         type: writer
         inline: true
         maxlength: 320
         required: true
-        help: Short description of the proposition. What will our people make?
       line-a:
         type: line
       
       assignedEmployeesHeadline:
-        label: Assigned Employees
+        label:
+          nl: Toegewezen werknemers
+          en: Assigned employees
+          fr: Employés affectés
         type: headline
       assignedEmployees:
-        label: Assigned employees
+        label:
+          nl: Toegewezen werknemers
+          en: Assigned employees
+          fr: Employés affectés
         type: pages
         query: site.index.filterBy('template', 'in', ['employee'])
-        layout: cards
+        layout: cardlets
         help: Select the people that would work on this project
+          nl: Selecteer de werknemers die aan die project zullen werken -> worden automatisch in teams verdeeld.
+          en: Select the employees who will work on that project -> are automatically divided into teams.
+          fr: Sélectionnez les employés qui travailleront sur ce projet -> ils sont automatiquement répartis en équipes.
         required: true
         image:
           query: page.profilePicture.toFile
