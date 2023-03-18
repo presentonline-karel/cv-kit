@@ -57,7 +57,11 @@
 
 
         <!-- Related employees -->
-        <?php snippet("employee/employee-related-empl") ?>
+        <?php if (isset($_SERVER['HTTP_REFERER'])) {
+            if($_SERVER['HTTP_REFERER'] == ($site->url() . "/home") || $_SERVER['HTTP_REFERER'] == ($site->url())) {
+                    snippet("employee/employee-related-empl");
+            }
+        } ?>
     </main>
 </div>
 

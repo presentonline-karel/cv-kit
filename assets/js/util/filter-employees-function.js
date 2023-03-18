@@ -29,6 +29,7 @@ const filterEmployeesOnFunction = () => {
 
     for(let i = 0; i < functions.length; i++) {
         functions[i].addEventListener("click", function() {
+            window.scrollTo(0, 0);
             functions[i].classList.toggle("active");
 
             activeFunctions = document.querySelectorAll(".filter-tag.active");
