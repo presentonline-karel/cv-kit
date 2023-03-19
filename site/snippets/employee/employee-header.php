@@ -1,8 +1,16 @@
-<section class="employee-header">
-    <div class="breadcrumbs">
+<section class="employee-header fade-section">
+    <div class="breadcrumbs breadcrumbs-home">
         <?php $departmentId = strtolower(str_replace(" ", "", $page->department())); ?>
 
         <a class="breadcrumb" href="<?= $site->url() . "/#" . $departmentId ?>"><?= $page->department()->name() ?></a>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        <span class="breadcrumb active"><?= $page->name() ?></span>
+    </div>
+
+    <div class="breadcrumbs breadcrumbs-project">
+        <?php $departmentId = strtolower(str_replace(" ", "", $page->department())); ?>
+
+        <a class="breadcrumb" href="<?= $_SERVER['HTTP_REFERER'] . "/#" . $departmentId ?>"><?= $page->department()->name() ?></a>
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
         <span class="breadcrumb active"><?= $page->name() ?></span>
     </div>

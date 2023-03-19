@@ -56,12 +56,14 @@
 
 
 
-        <!-- Related employees -->
-        <?php if (isset($_SERVER['HTTP_REFERER'])) {
+        <!-- Related employees -> Use JavaScript -->
+        <?php snippet("employee/employee-related-empl") ?>
+        
+        <?php /* if (isset($_SERVER['HTTP_REFERER'])) {
             if($_SERVER['HTTP_REFERER'] == ($site->url() . "/home") || $_SERVER['HTTP_REFERER'] == ($site->url())) {
                     snippet("employee/employee-related-empl");
             }
-        } ?>
+        } */ ?>
     </main>
 </div>
 
@@ -69,5 +71,6 @@
 
 <?= js("build/js/swipers/swiper-card-section.js", ["defer" => true]) ?>
 <?= js("build/js/general/toggle-scrolled-class.js", ["defer" => true]) ?>
+<?= js("build/js/util/employee-display-settings.js") ?>
 
 <?php snippet("general/footer") ?>

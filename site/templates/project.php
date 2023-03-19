@@ -27,7 +27,7 @@
 
         <!-- Filter section -->
         <section class="filter-section">
-            <h1><?= t("allEmployees") ?></h1>
+            <h1><?= t("selectedEmployees") ?></h1>
 
             <div class="employees-filter">
                 <form class="filter-form">
@@ -149,5 +149,6 @@
 
 <?= js("build/js/util/filter-employees-function.js", ["defer" => true]) ?>
 <?= js("build/js/util/filter-employees-name.js", ["defer" => true]) ?>
+<?= js("build/js/util/current-page-is-project.js", ["defer" => true]) ?>
 
 <?php snippet("general/footer") ?>

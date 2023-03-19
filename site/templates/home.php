@@ -141,5 +141,6 @@
 
 <?= js("build/js/util/filter-employees-function.js", ["defer" => true]) ?>
 <?= js("build/js/util/filter-employees-name.js", ["defer" => true]) ?>
+<?= js("build/js/util/current-page-is-home.js", ["defer" => true]) ?>
 
 <?php snippet("general/footer") ?>

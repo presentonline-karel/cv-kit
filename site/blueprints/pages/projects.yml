@@ -38,6 +38,17 @@ columns:
   main:
     width: 2/3
     fields:
+      projectsExplanationHeadline:
+        label: Projects explanation for client
+        type: headline
+      projectsExplanation:
+        label: Explanation
+        type: textarea
+        required: true
+        size: medium
+        maxlength: 240
+      line-a:
+        type: line
       projectsEmptyHeadline:
         label:
           nl: Content wanneer geen projecten

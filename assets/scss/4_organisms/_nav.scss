@@ -1,4 +1,28 @@
 .nav {
+    &.nav-project {
+        .nav-links {
+            .company {
+                display: none;
+            }
+
+            .project-info {
+                display: block;
+            }
+        }
+    }
+
+    &.nav-all-projects {
+        .nav-links {
+            .company {
+                display: none;
+            }
+
+            .general-project-info {
+                display: block;
+            }
+        }
+    }
+
     .logo-lang-container {
         @include size(100%, 72px);
         align-items: center;
@@ -37,7 +61,7 @@
             transform: translateX(0%);
         }
 
-        .company, .project-info {
+        .company, .project-info, .general-project-info {
             border-bottom: 1px solid $neutrals-400;
             margin-bottom: 32px;
             padding-bottom: 32px;
@@ -105,6 +129,8 @@
         }
 
         .project-info {
+            display: none;
+
             h3 {
                 margin-bottom: 4px;
             }
@@ -112,6 +138,30 @@
             h5 {
                 margin-bottom: 16px;
                 color: $neutrals-900;
+            }
+        }
+
+        .general-project-info {
+            display: none;
+            
+            h3 {
+                margin-bottom: 8px;
+            }
+        }
+
+        .copyright__logout {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            .logout-button {
+                background-color: $error-300;
+                color: $neutrals-100;
+                min-width: initial;
+
+                &:hover {
+                    background-color: $error-500;
+                }
             }
         }
     }
@@ -138,6 +188,12 @@
                     max-width: 414px;
                 }
             }
+
+            .general-project-info {
+                h3 {
+                    margin-bottom: 12px;
+                }
+            }
         }
     }
 }
@@ -154,7 +210,7 @@
             @include size(100%, 100%);
             padding: 88px 48px 24px;
 
-            .company, .project-info {
+            .company, .project-info, .general-project-info {
                 padding-top: 16px;
             }
 
@@ -196,7 +252,7 @@
             position: relative;
             transform: translateX(0%);
 
-            .company, .project-info {
+            .company, .project-info, .general-project-info {
                 border-bottom: 1px solid $primary-200;
                 padding-top: 40px;
             }
@@ -272,7 +328,7 @@
 @media only screen and (min-width: $desktop-m) {
     .nav {
         .nav-links {
-            .company, .project-info {
+            .company, .project-info, .general-project-info {
                 padding-bottom: 48px;
                 margin-bottom: 48px;
             }
@@ -300,6 +356,13 @@
                 h5 {
                     @include fontSize(20px, 28px);
                     margin-bottom: 24px;
+                }
+            }
+
+            .general-project-info {
+                h3 {
+                    @include fontSize(24px, 32px);
+                    margin-bottom: 16px;
                 }
             }
         }

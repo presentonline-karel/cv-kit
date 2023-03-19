@@ -26,4 +26,8 @@
     </div>
 </div>
 
+
+
+<?= js("build/js/util/current-page-is-projects.js", ["defer" => true]) ?>
+
 <?php snippet("general/footer") ?>

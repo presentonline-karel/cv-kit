@@ -1,4 +1,4 @@
-<section class="employee-introduction">
+<section class="employee-introduction fade-section">
     <h3><?= $page->introTitle() ?></h3>
     <p class="intro"><?= $page->intro() ?></p>
 

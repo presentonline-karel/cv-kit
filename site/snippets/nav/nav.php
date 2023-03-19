@@ -8,15 +8,10 @@
     <!-- Sliding nav -->
     <div class="nav-links">
         <div>
-            <?php if($page->template()->name() === "project") {
-
-                // Project info
-                snippet("nav/_project-info");
-            } else {
-
-                // Company
-                snippet("nav/_departments");
-            } ?>
+            <!-- Project info || Departments -->
+            <?php snippet("nav/_project-info") ?>
+            <?php snippet("nav/_departments") ?>
+            <?php snippet("nav/_general-project-info") ?>
 
 
 
@@ -35,9 +30,17 @@
 
 
 
-        <!-- Copyright -->
-        <?php if($companyInfo = $site->contactInfo()->toObject()): ?>
-            <p class="copyright p">© <?= $companyInfo->name() ?> <?php echo date("Y"); ?></p>
-        <?php endif; ?>
+        <div class="copyright__logout">
+
+            <!-- Copyright -->
+            <?php if($companyInfo = $site->contactInfo()->toObject()): ?>
+                <p class="copyright p">© <?= $companyInfo->name() ?> <?php echo date("Y"); ?></p>
+            <?php endif; ?>
+
+            <!-- Logout button mobile -->
+            <a href="/logout" class="button button-primary logout-button">
+                <span><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
+            </a>
+        </div>
     </div>
 </nav>

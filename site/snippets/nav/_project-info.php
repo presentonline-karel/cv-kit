@@ -1,6 +1,6 @@
 <div class="project-info">
-    <h3><?= $page->projectTitle() ?></h3>
-    <h5><?= $page->projectProduct() ?></h5>
+    <h3 class="project-info__title"><?= $page->projectTitle() ?></h3>
+    <h5 class="project-info__product"><?= $page->projectProduct() ?></h5>
 
-    <p><?= $page->projectDescription() ?></p>
+    <p class="project-info__description"><?= $page->projectDescription() ?></p>
 </div>
