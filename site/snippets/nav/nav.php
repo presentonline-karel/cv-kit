@@ -39,7 +39,7 @@
 
             <!-- Logout button mobile -->
             <a href="/logout" class="button button-primary logout-button">
-                <span><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</span>
+                <span><i class="fa fa-sign-out" aria-hidden="true"></i> <?= t("signOut") ?></span>
             </a>
         </div>
     </div>

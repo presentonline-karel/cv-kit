@@ -29,7 +29,7 @@
                         </div>
                     </div>
 
-                    <button class="button button-tertiary">Read<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                    <button class="button button-tertiary"><?= t("read") ?><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
                     <i class="fa fa-chevron-right desktop" aria-hidden="true"></i>
                 </a>
             <?php endforeach; ?>
