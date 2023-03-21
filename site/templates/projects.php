@@ -9,7 +9,7 @@
     <?php snippet("nav/nav") ?>
 
 
-    <div class="error-content">
+    <div class="projects-content">
         <?php
         $allProjects = $site->children()->template("project");
         $user = Find::user();
@@ -30,7 +30,7 @@
 
     <?php if (count($userProjects) > 0) : ?>
         <div class="error-content user-projects">
-            <h1>Your projects</h1>
+            <h2>Your projects</h2>
 
             <div class="projects">
                 <?php foreach($userProjects as $project): ?>

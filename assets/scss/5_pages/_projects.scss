@@ -1,0 +1,55 @@
+.container-projects {
+    position: relative;
+
+    .user-projects {
+        left: 50%;
+        max-width: 400px;
+        overflow: visible;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        top: 50%;
+        width: calc(100vw - 32px);
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+        .projects {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-xs) {
+    .container-projects {
+        .user-projects {
+            left: calc(50% + 189px);
+            transform: translate(-50%, -50%);
+            top: 50%;
+            width: calc(100vw - 382px);
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-m) {
+    .container-projects {
+        .user-projects {
+            max-width: 520px;
+
+            h2 {
+                @include fontSize(48px, 52px);
+                margin-bottom: 56px;
+            }
+
+            .projects {
+                gap: 20px;
+            }
+        }
+    }
+}
