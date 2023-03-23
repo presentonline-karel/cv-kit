@@ -56,8 +56,6 @@ AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
-php_value opcache.revalidate_freq 0
-
 <IfModule mod_headers.c>
   Header append Vary Accept env=REDIRECT_accept
 </IfModule>
