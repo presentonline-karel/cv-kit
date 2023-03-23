@@ -1,4 +1,5 @@
-title: Viewer
+title: Client
+home: /projects
 permissions:
   access:
     panel: false
