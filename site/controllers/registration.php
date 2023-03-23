@@ -50,6 +50,7 @@ return function ($kirby) {
                         // create the authentication challenge
                         try {
                             $status = $kirby->auth()->createChallenge($user->email(), false, 'login');
+
                             go('panel/login');
                         } catch (PermissionException $e) {
                             $errors[] = $e->getMessage();
