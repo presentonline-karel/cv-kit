@@ -1,4 +1,4 @@
-<?php snippet("general/header") ?>
+<?php //snippet("general/header") ?>
 
 <div class="intro">
     <h1><?= $page->title() ?></h1>

@@ -30,7 +30,8 @@
         <a class="button button-secundary websiteButton" href="<?= $companyInfo->website() ?>" target="_blank">
             <span>
                 <i class="fa fa-globe icon-big" aria-hidden="true"></i>
-                <?= trim($companyInfo->website(), "https://") ?>
+                <?php //trim($companyInfo->website(), "https://") ?>
+                presentonline.be
             </span>
 
             <i class="icon-hover fa fa-arrow-right" aria-hidden="true"></i>
@@ -41,6 +42,6 @@
     <div class="links desktop">
         <a class="link__call link" href="tel:<?= $companyInfo->phoneNumber() ?>"><i class="fa fa-phone icon-big" aria-hidden="true"></i><?= $companyInfo->phoneNumber() ?></a>
         <a class="link__email link" href="mailto:<?= $companyInfo->email() ?>"><i class="fa fa-envelope icon-big" aria-hidden="true"></i><?= $companyInfo->email() ?></a>
-        <a class="link__email link" href="<?= $companyInfo->website() ?>" target="_blank"><i class="fa fa-globe icon-big" aria-hidden="true"></i><?= trim($companyInfo->website(), "https://") ?></a>
+        <a class="link__email link" href="<?= $companyInfo->website() ?>" target="_blank"><i class="fa fa-globe icon-big" aria-hidden="true"></i>presentonline.be</a>
     </div>
 <?php endif; ?>

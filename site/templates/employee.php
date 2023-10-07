@@ -1,4 +1,4 @@
-<?php if (!$kirby->user()) go('/login') ?>
+<?php //if (!$kirby->user()) go('/login') ?>
 
 
 

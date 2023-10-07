@@ -1,7 +1,3 @@
-<?php if (!$kirby->user()) go('/login') ?>
-
-
-
 <?php snippet("general/header") ?>
 
 <!-- Container Home -->
